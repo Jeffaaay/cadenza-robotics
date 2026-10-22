@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "checked_date": "2026-10-22",
+  "purpose": "Source snapshots inspected for platform planning; joint hardware/software compatibility has not been validated.",
+  "sources": [
+    {
+      "name": "openarm_hardware",
+      "repository": "https://github.com/enactic/openarm_hardware",
+      "release": "2.0.0",
+      "commit": "eefc9fa5509562e5e4d630db9a52027afdbc6af1",
+      "release_published_at": "2026-09-09T02:06:46Z",
+      "license": "CERN-OHL-S-2.0",
+      "archive_url": "https://github.com/enactic/openarm_hardware/releases/download/2.0.0/openarm-hardware-2.0.0.tar.gz",
+      "archive_sha256_from_github_release": "247ce0141a9be6ebbb5a6c206cf0557574929ea0b80e20dddbff7c0c0919db75",
+      "state": "local_extracted_files_inspected_not_manufacturing_validated",
+      "archive_digest_note": "Digest read from GitHub release metadata. No local archive digest was computed during this review.",
+      "inspected_files": [
+        {
+          "path_in_archive_root": "OpenArm 2.0/OpenArm 2.0 BOM.xlsx",
+          "local_sha256": "ff76d3e67799fee5a284725efd0b0469f6480b603070cc2f465c660d11fc46cc",
+          "scope": "Bimanual parts list; individual side selection remains necessary. No price column."
+        },
+        {
+          "path_in_archive_root": "OpenArm 2.0/OpenArm_2.0.STEP",
+          "local_sha256": "0f97a5fb308d5b09353aa67bbd32d7c08e55dc5629bcbe20c12f71c82ef13c94",
+          "scope": "Local CAD previously inspected in Fusion; manufacturing and load validation incomplete."
+        },
+        {
+          "path_in_archive_root": "OpenArm KER/OpenArm KER BOM.xlsx",
+          "local_sha256": "49082ad2eb5ef2ad6fdc0767238c87f0c38e4a8e49cd8699cd5f7475d0703edc",
+          "scope": "File and opening BOM rows inspected; full electrical and build completeness not audited."
+        }
+      ]
+    },
+    {
+      "name": "openarm_mujoco",
+      "repository": "https://github.com/enactic/openarm_mujoco",
+      "commit": "a3c8a57ec15d385e3c1dbd3fd090ee486b7f258c",
+      "state": "existing_local_checkout_clean; model files available; no Cadenza real-robot baseline"
+    },
+    {
+      "name": "openarm_description",
+      "repository": "https://github.com/enactic/openarm_description",
+      "commit": "6f0de1cba743920e74e6b88ae5e29084d99123ce",
+      "license": "Apache-2.0",
+      "state": "remote_readme_and_commit_inspected; not_built_or_integrated"
+    },
+    {
+      "name": "openarm_teleop",
+      "repository": "https://github.com/enactic/openarm_teleop",
+      "commit": "eb2d49338bf70ace95282ea724903849397b7811",
+      "license": "Apache-2.0",
+      "state": "remote_readme_and_commit_inspected; not_built_or_run"
+    }
+  ],
+  "documentation": [
+    "https://docs.openarm.dev/setup/openarm-setup/",
+    "https://docs.openarm.dev/teleop/",
+    "https://docs.openarm.dev/tutorial/data-collection-webxr/",
+    "https://docs.openarm.dev/hardware/openarm-ker/general/"
+  ],
+  "unresolved": [
+    "Physical inventory, selected side, supplier hardware revision and total budget are unconfirmed.",
+    "The KER documentation contains an unreleased notice while the hardware repository and local archive include KER CAD and BOM. End-to-end reproduction is unverified.",
+    "Motor firmware, CAN adapter, host control environment and collection stack versions still need a matched compatibility check.",
+    "Custom shell geometry, attachments, mass properties, collision clearance and thermal effect have not been designed or measured."
+  ]
+}

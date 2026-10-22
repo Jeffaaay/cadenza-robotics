@@ -1,0 +1,42 @@
+# Dependencies and generated outputs
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.py[cod]
+build/
+dist/
+outputs/
+runs/
+data/
+datasets/
+checkpoints/
+vendor/
+downloads/
+
+# Local machine configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+local-config.*
+
+# Large recordings, weights and upstream archives
+*.mp4
+*.mov
+*.mkv
+*.bag
+*.mcap
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.zip
+*.tar.gz
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
