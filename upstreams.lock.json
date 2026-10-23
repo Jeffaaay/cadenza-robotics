@@ -129,7 +129,7 @@
   ],
   "unresolved": [
     "Selected platform plan: two OpenArm followers with reference extensions and jaws, two Mini leaders, three reference RGB cameras and an extrusion fixture. Partial existing-equipment evidence is in BUILD.md; availability, source/supplier revisions, workspace dimensions and total additional budget remain unconfirmed.",
-    "User reports probably enough LeRobot-related motors. Exact models, voltage, gear ratios, quantities and project availability are unverified; do not duplicate purchases or treat Feetech servos as Damiao actuators.",
+    "A DFRobot order confirms 12 ST3215 SER0069 servos, shipped 2026-02-28; vendor specs are 7.4V and 1:345. Mini's reference BOM requires 16 C046 servos at 1:147. Reuse compatibility, current availability and other stock remain unverified; do not duplicate purchases or treat Feetech servos as Damiao actuators.",
     "Reference 5 cm upper-arm extension and jaw_normal are selected as alignment targets. Exact original OpenArm base revision, compatibility with local 2.0 CAD, materials and fabrication/attachment details remain unresolved; no manufacturing release.",
     "OpenArm 2.0 BOM B0495 is an AR0234 camera; the folding report links a wide-angle fixed-focus IMX708 USB UVC camera. Arducam B0305 specs match that description by inference; exact delivered kit, optical setup and near-field image quality remain to verify. D405 is not counted as an equivalent baseline camera.",
     "Pinned follower feature declarations include position, velocity and torque, while the checkpoint expects 16 position channels; explicit field selection and ordering need runtime validation.",
