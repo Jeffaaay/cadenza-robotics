@@ -126,7 +126,7 @@
     "https://lerobot-robot-folding.hf.space/"
   ],
   "unresolved": [
-    "Bimanual followers are the agreed task configuration; physical inventory, supplier revisions, workspace dimensions and total budget remain unconfirmed.",
+    "Bimanual followers are the agreed task configuration. Partial existing-equipment evidence is recorded in BUILD.md; present availability, OpenArm ownership, supplier revisions, workspace dimensions and total additional budget remain unconfirmed.",
     "Reference folding hardware includes a 5 cm upper-arm extension and custom jaws; stock OpenArm 2.0 reach, gripper compatibility and source hardware revision mapping need review.",
     "Pinned follower feature declarations include position, velocity and torque, while the checkpoint expects 16 position channels; explicit field selection and ordering need runtime validation.",
     "Mini README single-port example differs from the pinned dual-port config; calibration and sign/remap/gripper conversions must be verified.",
