@@ -1,6 +1,6 @@
 # Working on Cadenza Robotics
 
-- Read README.md, BUILD.md and BASELINES.md before proposing a new direction. Current scope is an OpenArm-based platform and teleoperation baseline. Dexterous hands and piano are deferred.
+- Read README.md, BUILD.md and BASELINES.md before proposing a new direction. Current scope is a fixed-table bimanual OpenArm platform with grippers: bring up each arm, collect demonstrations, then reproduce autonomous flat-shirt folding before crumpled-shirt folding. Use the public LeRobot folding work as a reference, subject to hardware and interface compatibility checks. Dexterous hands and piano are deferred.
 - Understand the existing design, source code and evidence before choosing or modifying a method. Explain the observed failure, the change and how it will be measured.
 - Preserve OpenArm load-bearing structure, joint geometry, transmission and mechanical limits in the initial platform. Custom shells are removable, non-load-bearing parts. Check their mass, clearance, heat, wiring, camera view and maintenance access.
 - Distinguish author results, company reports, simulation, motion previews and our measured hardware results. Files present on disk do not prove that hardware exists or that a system has been reproduced.

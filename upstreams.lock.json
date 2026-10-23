@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "checked_date": "2026-10-22",
-  "purpose": "Source snapshots inspected for platform planning; joint hardware/software compatibility has not been validated.",
+  "purpose": "Source snapshots inspected for a fixed-table bimanual OpenArm folding platform; hardware/software/model compatibility and real-robot reproduction have not been validated.",
   "sources": [
     {
       "name": "openarm_hardware",
@@ -51,16 +51,85 @@
       "commit": "eb2d49338bf70ace95282ea724903849397b7811",
       "license": "Apache-2.0",
       "state": "remote_readme_and_commit_inspected; not_built_or_run"
+    },
+    {
+      "name": "lerobot_folding_reference",
+      "repository": "https://github.com/huggingface/lerobot",
+      "release": "v0.5.1",
+      "commit": "1396b9fab7aecddd10006c33c47a487ffdcb54b4",
+      "license": "Apache-2.0",
+      "inspected_paths": [
+        "src/lerobot/robots/openarm_follower/config_openarm_follower.py",
+        "src/lerobot/robots/openarm_follower/openarm_follower.py",
+        "src/lerobot/robots/bi_openarm_follower/bi_openarm_follower.py",
+        "src/lerobot/robots/bi_openarm_follower/config_bi_openarm_follower.py",
+        "src/lerobot/teleoperators/openarm_mini/openarm_mini.py",
+        "src/lerobot/teleoperators/openarm_mini/config_openarm_mini.py"
+      ],
+      "state": "remote_source_static_review_only; not_installed_or_executed"
+    },
+    {
+      "name": "open_arms_mini",
+      "repository": "https://github.com/pkooij/open-arms-mini",
+      "commit": "0628e081cfe105dc4156dba5099c2274c4aca2e8",
+      "license_statement": "README declares Apache-2.0; full hardware provenance not audited",
+      "inspected_paths": ["README.md", "BOM.md"],
+      "state": "leader_candidate; CAD_listings_and_build_docs_inspected; no_hardware_or_manufacturing_validation"
+    },
+    {
+      "name": "folding_final",
+      "repository": "https://huggingface.co/lerobot-data-collection/folding_final",
+      "commit": "695abe40dbf3aac04efda59c1501d748681fa0fb",
+      "license": "Apache-2.0",
+      "inspected_paths": [
+        "README.md", "config.json", "policy_preprocessor.json",
+        "policy_postprocessor.json", "train_config.json"
+      ],
+      "state": "file_inventory_and_text_configs_read; no_weights_downloaded; no_inference_run",
+      "compatibility_notes": [
+        "16 position features ordered right arm then left arm; separate three-camera input.",
+        "Relative joint actions exclude grippers; preprocessing and postprocessing statistics must travel with weights.",
+        "Generic ACT/so100 model-card commands are not a validated OpenArm deployment recipe.",
+        "rtc_config is null in saved config; runtime scheduling must be recovered separately.",
+        "Training dataset ID is lerobot-data-collection/level2_final_quality3; identity with public HQ snapshot not verified."
+      ]
+    },
+    {
+      "name": "high_quality_folding_dataset",
+      "repository": "https://huggingface.co/datasets/lerobot/high_quality_folding",
+      "commit": "c9eb858d4b84e520edecbda84a3534c3c1e78436",
+      "license": "Apache-2.0",
+      "inspected_paths": ["meta/info.json"],
+      "state": "metadata_and_remote_file_listing_read; dataset_not_downloaded_or_quality_audited"
+    },
+    {
+      "name": "folding_hardware_modifications",
+      "repository": "https://huggingface.co/datasets/lerobot/openarms-hardware-modifications",
+      "commit": "ffe34b93c070343042eb9412fbfeffce16139947",
+      "license": "Apache-2.0",
+      "state": "file_listing_and_card_metadata_inspected; CAD_not_downloaded_or_fit_checked; not_selected_for_manufacture"
+    },
+    {
+      "name": "unfolding_robotics_report",
+      "repository": "https://huggingface.co/spaces/lerobot/robot-folding",
+      "commit": "dfde81fa54352deb8fc6c1e61d05a8b5264ab0e5",
+      "report_url": "https://lerobot-robot-folding.hf.space/",
+      "state": "live_report_read; space_revision_recorded_from_API; no_claim_that_rendered_page_was_built_from_this_exact_revision"
     }
   ],
   "documentation": [
     "https://docs.openarm.dev/setup/openarm-setup/",
     "https://docs.openarm.dev/teleop/",
     "https://docs.openarm.dev/tutorial/data-collection-webxr/",
-    "https://docs.openarm.dev/hardware/openarm-ker/general/"
+    "https://docs.openarm.dev/hardware/openarm-ker/general/",
+    "https://huggingface.co/docs/lerobot/v0.5.1/openarm",
+    "https://lerobot-robot-folding.hf.space/"
   ],
   "unresolved": [
-    "Physical inventory, selected side, supplier hardware revision and total budget are unconfirmed.",
+    "Bimanual followers are the agreed task configuration; physical inventory, supplier revisions, workspace dimensions and total budget remain unconfirmed.",
+    "Reference folding hardware includes a 5 cm upper-arm extension and custom jaws; stock OpenArm 2.0 reach, gripper compatibility and source hardware revision mapping need review.",
+    "Pinned follower feature declarations include position, velocity and torque, while the checkpoint expects 16 position channels; explicit field selection and ordering need runtime validation.",
+    "Mini README single-port example differs from the pinned dual-port config; calibration and sign/remap/gripper conversions must be verified.",
     "The KER documentation contains an unreleased notice while the hardware repository and local archive include KER CAD and BOM. End-to-end reproduction is unverified.",
     "Motor firmware, CAN adapter, host control environment and collection stack versions still need a matched compatibility check.",
     "Custom shell geometry, attachments, mass properties, collision clearance and thermal effect have not been designed or measured."
