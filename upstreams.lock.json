@@ -74,7 +74,7 @@
       "commit": "0628e081cfe105dc4156dba5099c2274c4aca2e8",
       "license_statement": "README declares Apache-2.0; full hardware provenance not audited",
       "inspected_paths": ["README.md", "BOM.md"],
-      "state": "selected_leader_plan; existing_servo_models_and_counts_unverified; CAD_listings_and_build_docs_inspected; no_hardware_or_manufacturing_validation"
+      "state": "selected_leader_plan; 12_purchased_SER0069_servos_identified_with_different_vendor_ratio; reuse_compatibility_and_availability_unverified; CAD_listings_and_build_docs_inspected; no_hardware_or_manufacturing_validation"
     },
     {
       "name": "folding_final",
