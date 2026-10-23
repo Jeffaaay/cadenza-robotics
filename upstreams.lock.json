@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "checked_date": "2026-10-22",
-  "purpose": "Source snapshots inspected for a fixed-table bimanual OpenArm folding platform; hardware/software/model compatibility and real-robot reproduction have not been validated.",
+  "purpose": "Source snapshots for an initial fixed-table single OpenArm with gripper and Mini leader; bimanual folding is a deferred reference. Hardware/software/model compatibility and real-robot reproduction have not been validated.",
   "sources": [
     {
       "name": "openarm_hardware",
@@ -74,7 +74,7 @@
       "commit": "0628e081cfe105dc4156dba5099c2274c4aca2e8",
       "license_statement": "README declares Apache-2.0; full hardware provenance not audited",
       "inspected_paths": ["README.md", "BOM.md"],
-      "state": "selected_leader_plan; 12_purchased_SER0069_servos_identified_with_different_vendor_ratio; reuse_compatibility_and_availability_unverified; CAD_listings_and_build_docs_inspected; no_hardware_or_manufacturing_validation"
+      "state": "selected_single_leader_plan_needs_8_servos; 12_purchased_SER0069_servos_identified_with_different_vendor_ratio; reuse_and_single_arm_software_adaptation_unverified; CAD_listings_and_build_docs_inspected; no_hardware_or_manufacturing_validation"
     },
     {
       "name": "folding_final",
@@ -107,7 +107,7 @@
       "repository": "https://huggingface.co/datasets/lerobot/openarms-hardware-modifications",
       "commit": "ffe34b93c070343042eb9412fbfeffce16139947",
       "license": "Apache-2.0",
-      "state": "selected_reference_geometry_plan; file_listing_and_card_metadata_inspected; CAD_not_downloaded_or_fit_checked; manufacturing_release_pending_base_revision_interfaces_and_materials"
+      "state": "deferred_bimanual_reference_geometry; file_listing_and_card_metadata_inspected; CAD_not_downloaded_or_fit_checked; manufacturing_release_pending_base_revision_interfaces_and_materials"
     },
     {
       "name": "unfolding_robotics_report",
@@ -128,12 +128,12 @@
     "https://docs.arducam.com/Raspberry-Pi-Camera/Native-camera/12MP-IMX708/"
   ],
   "unresolved": [
-    "Selected platform plan: two OpenArm followers with reference extensions and jaws, two Mini leaders, three reference RGB cameras and an extrusion fixture. Partial existing-equipment evidence is in BUILD.md; availability, source/supplier revisions, workspace dimensions and total additional budget remain unconfirmed.",
-    "A DFRobot order confirms 12 ST3215 SER0069 servos, shipped 2026-02-28; vendor specs are 7.4V and 1:345. Mini's reference BOM requires 16 C046 servos at 1:147. Reuse compatibility, current availability and other stock remain unverified; do not duplicate purchases or treat Feetech servos as Damiao actuators.",
-    "Reference 5 cm upper-arm extension and jaw_normal are selected as alignment targets. Exact original OpenArm base revision, compatibility with local 2.0 CAD, materials and fabrication/attachment details remain unresolved; no manufacturing release.",
-    "OpenArm 2.0 BOM B0495 is an AR0234 camera; the folding report links a wide-angle fixed-focus IMX708 USB UVC camera. Arducam B0305 specs match that description by inference; exact delivered kit, optical setup and near-field image quality remain to verify. D405 is not counted as an equivalent baseline camera.",
+    "Selected first build: one OpenArm follower with matching gripper (right side provisionally for costing), one Mini, one compatible runtime CAN channel, proper single-arm power/stopping/fixture and reuse of D405 if suitable. Second arm, new three-camera layout and folding modifications are deferred. Availability, matched revisions, workspace and final additional cost remain unconfirmed; do not halve shared equipment costs.",
+    "A DFRobot order confirms 12 ST3215 SER0069 servos, shipped 2026-02-28; vendor specs are 7.4V and 1:345. One Mini requires 8 C046 servos at 1:147 (16 for a future pair). Reuse compatibility and availability remain unverified; allocate at most 8 to the current build, and do not treat Feetech servos as Damiao actuators.",
+    "Reference 5 cm upper-arm extension and jaw_normal are deferred. Exact folding-reference base revision, compatibility with local 2.0 CAD, materials and fabrication/attachment details remain unresolved; no manufacturing release.",
+    "OpenArm 2.0 BOM B0495 is AR0234; the folding report links wide-angle fixed-focus IMX708 USB UVC. B0305 matching is an inference requiring delivered-kit verification. Existing D405 is the initial single-arm observation/collection candidate, not an equivalent replacement for the deferred three-camera checkpoint inputs.",
     "Pinned follower feature declarations include position, velocity and torque, while the checkpoint expects 16 position channels; explicit field selection and ordering need runtime validation.",
-    "Mini README single-port example differs from the pinned dual-port config; calibration and sign/remap/gripper conversions must be verified.",
+    "Mini README single-port example differs from the pinned dual-port config. Single Mini to openarm_follower requires software adaptation/validation of 8 action channels, calibration and sign/remap/gripper conversions; the 16-action folding checkpoint is not a drop-in single-arm policy.",
     "The KER documentation contains an unreleased notice while the hardware repository and local archive include KER CAD and BOM. End-to-end reproduction is unverified.",
     "Motor firmware, CAN adapter, host control environment and collection stack versions still need a matched compatibility check.",
     "Custom shell geometry, attachments, mass properties, collision clearance and thermal effect have not been designed or measured."
