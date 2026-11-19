@@ -1,0 +1,313 @@
+{
+  "sources": {
+    "smolvla": {
+      "kind": "model",
+      "repo": "openrob-furg/smolvla-openarm-single-pick-place-lego-n100-targeted50",
+      "revision": "c6f2e90bee01487c51dd597d2dd100b585354c44"
+    },
+    "act": {
+      "kind": "model",
+      "repo": "enactic/act-openarm-2-cell-pick_up_cube_mujoco",
+      "revision": "27cbd9a205d2e006aef518a54a3c53cf8e421a13"
+    },
+    "vlm": {
+      "kind": "model",
+      "repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+      "revision": "4cde9d208e19519c36917aa170fffc7e381aa0ad"
+    },
+    "smolvla-data": {
+      "kind": "dataset",
+      "repo": "openrob-furg/openarm-lego-n100-targeted50",
+      "revision": "9ea38b57aa9d7c0290f96351a0389bb1fa3f366c"
+    },
+    "act-data": {
+      "kind": "dataset",
+      "repo": "k1000dai/openarm-2-cell-pick_up_cube_mujoco-lerobot",
+      "revision": "c37b77992de5004bf0f6f582cbe2e369fc8f9fe4"
+    }
+  },
+  "files": [
+    {
+      "alias": "smolvla",
+      "path": "README.md",
+      "sha256": "e0f043d3ba29ec37172a2d0223464fad23f9811704a21f29c1ddea377b5338ef",
+      "bytes": 2826
+    },
+    {
+      "alias": "smolvla",
+      "path": "config.json",
+      "sha256": "e80015b5adb9d6b7d86b1f4b642d8cbf16679500704b5709118b63b9c76a77df",
+      "bytes": 2493
+    },
+    {
+      "alias": "smolvla",
+      "path": "model.safetensors",
+      "sha256": "81362c8af46c91bc68ab6526f0205e7576d1dc526a8bdd0a0dec8c9c7f1cbd2a",
+      "bytes": 906712520
+    },
+    {
+      "alias": "smolvla",
+      "path": "policy_postprocessor.json",
+      "sha256": "f24875ca8641ab68c5aa70b8785537222e2bea90d4a43365a0b9dc0a64cbe6dc",
+      "bytes": 660
+    },
+    {
+      "alias": "smolvla",
+      "path": "policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+      "sha256": "7f2af4a86cbf04194735d4cfcb04976c79cd7fcb5f886ca408578ef4e832db26",
+      "bytes": 7848
+    },
+    {
+      "alias": "smolvla",
+      "path": "policy_preprocessor.json",
+      "sha256": "c96a4d09a212e63991d2cf5e3ef6bd5ccdf62055f24d72783da8d5d1429219ca",
+      "bytes": 2055
+    },
+    {
+      "alias": "smolvla",
+      "path": "policy_preprocessor_step_5_normalizer_processor.safetensors",
+      "sha256": "7f2af4a86cbf04194735d4cfcb04976c79cd7fcb5f886ca408578ef4e832db26",
+      "bytes": 7848
+    },
+    {
+      "alias": "smolvla",
+      "path": "train_config.json",
+      "sha256": "da2d52abacbdebd0a091d6e60a0de4e51735a6b97642de777e3aad35ee160cfe",
+      "bytes": 7404
+    },
+    {
+      "alias": "act",
+      "path": "README.md",
+      "sha256": "a81308453f5bb1944bc7dbf26a5547a564ba250302aeb0d08f9dc249022d2fab",
+      "bytes": 2194
+    },
+    {
+      "alias": "act",
+      "path": "config.json",
+      "sha256": "2273df48c784cf5b4ab0f05709f327c3871b922be3d30e7c920f9a1af945c371",
+      "bytes": 2292
+    },
+    {
+      "alias": "act",
+      "path": "model.safetensors",
+      "sha256": "a4e835448c0d7535d59590423cee2b7f86ff54369c7c16dfd4bd78d657eb56dc",
+      "bytes": 206781696
+    },
+    {
+      "alias": "act",
+      "path": "policy_postprocessor.json",
+      "sha256": "c1e9e8e62f40b36f4e214a693f1adbd83563aa5e423161c98dac78cefcd6ec16",
+      "bytes": 661
+    },
+    {
+      "alias": "act",
+      "path": "policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+      "sha256": "eae879b729e0b19de2018721ddc6c221967dc57a84f5be3f745c5e245ae8c5d1",
+      "bytes": 8932
+    },
+    {
+      "alias": "act",
+      "path": "policy_preprocessor.json",
+      "sha256": "a4f40b9e8a423ec6e9ca33eedaff12712422bc4718406d4b1431043b7a920f2d",
+      "bytes": 1876
+    },
+    {
+      "alias": "act",
+      "path": "policy_preprocessor_step_3_normalizer_processor.safetensors",
+      "sha256": "d5fccfff0eae31f509a3260d72b063ec3b1390384be8f7eecd4d5369e6ae30df",
+      "bytes": 8956
+    },
+    {
+      "alias": "act",
+      "path": "train_config.json",
+      "sha256": "75a8698bbff5ec3cbdf084e639f90e19ed7f6d4f89ed1ef60fc0ab3990e28536",
+      "bytes": 6805
+    },
+    {
+      "alias": "vlm",
+      "path": "README.md",
+      "sha256": "afc4bf5f519438b221a84292979a9eac3de4b9726e5baaa82033c55f59f9f7a5",
+      "bytes": 10865
+    },
+    {
+      "alias": "vlm",
+      "path": "added_tokens.json",
+      "sha256": "74135b8664b56088c0006f1c8e848d79a8eba003411f72ebf1dc2ee96227be3a",
+      "bytes": 4739
+    },
+    {
+      "alias": "vlm",
+      "path": "chat_template.json",
+      "sha256": "9bc4f36b8d064f824368648472a4a09268c4bbf9bf930f04fae47f1f596dae92",
+      "bytes": 517
+    },
+    {
+      "alias": "vlm",
+      "path": "config.json",
+      "sha256": "ea6bc1237e96247f6258de3e202e2e62b93d6f386dc47e7b36b5588bf3a15e17",
+      "bytes": 3767
+    },
+    {
+      "alias": "vlm",
+      "path": "generation_config.json",
+      "sha256": "34835060c9f0f74d1acb456cc72ca32746d3843d9eb5f578f9cbffac1d2eb840",
+      "bytes": 136
+    },
+    {
+      "alias": "vlm",
+      "path": "merges.txt",
+      "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+      "bytes": 466391
+    },
+    {
+      "alias": "vlm",
+      "path": "preprocessor_config.json",
+      "sha256": "149e315d9410368e5491455bb06e0f763426e9e56cca731c13b24404a29b6374",
+      "bytes": 599
+    },
+    {
+      "alias": "vlm",
+      "path": "processor_config.json",
+      "sha256": "f3ad45028447b3562b4752be0d5916d6806c1ef589091a469608dcf0faa1737c",
+      "bytes": 67
+    },
+    {
+      "alias": "vlm",
+      "path": "special_tokens_map.json",
+      "sha256": "2dfea2a426162316ff1567c82bc6d36d9690cd9f90455f075c77daca78b45c60",
+      "bytes": 868
+    },
+    {
+      "alias": "vlm",
+      "path": "tokenizer.json",
+      "sha256": "5ece781dc8d2b2f3e2f289ca0ae50b17cfc27dd27bfe7971bb8241e0b964331a",
+      "bytes": 3548256
+    },
+    {
+      "alias": "vlm",
+      "path": "tokenizer_config.json",
+      "sha256": "8b262ec2acb7773caac7b1e59edf921671cdb4c7c815a9c714242540d3fcb531",
+      "bytes": 28713
+    },
+    {
+      "alias": "vlm",
+      "path": "vocab.json",
+      "sha256": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79",
+      "bytes": 800662
+    },
+    {
+      "alias": "smolvla-data",
+      "path": "README.md",
+      "sha256": "5a739964322e50d641c9a9380868d359cbb5a6e8e576e712b84fb2bdd0d15a22",
+      "bytes": 3323
+    },
+    {
+      "alias": "smolvla-data",
+      "path": "data/chunk-000/file-000.parquet",
+      "sha256": "b5a6b010323f08768b628b3bd84988019849f9ce5af30513748243f7ba527d9d",
+      "bytes": 2260275
+    },
+    {
+      "alias": "smolvla-data",
+      "path": "meta/episodes/chunk-000/file-000.parquet",
+      "sha256": "7f57d29967e09bc542218ec774574629297e5d9d048cd510ce31e831bf896401",
+      "bytes": 333919
+    },
+    {
+      "alias": "smolvla-data",
+      "path": "meta/info.json",
+      "sha256": "9ba1675f7779399e7e333a65dfa421ff7e5b6a9385f31c45a6c035599003dc36",
+      "bytes": 3874
+    },
+    {
+      "alias": "smolvla-data",
+      "path": "meta/stats.json",
+      "sha256": "dbfbdca9838d687f028aa8b260c28e88dbdf6f096eda1da69896c56cb6c40038",
+      "bytes": 14427
+    },
+    {
+      "alias": "smolvla-data",
+      "path": "meta/tasks.parquet",
+      "sha256": "50b52fdbca77e70de8a2c4fb7d78642241160396b702682b9d9887f15a2ec053",
+      "bytes": 2089
+    },
+    {
+      "alias": "smolvla-data",
+      "path": "videos/observation.images.cam_chest/chunk-000/file-000.mp4",
+      "sha256": "1ffa0396056d815a45e4de14193148cf1e97ea7fabec0cc0782fbc0ea67a2286",
+      "bytes": 276224389
+    },
+    {
+      "alias": "smolvla-data",
+      "path": "videos/observation.images.right_cam_wrist/chunk-000/file-000.mp4",
+      "sha256": "66d3246e8c55b0f17b93300d07b563f2221fe90ce23005d0509e51560923adcc",
+      "bytes": 184564985
+    },
+    {
+      "alias": "act-data",
+      "path": "README.md",
+      "sha256": "ff4adba5b999956caae90782d71002941efc09c17cc898e27da020cc5ca947f8",
+      "bytes": 8826
+    },
+    {
+      "alias": "act-data",
+      "path": "data/chunk-000/file-000.parquet",
+      "sha256": "e03742cc5ca55a429a2d16f8ed6d97872311b704e27468ddf7d16f1340d8cf3e",
+      "bytes": 1075141
+    },
+    {
+      "alias": "act-data",
+      "path": "meta/episodes/chunk-000/file-000.parquet",
+      "sha256": "3e6cd8f9b512cd5e07bd4d6e51160091e48148b42217ac13b6410bf05b7f8734",
+      "bytes": 190614
+    },
+    {
+      "alias": "act-data",
+      "path": "meta/info.json",
+      "sha256": "9e99a4f0e93f724fffde2b2e13bd61f882a7d8840c040900482ee32635277ee3",
+      "bytes": 6422
+    },
+    {
+      "alias": "act-data",
+      "path": "meta/stats.json",
+      "sha256": "92d9bbb4d1b693ab163788a742104cff0140e8703f833f583ca09a16e9da5888",
+      "bytes": 19610
+    },
+    {
+      "alias": "act-data",
+      "path": "meta/tasks.parquet",
+      "sha256": "203db40a53a9d768b55498373a53911a031b36e0323c36d6fa66d52744970760",
+      "bytes": 2068
+    },
+    {
+      "alias": "act-data",
+      "path": "videos/observation.images.ceiling/chunk-000/file-000.mp4",
+      "sha256": "d291037c33ad52b9feb3de6d84bd09fb824cb4de1cb7face93f8050a066ac24c",
+      "bytes": 15747701
+    },
+    {
+      "alias": "act-data",
+      "path": "videos/observation.images.head_left/chunk-000/file-000.mp4",
+      "sha256": "8140a0eda0f975872b7110efa466f85882591bdcc142d10e59046a006ca5a4f7",
+      "bytes": 45978071
+    },
+    {
+      "alias": "act-data",
+      "path": "videos/observation.images.head_right/chunk-000/file-000.mp4",
+      "sha256": "eb22df2c9e60daa62820e4c69c78257610f75ca0d303d007dad38e15271a9cc7",
+      "bytes": 41925149
+    },
+    {
+      "alias": "act-data",
+      "path": "videos/observation.images.wrist_left/chunk-000/file-000.mp4",
+      "sha256": "464e1ef527c01a90acd12d6b6d8045c943f0b8cef9e10320f632cf49d9c1331f",
+      "bytes": 18347760
+    },
+    {
+      "alias": "act-data",
+      "path": "videos/observation.images.wrist_right/chunk-000/file-000.mp4",
+      "sha256": "2fb5049be3657edbfccb97767749396557e963db3ea7e063fd2fc6cc1d00cd42",
+      "bytes": 31866960
+    }
+  ]
+}

@@ -10,6 +10,7 @@
 - Mini 文件与打印顺序已准备，但它是 Feetech 示教器，不能当成 Damiao 主臂的打印结构包。两侧输入映射、舵机/供电兼容性及现有零件完整性仍待验证。
 - 第一组承力试件为 J6_A/B/C 闭合梁，先接口试片和独立台架验证。肩部、腕部及固定上半身的 PLA 候选也属于当前目标；轮架移到后续，不以先采购原金属骨架为条件。
 - 平台门槛见 [M1](README.md#research-milestones)，材料进入条件与双臂数据接口见 [BASELINES.md](BASELINES.md)。
+- 当前运行主机实测为 RTX 5060 Laptop、8151 MiB 显存、约 32 GB 系统内存，Windows/Python 3.12.10；不是下方历史订单中的 RTX 4060 Ti 16 GB 台式机。已在独立环境完成 [SmolVLA/ACT 离线推理](experiments/offline-inference/README.md)，不据此推断 Jetson、folding_final、训练或实机运行性能。
 
 ### 历史询价依据（2026-10-22）
 

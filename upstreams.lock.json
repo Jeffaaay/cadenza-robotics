@@ -155,5 +155,12 @@
     "New geometry, attachment details, mass/center of gravity, shoulder width, collision clearance and thermal effects remain unvalidated; do not inherit the prior extra 85 mm shoulder offset per side."
   ],
   "project_scope_updated_date": "2026-11-19",
-  "current_phase": "Fixed bimanual upper body first. Offline model inference may run before hardware; closed-loop tasks require validated structure/control. No model execution or hardware capability is established by this scope update."
+  "current_phase": "Fixed bimanual upper body first. Recorded-observation SmolVLA and ACT inference measured on 2026-11-19; see offline_inference. Closed-loop tasks and PLA structure/control validation remain incomplete.",
+  "offline_inference": {
+    "measured_date": "2026-11-19",
+    "source_lock": "experiments/offline-inference/sources.lock.json",
+    "report": "experiments/offline-inference/README.md",
+    "status": "smolvla_and_act_recorded_observation_inference_passed",
+    "scope": "No hardware actuation, task success evaluation, closed-loop simulation, training or PLA validation."
+  }
 }

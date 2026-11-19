@@ -13,6 +13,7 @@ datasets/
 checkpoints/
 vendor/
 downloads/
+work/
 
 # Local machine configuration and credentials
 .env
