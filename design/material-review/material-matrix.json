@@ -23,7 +23,8 @@
       "baseline_change": "第一版保留金属。若改造，用标准短型材/板材承担力流，PLA 做定位与外形；禁止按原 12 mm 包络直接照抄打印。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "肩根改为带闭合背腔和宽支承面的 PLA 座；先打印电机/安装孔配合试片，再测整臂根部弯扭。用穿透螺栓、可采购套筒和防转键，保持原肩轴位置；不直接照抄原金属外形。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a2",
@@ -54,7 +55,8 @@
       "baseline_change": "保留关键金属配合面和压块；外围非接触体积可打印，但需重新划分接口，不能仅加热熔螺母。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "重画 PLA 分体夹持座和加强桥，增大承压面并留真实电机接口；定位/夹紧与主梁分工，验证热态夹紧漂移。标准套筒可用，定制金属压块不列为默认前置条件。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a3",
@@ -85,7 +87,8 @@
       "baseline_change": "第一版保留薄板；若取消整片板，应由金属耳座＋带闭合截面的打印件替代，不能只增加填充率。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "两片薄板优先合并为 PLA 箱形或带横向联系的双侧结构，圆角耳根、穿透紧固；通过新截面承载，检查肩部扫掠及层间拉开。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a4",
@@ -109,7 +112,8 @@
       "baseline_change": "第一版保留金属，可评估平板切割/钻孔替代复杂加工；若打印必须改截面并保留金属法兰。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "把原 5 mm 平板重新设计成带深截面和圆角过渡的 PLA 输出连接体，沿电机孔圈分布载荷；先验证孔座、输出面跳动与板外弯曲。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a5",
@@ -133,7 +137,8 @@
       "baseline_change": "保留金属接口块；允许把不承力的罩体独立打印。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "采用 PLA 闭合转接座和宽根部筋，保留既有电机安装基准；用实际孔轴试片确定配合，再验证上臂根部持载、温升和松弛。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a6",
@@ -157,7 +162,8 @@
       "baseline_change": "保留首版；第二轮可与相邻打印壳合并为封闭承力段，保留端部压板/套筒。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "用 PLA 带筋桥接/端盖整合支承面，避免孤立薄耳和仅靠塑料螺纹传力；验证横向变形、孔位和全范围间隙。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a7",
@@ -181,7 +187,8 @@
       "baseline_change": "适合后续改成闭合箱形/双侧带筋 PLA 长段；圆孔端保留金属轴承座或夹片，穿透螺栓＋金属定长套筒。不能仅在原薄板上加厚。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "J4_A 在 J6 及 J4_D/E 试验之后推进：用 PLA 闭合梁代替原薄板，加大端部过渡；保留原轴线/臂长作对照，重算质量、挠度和碰撞。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a8",
@@ -212,7 +219,8 @@
       "baseline_change": "保留小型金属端部；长段可以换 PLA，不要求连整个框架都 CNC。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "精密接口也纳入 PLA 重设计：分体轴承座、宽支承肩台和穿透夹紧；轴承与标准轴保留，打印配合先试片/实测，不把原孔尺寸当成成品公差。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a9",
@@ -243,7 +251,8 @@
       "baseline_change": "改为一体打印的中空连接体，保留两端金属小法兰/轴承座；保持原轴间距，先不缩臂。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "J4_D/E 作为第二组结构试件，合并成带筋闭合 PLA 连杆，端部局部加厚并采用可更换标准轴套；先测扭转与热态孔距稳定。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a10",
@@ -267,7 +276,8 @@
       "baseline_change": "先核实新版图纸/材料；若降成本，优先标准金属座＋打印外围，不直接宣布它是 6061。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "先核对 J5_A_rotate90 实物接口和载荷，再设计 PLA 带筋法兰/连接座；原材质尚未确认不妨碍提出候选，但不得拿旧 J5_A 材质当验证依据。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a11",
@@ -298,7 +308,8 @@
       "baseline_change": "优先结构试验件：PLA 闭合薄壁梁＋纵向筋，端部金属耳/套；保持外包络，新增筋朝空腔内长。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "第一组承力原型：J6_A/B 与 C 合并为 PLA 闭合薄壁梁，端部短而宽、内侧加筋，使用穿透螺栓和可采购定长套筒；先做独立台架件，量挠度、扭转、温升与持载漂移。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a12",
@@ -328,7 +339,8 @@
       "baseline_change": "与 J6_A/B 的打印闭合体整合，减少拼缝；保留穿透紧固和定长金属套筒。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "与 J6_A/B 一体或键合拼装为 PLA 闭合梁，承担侧板间距和抗扭；拼接面传剪不能只靠螺栓摩擦，左右形状分别核对。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a13",
@@ -352,7 +364,8 @@
       "baseline_change": "首版保留金属；确认仅作非受力罩支座之后才下调等级。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "核实环形件是否承担止挡或轴向夹持，再设计 PLA 加宽分体环；标准销/轴可保留。若是硬止挡，单独测冲击与开口根部，不能凭静态夹紧通过。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a14",
@@ -376,7 +389,8 @@
       "baseline_change": "保留金属薄环；外罩和线缆支架打印。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "腕部薄金属环改为带轴向筋的 PLA 分体环/壳，保持电机接口和相机视野；先检查增加截面后能否满足细腕包络，再做热态游隙试验。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a15",
@@ -407,7 +421,8 @@
       "baseline_change": "保留轴/孔所在的小金属块。可把跨接外围改 PLA，但先不把短精密件当优先省钱目标。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "把短耳座与桥接件合并为 PLA 支架，凸轴功能优先由现成标准轴/销承担；轴承孔独立试配、支承间距实测，避免直接打印耐磨转轴。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "a16",
@@ -444,7 +459,8 @@
       "baseline_change": "保留金属关键路径；若合并重设计，要把跨接做成闭合截面并留金属轴/法兰。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "以闭合 PLA 腕末连接体替代细窄跨接/法兰组合，沿孔圈分布载荷；标准轴套、螺栓可保留，先测偏心弯矩、重复定位与层间开裂。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "e1",
@@ -468,7 +484,8 @@
       "baseline_change": "首版保留原加工基座；第二轮可评估金属轴座＋PLA 箱体组合。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "夹爪电机基座优先重画为 PLA 箱体，轴承座之间加横向联系并留散热间隙；验证齿轮中心距、堵转限流下的变形及热态平行度。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "e2",
@@ -512,7 +529,8 @@
       "baseline_change": "保留金属接口，夹爪外壳另打印；不可用 v1 滑轨夹爪材料表给这些 v2 件定材。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "合并为 PLA 工具接口和支承体，保持现有电机、齿轮、轴承的工作位置；通过试片、公差实测与循环抓取确定配合，不默认需要整套加工接口。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "e3",
@@ -543,7 +561,8 @@
       "baseline_change": "保留金属转轴/轮毂；可研究标准轴＋夹紧式轮毂替代定制件，必须匹配接口。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "优先拆分为现成标准金属轴/销＋PLA 轮毂/连接体，检查止转和轴向定位；尚无匹配标准轴规格，可能仍是少量金属例外，不能声称已消除全部定制轴加工。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "e4",
@@ -574,7 +593,8 @@
       "baseline_change": "可先做 PLA 加筋指根，驱动孔/轴孔保留金属衬套和压板；须同时限制夹持力。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "采用 PLA 加筋指根、短粗圆角过渡和标准轴套/穿透螺栓，夹持力与堵转电流同时标定；物品轻不代表夹持反力小。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "e5",
@@ -592,7 +612,8 @@
       "baseline_change": "优先 PLA 指体＋可更换橡胶/硅胶/泡棉接触垫；短粗指根、圆角、穿透螺栓，避开视觉区域。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "优先 PLA 指体＋可更换橡胶/硅胶/泡棉接触垫；短粗指根、圆角、穿透螺栓，避开视觉区域。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "e6",
@@ -622,7 +643,8 @@
       "baseline_change": "优先短而带三角筋的 PLA 支架＋螺钉/螺母和线缆卸力；留电机散热间隙。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "优先短而带三角筋的 PLA 支架＋螺钉/螺母和线缆卸力；留电机散热间隙。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "p1",
@@ -646,7 +668,8 @@
       "baseline_change": "普通 PLA 分件打印可作为首版；螺钉可拆、圆角、适度通风；别紧贴电机或夹住转动部件。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "普通 PLA 分件打印可作为首版；螺钉可拆、圆角、适度通风；别紧贴电机或夹住转动部件。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "p2",
@@ -664,7 +687,8 @@
       "baseline_change": "PLA 线夹＋软内衬，圆滑走线，预留活动余量。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "PLA 线夹＋软内衬，圆滑走线，预留活动余量。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "h1",
@@ -839,7 +863,8 @@
       "baseline_change": "保留标准件；穿透螺栓配定长金属套筒、压板和防转键。套筒端面对接金属面；靠大垫片仍不能消除 PLA 蠕变。",
       "current_route": "retain_standard_hardware",
       "pla_first_path": "保留标准件；穿透螺栓配定长金属套筒、压板和防转键。套筒端面对接金属面；靠大垫片仍不能消除 PLA 蠕变。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "h2",
@@ -863,7 +888,8 @@
       "baseline_change": "首版保留原采购齿轮；打印齿轮另做消耗性试验，不和结构改版同时引入。",
       "current_route": "retain_standard_hardware",
       "pla_first_path": "首版保留原采购齿轮；打印齿轮另做消耗性试验，不和结构改版同时引入。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "h3",
@@ -885,7 +911,8 @@
       "baseline_change": "优先保留采购垫片；0.5 mm 功能垫片不以普通 PLA 薄片直接替代。",
       "current_route": "retain_standard_hardware",
       "pla_first_path": "优先保留采购垫片；0.5 mm 功能垫片不以普通 PLA 薄片直接替代。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "b1",
@@ -904,8 +931,9 @@
       "baseline_decision": "keep",
       "baseline_change": "原版仅作为受力路径参考。轮式版可改高度与形状，但无需复制 750 mm 立柱或厚底板。",
       "current_route": "upstream_reference_only",
-      "pla_first_path": "原铝型材立柱和桌面底座仅作参考，轮式方案不照搬采购。新结构按 b2–b4 的 PLA 方案重新设计和验证。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "pla_first_path": "本阶段可借鉴原固定支承的载荷路径；轮式改版留后续。原铝型材立柱和桌面底座仅作参考，轮式方案不照搬采购。新结构按 b2–b4 的 PLA 方案重新设计和验证。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "b2",
@@ -920,7 +948,8 @@
       "baseline_change": "候选：左右小金属接口板＋一根窄金属横梁/短型材＋PLA 外形。紧固力经套筒/金属面闭合；避免额外外移肩轴。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "默认研究窄截面 PLA 箱形肩桥，分段时使用承剪键、重叠连接和可采购紧固件；先验证双臂前伸与单臂侧伸。不得继承旧概念额外外移 85 mm/侧。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "b3",
@@ -934,8 +963,9 @@
       "baseline_decision": "newmetal",
       "baseline_change": "候选：一根金属矩形管或短型材主脊柱，上下小接板；PLA 打印线槽、电子仓和曲面外壳。全 PLA 分段躯干留作独立比较试样。",
       "current_route": "pla_first_redesign",
-      "pla_first_path": "默认研究带纵筋/隔板的 PLA 闭合躯干，按 P1S 成形空间分段；节点同时传弯矩和剪力。拉杆/套筒只解决对应功能，必须实测长期预紧、弯扭和热态漂移；金属脊柱保留为失败后的备选。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "pla_first_path": "本阶段只做固定上半身所需的短支承，不以完整高躯干为前置条件。默认研究带纵筋/隔板的 PLA 闭合躯干，按 P1S 成形空间分段；节点同时传弯矩和剪力。拉杆/套筒只解决对应功能，必须实测长期预紧、弯扭和热态漂移；金属脊柱保留为失败后的备选。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "b4",
@@ -949,8 +979,9 @@
       "baseline_decision": "newmetal",
       "baseline_change": "候选：小金属车架/横梁＋金属电机轮轴支座；PLA 外裙、轻载托盘。电池低置并固定；不预设一整块厚钢板压重。",
       "current_route": "pla_first_redesign",
-      "pla_first_path": "车架、电池托盘和轮组连接体优先 PLA 加筋箱体/模块化梁；轮轴、轴承、紧固件及现有电机保留。轮距、低位电池和支撑点由真实重心与制动/越缝试验确定，尚无可制造定稿。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "pla_first_path": "下半身已暂缓，本行仅保留后续候选，不安排当前制作/采购。车架、电池托盘和轮组连接体优先 PLA 加筋箱体/模块化梁；轮轴、轴承、紧固件及现有电机保留。轮距、低位电池和支撑点由真实重心与制动/越缝试验确定，尚无可制造定稿。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "deferred_lower_body"
     },
     {
       "id": "b5",
@@ -972,7 +1003,8 @@
       "baseline_change": "短支座、三角筋和穿透紧固的 PLA 候选。若以后加云台电机，要另评轴/轴承座；当前不加购。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "短支座、三角筋和穿透紧固的 PLA 候选。若以后加云台电机，要另评轴/轴承座；当前不加购。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "b6",
@@ -987,7 +1019,8 @@
       "baseline_change": "PLA 薄壳＋可拆布料/泡棉或局部软垫，露出散热/检修区；不为“像人”扩大肩架。P1S 单色即可，不依赖 AMS。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "PLA 薄壳＋可拆布料/泡棉或局部软垫，露出散热/检修区；不为“像人”扩大肩架。P1S 单色即可，不依赖 AMS。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     },
     {
       "id": "b7",
@@ -1009,8 +1042,10 @@
       "baseline_change": "若沿用此相机方案，可做短带筋 PLA 架＋穿透螺母；不是轮式机器人必须购买的部件。",
       "current_route": "pla_first_redesign",
       "pla_first_path": "若沿用此相机方案，可做短带筋 PLA 架＋穿透螺母；不是轮式机器人必须购买的部件。",
-      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。",
+      "phase": "upper_body_or_reference"
     }
   ],
-  "baseline_note": "baseline_decision/baseline_change retain the initial conservative material assessment. They are not the current procurement or manufacturing requirement. CAD colors encode this baseline only."
+  "baseline_note": "baseline_decision/baseline_change retain the initial conservative material assessment. They are not the current procurement or manufacturing requirement. CAD colors encode this baseline only.",
+  "current_phase": "阶段更新：当前只做可靠固定的双臂上半身，先验证 VLA/学习模型；下半身、轮式底盘和移动电池暂缓。短躯干/肩部支承须可靠固定；上臂自重、接口刚度和温升仍需验证。"
 }

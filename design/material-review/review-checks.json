@@ -34,10 +34,10 @@
     "cad-part-index.json": "326db496dc90c0746aeb52e79db6b8591bb8699b2671072d1babc378b9e3309d",
     "LICENSE-CERN-OHL-S-2.0.txt": "253ad3f89603e728abfa60c36fbcaf8225cf55c1eab12725f19fb3d74d647f3a",
     "load-calculation.json": "86b6f4e8519d3ef6f9a8ffa5f69d06ec1b22d084e3e0076cec9693986cd573a3",
-    "material-matrix.json": "9c0bb91b2797ca4c0efbc91385c77921271ecac29b4a89494004b4ffd9952a24",
+    "material-matrix.json": "0de08130262230402fbaf0204c185624cefbe6ef3e4b53f36baef366bca03161",
     "material-source-match.json": "e4ee835c8fb8ed1e8df9a7a6cd7398d92fc167a0ed186c24cfa76edff5a64ba5",
-    "openarm-material-review.html": "25e36caf327a68903a7f830d7c416bdb97ae407e7fad7e3c51492c69634a17b2",
-    "README.md": "1fe3598d27c1050721439ef4e145d65924ca826946081a32a7ed0a7056283a72",
+    "openarm-material-review.html": "bb5cc409f3daacca3ba0aa13d80c9a3f64ce16c45a9f1f96d72b40958450d0e2",
+    "README.md": "21d17503e684713a3ce2f84389cd1f2192a15c462f720a9f073f061606815ab4",
     "reproduce-cad-extraction.py": "bf4d92f1282cd79fa484a40acbd7c64fd9443eec163203d52d557360d094ac77",
     "reproduce-load-calculation.py": "815a79440066a5d9d69d9c3f040a9b5ea3141c1ad60ed3cfe2a08cd97396a87c"
   },

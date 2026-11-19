@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "checked_date": "2026-10-22",
-  "purpose": "Source snapshots for a bimanual OpenArm with purchased motors, PLA-first custom structures and a wheeled first version. checked_date retains the original source audit date; the 2026-11-19 material review records new local-file inspection without claiming all upstream sources were re-audited. Hardware/software/model compatibility and real-robot validation remain incomplete.",
+  "purpose": "Source snapshots for a bimanual OpenArm with purchased motors, PLA-first custom structures and a fixed upper-body first phase for VLA/learning-model experiments; lower body and mobile base deferred. checked_date retains the original source audit date; the 2026-11-19 material review records new local-file inspection without claiming all upstream sources were re-audited. Hardware/software/model compatibility and real-robot validation remain incomplete.",
   "sources": [
     {
       "name": "openarm_hardware",
@@ -154,5 +154,6 @@
     "NCT is the user-provided application term and remains undefined; do not silently rename it ACT.",
     "New geometry, attachment details, mass/center of gravity, shoulder width, collision clearance and thermal effects remain unvalidated; do not inherit the prior extra 85 mm shoulder offset per side."
   ],
-  "project_scope_updated_date": "2026-11-19"
+  "project_scope_updated_date": "2026-11-19",
+  "current_phase": "Fixed bimanual upper body first. Offline model inference may run before hardware; closed-loop tasks require validated structure/control. No model execution or hardware capability is established by this scope update."
 }
