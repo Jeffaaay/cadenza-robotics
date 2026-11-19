@@ -1,0 +1,205 @@
+{
+  "source": "v2/openarm_bimanual.xml",
+  "sha256": "bdcebc15daa0fb91bbe87e1f6fb58fd4373e4819f0fe5930532211faefbbb027",
+  "mujoco_version": "3.16.0",
+  "scope": "Local model inertials; not measured hardware. Forward kinematics and static gravity only; no motion rollout, collisions or strength certification.",
+  "body_masses_kg": {
+    "openarm_right_base_link": 1.14323,
+    "openarm_right_link1": 1.14167,
+    "openarm_right_link2": 0.277509,
+    "openarm_right_link3": 1.07386,
+    "openarm_right_link4": 0.634853,
+    "openarm_right_link5": 0.615659,
+    "openarm_right_link6": 0.475203,
+    "openarm_right_ee_base_link": 0.52832,
+    "openarm_right_ee_inner_finger": 0.125979,
+    "openarm_right_ee_outer_finger": 0.11372
+  },
+  "single_arm_including_base_and_gripper_kg": 6.130003,
+  "poses": [
+    {
+      "pose": "下垂",
+      "q_right_rad": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "object_point_world_m": [
+        0.0,
+        -0.1525,
+        -0.536
+      ],
+      "object_point_assumption": "EE body local [0,0,-0.100] m, not a measured grasp point",
+      "self_weight_base_moment_Nm": [
+        6.075858306705816,
+        -0.10257737421903447,
+        0.0
+      ],
+      "joints": [
+        {
+          "j": 1,
+          "gravity_empty_Nm": -0.07418929917302247,
+          "extra_per_kg_Nm": 0.0
+        },
+        {
+          "j": 2,
+          "gravity_empty_Nm": -0.03245187940256444,
+          "extra_per_kg_Nm": 0.0
+        },
+        {
+          "j": 3,
+          "gravity_empty_Nm": 0.0,
+          "extra_per_kg_Nm": 0.0
+        },
+        {
+          "j": 4,
+          "gravity_empty_Nm": 0.014714221220989532,
+          "extra_per_kg_Nm": 0.0
+        },
+        {
+          "j": 5,
+          "gravity_empty_Nm": 0.0,
+          "extra_per_kg_Nm": 0.0
+        },
+        {
+          "j": 6,
+          "gravity_empty_Nm": -0.03849337637126664,
+          "extra_per_kg_Nm": 0.0
+        },
+        {
+          "j": 7,
+          "gravity_empty_Nm": 0.045669039961160715,
+          "extra_per_kg_Nm": 0.0
+        }
+      ],
+      "gravity_jacobian_crosscheck_max_error_Nm": 2.0816681711721685e-16
+    },
+    {
+      "pose": "屈肘示例",
+      "q_right_rad": [
+        0.7,
+        0,
+        0,
+        1.1,
+        0,
+        0,
+        0
+      ],
+      "object_point_world_m": [
+        0.44946374254980165,
+        -0.1525,
+        -0.09646941927957195
+      ],
+      "object_point_assumption": "EE body local [0,0,-0.100] m, not a measured grasp point",
+      "self_weight_base_moment_Nm": [
+        6.075858306705816,
+        8.879899443916676,
+        0.0
+      ],
+      "joints": [
+        {
+          "j": 1,
+          "gravity_empty_Nm": 8.908287518962688,
+          "extra_per_kg_Nm": 4.409239314413554
+        },
+        {
+          "j": 2,
+          "gravity_empty_Nm": -0.024820566423749857,
+          "extra_per_kg_Nm": 0.0
+        },
+        {
+          "j": 3,
+          "gravity_empty_Nm": 0.020905941305479014,
+          "extra_per_kg_Nm": 0.0
+        },
+        {
+          "j": 4,
+          "gravity_empty_Nm": 4.262655977055136,
+          "extra_per_kg_Nm": 3.0188887018171697
+        },
+        {
+          "j": 5,
+          "gravity_empty_Nm": 0.045165619021582615,
+          "extra_per_kg_Nm": 0.0
+        },
+        {
+          "j": 6,
+          "gravity_empty_Nm": -0.5046234618501537,
+          "extra_per_kg_Nm": -0.9553445258915095
+        },
+        {
+          "j": 7,
+          "gravity_empty_Nm": -0.010376101541798004,
+          "extra_per_kg_Nm": 0.0
+        }
+      ],
+      "gravity_jacobian_crosscheck_max_error_Nm": 8.881784197001252e-16
+    },
+    {
+      "pose": "水平前伸",
+      "q_right_rad": [
+        1.5707963267948966,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "object_point_world_m": [
+        0.536,
+        -0.15250000000000002,
+        0.0
+      ],
+      "object_point_assumption": "EE body local [0,0,-0.100] m, not a measured grasp point",
+      "self_weight_base_moment_Nm": [
+        6.0758583067058165,
+        11.6689990264542,
+        0.0
+      ],
+      "joints": [
+        {
+          "j": 1,
+          "gravity_empty_Nm": 11.697387101500212,
+          "extra_per_kg_Nm": 5.25816
+        },
+        {
+          "j": 2,
+          "gravity_empty_Nm": 7.205764741017207e-18,
+          "extra_per_kg_Nm": 0.0
+        },
+        {
+          "j": 3,
+          "gravity_empty_Nm": 0.03245167234560198,
+          "extra_per_kg_Nm": 0.0
+        },
+        {
+          "j": 4,
+          "gravity_empty_Nm": 4.38056113058604,
+          "extra_per_kg_Nm": 3.09996
+        },
+        {
+          "j": 5,
+          "gravity_empty_Nm": 0.046378527389190516,
+          "extra_per_kg_Nm": 0.0
+        },
+        {
+          "j": 6,
+          "gravity_empty_Nm": -0.5271556055751447,
+          "extra_per_kg_Nm": -0.9809999999999995
+        },
+        {
+          "j": 7,
+          "gravity_empty_Nm": -1.0140563935481401e-17,
+          "extra_per_kg_Nm": 0.0
+        }
+      ],
+      "gravity_jacobian_crosscheck_max_error_Nm": 8.881784197001252e-16
+    }
+  ],
+  "source_url": "https://github.com/enactic/openarm_mujoco/blob/a3c8a57ec15d385e3c1dbd3fd090ee486b7f258c/v2/openarm_bimanual.xml"
+}

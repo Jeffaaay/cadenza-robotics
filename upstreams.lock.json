@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "checked_date": "2026-10-22",
-  "purpose": "Source snapshots for an initial fixed-table single OpenArm with gripper and Mini leader; bimanual folding is a deferred reference. Hardware/software/model compatibility and real-robot reproduction have not been validated.",
+  "purpose": "Source snapshots for a bimanual OpenArm with purchased motors, PLA-first custom structures and a wheeled first version. checked_date retains the original source audit date; the 2026-11-19 material review records new local-file inspection without claiming all upstream sources were re-audited. Hardware/software/model compatibility and real-robot validation remain incomplete.",
   "sources": [
     {
       "name": "openarm_hardware",
@@ -18,25 +18,33 @@
         {
           "path_in_archive_root": "OpenArm 2.0/OpenArm 2.0 BOM.xlsx",
           "local_sha256": "ff76d3e67799fee5a284725efd0b0469f6480b603070cc2f465c660d11fc46cc",
-          "scope": "Bimanual parts list; individual side selection remains necessary. No price column."
+          "scope": "Bimanual reference BOM; 38 custom manufacturing rows covered in the material review. Not an actual delivered inventory."
         },
         {
           "path_in_archive_root": "OpenArm 2.0/OpenArm_2.0.STEP",
           "local_sha256": "0f97a5fb308d5b09353aa67bbd32d7c08e55dc5629bcbe20c12f71c82ef13c94",
-          "scope": "Local CAD previously inspected in Fusion; manufacturing and load validation incomplete."
+          "scope": "73 selected single-side/support components extracted and rendered with ancestor transforms. PLA manufacturing and physical load validation incomplete."
         },
         {
           "path_in_archive_root": "OpenArm KER/OpenArm KER BOM.xlsx",
           "local_sha256": "49082ad2eb5ef2ad6fdc0767238c87f0c38e4a8e49cd8699cd5f7475d0703edc",
           "scope": "File and opening BOM rows inspected; full electrical and build completeness not audited."
         }
-      ]
+      ],
+      "material_review_date": "2026-11-19",
+      "material_review": "design/material-review/README.md"
     },
     {
       "name": "openarm_mujoco",
       "repository": "https://github.com/enactic/openarm_mujoco",
       "commit": "a3c8a57ec15d385e3c1dbd3fd090ee486b7f258c",
-      "state": "existing_local_checkout_clean; model files available; no Cadenza real-robot baseline"
+      "state": "existing_local_checkout_clean; model files available; no Cadenza real-robot baseline",
+      "material_review_date": "2026-11-19",
+      "inspected_file": {
+        "path": "v2/openarm_bimanual.xml",
+        "local_sha256": "bdcebc15daa0fb91bbe87e1f6fb58fd4373e4819f0fe5930532211faefbbb027",
+        "scope": "Three static poses and COM-Jacobian gravity cross-check; no claim that the local model is byte-identical to the pinned upstream commit. Not a PLA model or physical test."
+      }
     },
     {
       "name": "openarm_description",
@@ -73,8 +81,11 @@
       "repository": "https://github.com/pkooij/open-arms-mini",
       "commit": "0628e081cfe105dc4156dba5099c2274c4aca2e8",
       "license_statement": "README declares Apache-2.0; full hardware provenance not audited",
-      "inspected_paths": ["README.md", "BOM.md"],
-      "state": "selected_single_leader_plan_needs_8_servos; 12_purchased_SER0069_servos_identified_with_different_vendor_ratio; reuse_and_single_arm_software_adaptation_unverified; CAD_listings_and_build_docs_inspected; no_hardware_or_manufacturing_validation"
+      "inspected_paths": [
+        "README.md",
+        "BOM.md"
+      ],
+      "state": "bimanual_leader_candidate_requires_16_reference_servos; 12_purchased_SER0069_have_different_vendor_ratio; count_availability_reuse_and_8_per_side_16_combined_mapping_unverified; no_hardware_acceptance"
     },
     {
       "name": "folding_final",
@@ -82,8 +93,11 @@
       "commit": "695abe40dbf3aac04efda59c1501d748681fa0fb",
       "license": "Apache-2.0",
       "inspected_paths": [
-        "README.md", "config.json", "policy_preprocessor.json",
-        "policy_postprocessor.json", "train_config.json"
+        "README.md",
+        "config.json",
+        "policy_preprocessor.json",
+        "policy_postprocessor.json",
+        "train_config.json"
       ],
       "state": "file_inventory_and_text_configs_read; no_weights_downloaded; no_inference_run",
       "compatibility_notes": [
@@ -99,7 +113,9 @@
       "repository": "https://huggingface.co/datasets/lerobot/high_quality_folding",
       "commit": "c9eb858d4b84e520edecbda84a3534c3c1e78436",
       "license": "Apache-2.0",
-      "inspected_paths": ["meta/info.json"],
+      "inspected_paths": [
+        "meta/info.json"
+      ],
       "state": "metadata_and_remote_file_listing_read; dataset_not_downloaded_or_quality_audited"
     },
     {
@@ -107,7 +123,7 @@
       "repository": "https://huggingface.co/datasets/lerobot/openarms-hardware-modifications",
       "commit": "ffe34b93c070343042eb9412fbfeffce16139947",
       "license": "Apache-2.0",
-      "state": "deferred_bimanual_reference_geometry; file_listing_and_card_metadata_inspected; CAD_not_downloaded_or_fit_checked; manufacturing_release_pending_base_revision_interfaces_and_materials"
+      "state": "bimanual_reference_geometry_not_a_default_PLA_build_instruction; base_revision_interfaces_materials_and_fit_unverified; no_manufacturing_release"
     },
     {
       "name": "unfolding_robotics_report",
@@ -128,14 +144,15 @@
     "https://docs.arducam.com/Raspberry-Pi-Camera/Native-camera/12MP-IMX708/"
   ],
   "unresolved": [
-    "Selected first build: one OpenArm follower with matching gripper (right side provisionally for costing), one Mini, one compatible runtime CAN channel, proper single-arm power/stopping/fixture and reuse of D405 if suitable. Second arm, new three-camera layout and folding modifications are deferred. Availability, matched revisions, workspace and final additional cost remain unconfirmed; do not halve shared equipment costs.",
-    "A DFRobot order confirms 12 ST3215 SER0069 servos, shipped 2026-02-28; vendor specs are 7.4V and 1:345. One Mini requires 8 C046 servos at 1:147 (16 for a future pair). Reuse compatibility and availability remain unverified; allocate at most 8 to the current build, and do not treat Feetech servos as Damiao actuators.",
-    "Reference 5 cm upper-arm extension and jaw_normal are deferred. Exact folding-reference base revision, compatibility with local 2.0 CAD, materials and fabrication/attachment details remain unresolved; no manufacturing release.",
-    "OpenArm 2.0 BOM B0495 is AR0234; the folding report links wide-angle fixed-focus IMX708 USB UVC. B0305 matching is an inference requiring delivered-kit verification. Existing D405 is the initial single-arm observation/collection candidate, not an equivalent replacement for the deferred three-camera checkpoint inputs.",
-    "Pinned follower feature declarations include position, velocity and torque, while the checkpoint expects 16 position channels; explicit field selection and ordering need runtime validation.",
-    "Mini README single-port example differs from the pinned dual-port config. Single Mini to openarm_follower requires software adaptation/validation of 8 action channels, calibration and sign/remap/gripper conversions; the 16-action folding checkpoint is not a drop-in single-arm policy.",
-    "The KER documentation contains an unreleased notice while the hardware repository and local archive include KER CAD and BOM. End-to-end reproduction is unverified.",
-    "Motor firmware, CAN adapter, host control environment and collection stack versions still need a matched compatibility check.",
-    "Custom shell geometry, attachments, mass properties, collision clearance and thermal effect have not been designed or measured."
-  ]
+    "Bimanual OpenArm with purchased motors unchanged, PLA-first links/interfaces/shoulders/torso/wheel frame. Actual motor inventory, revisions, power, stops, cables, standard hardware, wheel system, battery and budget remain to be verified.",
+    "No validated PLA manufacturing CAD, structural/thermal/creep/fatigue results, motion baseline or wheel stability result. Initial metal recommendations are historical alternatives, not current procurement requirements.",
+    "Two reference Minis need 16 C046 servos at 1:147; 12 purchased SER0069 at 1:345 cannot establish either full quantity or reuse compatibility. Do not count Feetech servos as Damiao actuators.",
+    "Reference +5 cm links and jaw_normal are optional reference modifications; compatibility with 2.0 and the new PLA geometry is unverified.",
+    "B0495 is AR0234; folding reference uses a wide-angle fixed-focus IMX708 candidate. D405 reuse requires actual view and capture tests; it is not automatically equivalent to checkpoint inputs.",
+    "Validate per-side eight-position and combined sixteen-position field order, units, signs, J6/J7 remapping, gripper conversion, cameras, timing and processor statistics. Equal action dimension does not establish policy compatibility.",
+    "KER CAD/BOM exist but end-to-end reproduction remains unverified. Motor firmware, CAN hardware, host control and collection stack still need matched checks.",
+    "NCT is the user-provided application term and remains undefined; do not silently rename it ACT.",
+    "New geometry, attachment details, mass/center of gravity, shoulder width, collision clearance and thermal effects remain unvalidated; do not inherit the prior extra 85 mm shoulder offset per side."
+  ],
+  "project_scope_updated_date": "2026-11-19"
 }

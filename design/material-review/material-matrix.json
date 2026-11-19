@@ -1,0 +1,1016 @@
+{
+  "status": "PLA-first design requirement, 2026-11-19; candidate routes only, no validated PLA manufacturing release.",
+  "groups": [
+    {
+      "id": "a1",
+      "title": "J1_A · 肩根安装件",
+      "bom": [
+        {
+          "row": 7,
+          "name": "J1_A",
+          "model": "MVBLK-ASN-48S-4BGUX-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J1_A"
+      ],
+      "material": "Al6061；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "整臂重量、前伸弯矩、双向扭转，经安装孔送入肩架。",
+      "why": "叉形开口削弱截面，孔边承压和长期预紧决定连接刚度；不是只受物品重量。",
+      "verify": "实物孔距与孔型、配合面、紧固预紧力、最小净截面；肩根受力和温升。",
+      "baseline_decision": "keep",
+      "baseline_change": "第一版保留金属。若改造，用标准短型材/板材承担力流，PLA 做定位与外形；禁止按原 12 mm 包络直接照抄打印。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "肩根改为带闭合背腔和宽支承面的 PLA 座；先打印电机/安装孔配合试片，再测整臂根部弯扭。用穿透螺栓、可采购套筒和防转键，保持原肩轴位置；不直接照抄原金属外形。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a2",
+      "title": "J1_B / J1_C · 肩部转接与夹持件",
+      "bom": [
+        {
+          "row": 8,
+          "name": "J1_B",
+          "model": "MVBLK-ASN-48S-HMK8D-L",
+          "pair_quantity": 2.0
+        },
+        {
+          "row": 9,
+          "name": "J1_C",
+          "model": "MVBLK-ASN-48S-EF9C9-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J1_B",
+        "J1_C"
+      ],
+      "material": "Al6061；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "连接 J1/J2 区域，传递力矩与横向载荷；具体力流依据 CAD 装配推断。",
+      "why": "短紧凑件的孔位、夹持面及间隙比大体积减重更关键，贴近大电机。",
+      "verify": "剖面/公差图、螺纹有效深度、转接刚度、重复拆装与热态松动。",
+      "baseline_decision": "keep",
+      "baseline_change": "保留关键金属配合面和压块；外围非接触体积可打印，但需重新划分接口，不能仅加热熔螺母。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "重画 PLA 分体夹持座和加强桥，增大承压面并留真实电机接口；定位/夹紧与主梁分工，验证热态夹紧漂移。标准套筒可用，定制金属压块不列为默认前置条件。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a3",
+      "title": "J1_D / J1_E · 肩侧连接板",
+      "bom": [
+        {
+          "row": 10,
+          "name": "J1_D",
+          "model": "MVSHM-3N03040-48P-1STE8-L",
+          "pair_quantity": 2.0
+        },
+        {
+          "row": 11,
+          "name": "J1_E",
+          "model": "MVSHM-3N03040-48P-42E2H-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J1_D",
+        "J1_E"
+      ],
+      "material": "SUS304；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "两片有安装耳的 3 mm 板参与肩部连接，承担面内力、偏心弯曲和扭转。",
+      "why": "薄金属保留了大电机周边活动空间。左右耳根和螺栓孔对打印层间拉开敏感。",
+      "verify": "孔边应力、耳根圆角、打印方向、扭转刚度、肩部扫掠间隙。",
+      "baseline_decision": "keep",
+      "baseline_change": "第一版保留薄板；若取消整片板，应由金属耳座＋带闭合截面的打印件替代，不能只增加填充率。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "两片薄板优先合并为 PLA 箱形或带横向联系的双侧结构，圆角耳根、穿透紧固；通过新截面承载，检查肩部扫掠及层间拉开。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a4",
+      "title": "J2_A · 肩输出连接板",
+      "bom": [
+        {
+          "row": 12,
+          "name": "J2_A",
+          "model": "MVSHM-3N05042-48P-E2REY-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J2_A"
+      ],
+      "material": "SUS304；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "圆孔端连接输出接口，长端传力至下游，带偏心弯矩。",
+      "why": "原 CAD 是 5 mm 薄板；受力孔与窄长过渡集中，不适合原厚度 PLA。",
+      "verify": "法兰孔/定位精度、板外弯曲、失速或急停受力、与 J2_B 的组合刚度。",
+      "baseline_decision": "keep",
+      "baseline_change": "第一版保留金属，可评估平板切割/钻孔替代复杂加工；若打印必须改截面并保留金属法兰。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "把原 5 mm 平板重新设计成带深截面和圆角过渡的 PLA 输出连接体，沿电机孔圈分布载荷；先验证孔座、输出面跳动与板外弯曲。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a5",
+      "title": "J2_B · 上臂根部转接件",
+      "bom": [
+        {
+          "row": 13,
+          "name": "J2_B",
+          "model": "MVBLK-ASN-48S-6UB8Y-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J2_B"
+      ],
+      "material": "Al6061；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "肩后级电机和连杆接口；承受上臂及以下部件的自重和力矩。",
+      "why": "紧凑的环形台阶、螺纹和局部耳座需要稳定配合，暖态漂移会累积到末端。",
+      "verify": "接触面与轴线、安装螺纹、热态加载和拆装重复性。",
+      "baseline_decision": "keep",
+      "baseline_change": "保留金属接口块；允许把不承力的罩体独立打印。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "采用 PLA 闭合转接座和宽根部筋，保留既有电机安装基准；用实际孔轴试片确定配合，再验证上臂根部持载、温升和松弛。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a6",
+      "title": "J2_C · 上臂根部折弯连接件",
+      "bom": [
+        {
+          "row": 14,
+          "name": "J2_C",
+          "model": "MVSHM-3N01548-48P-P2GEJ-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J2_C"
+      ],
+      "material": "SUS304；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "根部区域两侧连接与抗扭约束；须用装配图确认每个孔的实际力流。",
+      "why": "薄折弯形状靠截面深度工作；直接打印薄壁易在折角和螺栓处变形。",
+      "verify": "装配约束、面外弯曲、夹紧力保持、层间开裂；不能凭它像罩子就删掉。",
+      "baseline_decision": "keep",
+      "baseline_change": "保留首版；第二轮可与相邻打印壳合并为封闭承力段，保留端部压板/套筒。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "用 PLA 带筋桥接/端盖整合支承面，避免孤立薄耳和仅靠塑料螺纹传力；验证横向变形、孔位和全范围间隙。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a7",
+      "title": "J4_A · 上臂长框架",
+      "bom": [
+        {
+          "row": 15,
+          "name": "J4_A",
+          "model": "MVSHM-3N02048-48P-EH8AF-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J4_A"
+      ],
+      "material": "SUS304；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "J3–J4 区域长框架，传递肘部以下重量、驱动力和扭转。",
+      "why": "长度约 182.5 mm（该件局部包络），薄钢边条与圆孔座能同时保持细长和刚度。",
+      "verify": "肘轴同轴度、两端连接、弯曲/扭转挠度、最弱打印方向、热态 24–72 h 蠕变、活动空间。",
+      "baseline_decision": "hybrid",
+      "baseline_change": "适合后续改成闭合箱形/双侧带筋 PLA 长段；圆孔端保留金属轴承座或夹片，穿透螺栓＋金属定长套筒。不能仅在原薄板上加厚。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "J4_A 在 J6 及 J4_D/E 试验之后推进：用 PLA 闭合梁代替原薄板，加大端部过渡；保留原轴线/臂长作对照，重算质量、挠度和碰撞。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a8",
+      "title": "J4_B / J4_C · 肘部圆形接口",
+      "bom": [
+        {
+          "row": 16,
+          "name": "J4_B",
+          "model": "MVTUP-ASN-48P-DMN5U-L",
+          "pair_quantity": 2.0
+        },
+        {
+          "row": 17,
+          "name": "J4_C",
+          "model": "MVTUP-ASN-48P-XK7HZ-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J4_B",
+        "J4_C"
+      ],
+      "material": "Al6061；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "圆形端部承担电机/轴承定位与法兰传力，B/C 分工需装配与公差图确认。",
+      "why": "短圆台阶和孔阵的精度敏感；打印配合松动会直接成为肘关节游隙。",
+      "verify": "配合直径、轴向夹紧、孔位、温升后的同轴度和游隙。",
+      "baseline_decision": "keep",
+      "baseline_change": "保留小型金属端部；长段可以换 PLA，不要求连整个框架都 CNC。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "精密接口也纳入 PLA 重设计：分体轴承座、宽支承肩台和穿透夹紧；轴承与标准轴保留，打印配合先试片/实测，不把原孔尺寸当成成品公差。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a9",
+      "title": "J4_D / J4_E · 肘后两侧连接板",
+      "bom": [
+        {
+          "row": 18,
+          "name": "J4_D",
+          "model": "MVSHM-3N02048-48P-WH1FY-L",
+          "pair_quantity": 2.0
+        },
+        {
+          "row": 19,
+          "name": "J4_E",
+          "model": "MVSHM-3N02048-48P-S94SN-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J4_D",
+        "J4_E"
+      ],
+      "material": "SUS304；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "两侧板跨接肘后区域，包含被动孔座与主动孔阵；共同约束下游电机。",
+      "why": "薄板用较大两侧间距抗弯/抗扭，端部孔座不能靠层纹摩擦长期定位。",
+      "verify": "双侧同轴、端部剥离、关节间隙、对线缆和关节范围的影响；低速循环与恒载。",
+      "baseline_decision": "hybrid",
+      "baseline_change": "改为一体打印的中空连接体，保留两端金属小法兰/轴承座；保持原轴间距，先不缩臂。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "J4_D/E 作为第二组结构试件，合并成带筋闭合 PLA 连杆，端部局部加厚并采用可更换标准轴套；先测扭转与热态孔距稳定。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a10",
+      "title": "J5_A_rotate90 / CAD J5_A_v2_0",
+      "bom": [
+        {
+          "row": 20,
+          "name": "J5_A_rotate90.SLDPRT",
+          "model": "MVTUP-ASN-4EW-3BJ7T-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J5_A_v2_0"
+      ],
+      "material": "v2 BOM 仅列 meviy 订货号；具体合金/材料未确认，不按代码猜测",
+      "load": "短台阶转接件，连接肘后与腕前段。",
+      "why": "v2 货号与 v1 不同，无法确认沿用材质；CAD 有紧凑孔座和法兰结构，宜先保留原加工方案。",
+      "verify": "新版订货图、公差、法兰传力、承压面与电机热接触。",
+      "baseline_decision": "keep",
+      "baseline_change": "先核实新版图纸/材料；若降成本，优先标准金属座＋打印外围，不直接宣布它是 6061。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "先核对 J5_A_rotate90 实物接口和载荷，再设计 PLA 带筋法兰/连接座；原材质尚未确认不妨碍提出候选，但不得拿旧 J5_A 材质当验证依据。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a11",
+      "title": "J6_A / J6_B · 前臂两侧长板",
+      "bom": [
+        {
+          "row": 21,
+          "name": "J6_A",
+          "model": "MVSHM-3N01548-48P-LUEKH-L",
+          "pair_quantity": 2.0
+        },
+        {
+          "row": 22,
+          "name": "J6_B",
+          "model": "MVSHM-3N01548-48P-2G9M4-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J6_A",
+        "J6_B"
+      ],
+      "material": "SUS304；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "把腕部、夹爪和物品重量传回前级，同时维持两侧支撑相对位置。",
+      "why": "A/B 功能不完全相同，但都是约 118.5 mm 跨度的薄板长段，值得作为同一组合替换。",
+      "verify": "扭转刚度和末端漂移、孔座蠕变、J6 电机温升、层间强度和线缆间隙。",
+      "baseline_decision": "hybrid",
+      "baseline_change": "优先结构试验件：PLA 闭合薄壁梁＋纵向筋，端部金属耳/套；保持外包络，新增筋朝空腔内长。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "第一组承力原型：J6_A/B 与 C 合并为 PLA 闭合薄壁梁，端部短而宽、内侧加筋，使用穿透螺栓和可采购定长套筒；先做独立台架件，量挠度、扭转、温升与持载漂移。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a12",
+      "title": "J6_C_left / right · 前臂跨接件",
+      "bom": [
+        {
+          "row": 23,
+          "name": "J6_C_left",
+          "model": "MVSHM-3N0154A-48P-GWWD7-L",
+          "pair_quantity": 1.0
+        },
+        {
+          "row": 24,
+          "name": "J6_C_right",
+          "model": "MVSHM-3N0154A-48P-H6RYM-L",
+          "pair_quantity": 1.0
+        }
+      ],
+      "cad": [
+        "J6_C"
+      ],
+      "material": "SUS304；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "跨接两侧板，保持间距并抵抗侧板张开；它不是装饰件。",
+      "why": "单独改薄 PLA 会降低整组抗扭，即使它本身重量很小。",
+      "verify": "两侧间距变化、连接扭转、分层开口；左右件分别确认方向。",
+      "baseline_decision": "hybrid",
+      "baseline_change": "与 J6_A/B 的打印闭合体整合，减少拼缝；保留穿透紧固和定长金属套筒。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "与 J6_A/B 一体或键合拼装为 PLA 闭合梁，承担侧板间距和抗扭；拼接面传剪不能只靠螺栓摩擦，左右形状分别核对。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a13",
+      "title": "J6_D · 腕前环形限位/夹持件",
+      "bom": [
+        {
+          "row": 25,
+          "name": "J6_D",
+          "model": "MVSHM-3N03040-48P-7127C-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J6_D"
+      ],
+      "material": "SUS304；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "环形开口件参与腕前约束；精确夹持/止挡分工仍需装配图。",
+      "why": "小而薄，减重收益有限，孔位与开口根部、潜在接触冲击更重要。",
+      "verify": "作用面、是否承担硬限位、螺栓载荷与接触磨损。",
+      "baseline_decision": "keep",
+      "baseline_change": "首版保留金属；确认仅作非受力罩支座之后才下调等级。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "核实环形件是否承担止挡或轴向夹持，再设计 PLA 加宽分体环；标准销/轴可保留。若是硬止挡，单独测冲击与开口根部，不能凭静态夹紧通过。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a14",
+      "title": "J7_A · 腕部环形转接座",
+      "bom": [
+        {
+          "row": 26,
+          "name": "J7_A",
+          "model": "MVTUP-ASN-48P-XU5X7-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J7_A"
+      ],
+      "material": "Al6061；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "环形电机接口、侧向支撑连接，传递末端力矩。",
+      "why": "圆周夹持与轴线稳定需要紧凑刚性；大幅加厚会直接让手腕变粗。",
+      "verify": "环的配合、侧孔螺纹、热态游隙、工具碰撞的横向弯矩。",
+      "baseline_decision": "keep",
+      "baseline_change": "保留金属薄环；外罩和线缆支架打印。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "腕部薄金属环改为带轴向筋的 PLA 分体环/壳，保持电机接口和相机视野；先检查增加截面后能否满足细腕包络，再做热态游隙试验。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a15",
+      "title": "J7_B / J7_C · 腕部耳座与桥接块",
+      "bom": [
+        {
+          "row": 27,
+          "name": "J7_B",
+          "model": "MVBLK-ASN-48S-G98W9-L",
+          "pair_quantity": 4.0
+        },
+        {
+          "row": 28,
+          "name": "J7_C",
+          "model": "MVBLK-ASN-48S-HHRAL-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J7_B",
+        "J7_C"
+      ],
+      "material": "Al6061；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "J7_B 每臂两件，含凸轴/孔座；J7_C 连接支撑，维持腕部轴线。",
+      "why": "集中承压与尺寸稳定比材料用量更关键；螺栓套筒不能自动替代一段精密轴。",
+      "verify": "轴承配合、公差链、端面间隙、循环磨损。",
+      "baseline_decision": "keep",
+      "baseline_change": "保留轴/孔所在的小金属块。可把跨接外围改 PLA，但先不把短精密件当优先省钱目标。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "把短耳座与桥接件合并为 PLA 支架，凸轴功能优先由现成标准轴/销承担；轴承孔独立试配、支承间距实测，避免直接打印耐磨转轴。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "a16",
+      "title": "J7_D_left/right / J7_E · 腕末连接",
+      "bom": [
+        {
+          "row": 29,
+          "name": "J7_D_left",
+          "model": "MVBLK-SUB-48P-DXLUA-L",
+          "pair_quantity": 1.0
+        },
+        {
+          "row": 30,
+          "name": "J7_D_right",
+          "model": "MVBLK-SUB-48P-C2CHA-L",
+          "pair_quantity": 1.0
+        },
+        {
+          "row": 31,
+          "name": "J7_E",
+          "model": "MVBLK-SUB-48S-U94SX-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "J7_D",
+        "J7_E"
+      ],
+      "material": "SUS304；v2 与 v1 完整货号相同（非 v2 材料证书）",
+      "load": "细窄跨接件与圆形法兰传递末端弯扭载荷，保持腕末位置。",
+      "why": "细颈、偏心臂和孔座的局部载荷明显；纯 PLA 等包络刚度低。",
+      "verify": "偏心弯矩、窄颈应力、工具撞击、重复定位和夹紧漂移。",
+      "baseline_decision": "keep",
+      "baseline_change": "保留金属关键路径；若合并重设计，要把跨接做成闭合截面并留金属轴/法兰。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "以闭合 PLA 腕末连接体替代细窄跨接/法兰组合，沿孔圈分布载荷；标准轴套、螺栓可保留，先测偏心弯矩、重复定位与层间开裂。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "e1",
+      "title": "夹爪 base_4310",
+      "bom": [
+        {
+          "row": 60,
+          "name": "end-efector_base_4310.SLDPRT",
+          "model": "MVBLK-ASN-4H8-M8K3G",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "end-efector_base_4310"
+      ],
+      "material": "v2 BOM 仅列 meviy 订货号；具体合金/材料未确认，不按代码猜测",
+      "load": "承载夹爪电机与传动部件，维持齿轮/轴的相对位置。",
+      "why": "自重小不代表夹持反力小；夹持挤压力和卡住时的力矩也作用在基座。",
+      "verify": "v2 材料、齿轮中心距、夹持电流上限、热态平行度。",
+      "baseline_decision": "keep",
+      "baseline_change": "首版保留原加工基座；第二轮可评估金属轴座＋PLA 箱体组合。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "夹爪电机基座优先重画为 PLA 箱体，轴承座之间加横向联系并留散热间隙；验证齿轮中心距、堵转限流下的变形及热态平行度。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "e2",
+      "title": "夹爪 J7_joint_A/B/C_4310",
+      "bom": [
+        {
+          "row": 51,
+          "name": "copy_end-efector_J7_joint_A_4310_mir.SLDPRT",
+          "model": "MVBLK-SUB-4H8-BBPJE",
+          "pair_quantity": 1.0
+        },
+        {
+          "row": 52,
+          "name": "copy_end-efector_J7_joint_B_4310.SLDPRT",
+          "model": "MVBLK-ASN-4H8-1YLHR",
+          "pair_quantity": 2.0
+        },
+        {
+          "row": 55,
+          "name": "copy_end-efector_J7_joint_A_4310.SLDPRT",
+          "model": "MVBLK-SUB-4H8-8MJDA",
+          "pair_quantity": 1.0
+        },
+        {
+          "row": 58,
+          "name": "copy_end-efector_J7_joint_C_4310.SLDPRT",
+          "model": "MVBLK-ASN-4H8-G3K8L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "end-efector_J7_joint_A_4310",
+        "end-efector_J7_joint_B_4310",
+        "end-efector_J7_joint_C_4310"
+      ],
+      "material": "v2 BOM 仅列 meviy 订货号；具体合金/材料未确认，不按代码猜测",
+      "load": "工具与腕部连接、传动/支承接口；同属一组接口，但各件分工需公差图确认。",
+      "why": "小零件上集中孔、台阶与载荷，打印节省的体积很少，间隙会影响精细抓取。",
+      "verify": "新版材质与公差、工具偏心、手眼标定重复性、持载与循环。",
+      "baseline_decision": "keep",
+      "baseline_change": "保留金属接口，夹爪外壳另打印；不可用 v1 滑轨夹爪材料表给这些 v2 件定材。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "合并为 PLA 工具接口和支承体，保持现有电机、齿轮、轴承的工作位置；通过试片、公差实测与循环抓取确定配合，不默认需要整套加工接口。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "e3",
+      "title": "夹爪 shaft_A / shaft_B_4310",
+      "bom": [
+        {
+          "row": 56,
+          "name": "copy_end-efector_shaft_B_4310.SLDPRT",
+          "model": "MVTUP-ASN-4H8-9YE4F",
+          "pair_quantity": 2.0
+        },
+        {
+          "row": 59,
+          "name": "end-efector_shaft_A_4310.SLDPRT",
+          "model": "MVBLK-ASN-4H8-CHHCX",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "end-efector_shaft_A_4310",
+        "end-efector_shaft_B_4310"
+      ],
+      "material": "v2 BOM 仅列 meviy 订货号；具体合金/材料未确认，不按代码猜测",
+      "load": "转轴/轮毂，承担传动扭矩、轴承配合和轴向定位。",
+      "why": "耐磨、孔轴配合与夹紧是首要约束；普通 PLA 原尺寸转轴不是合理首版。",
+      "verify": "轴径与公差、止转结构、接触应力、磨损；实际材料仍未确认。",
+      "baseline_decision": "keep",
+      "baseline_change": "保留金属转轴/轮毂；可研究标准轴＋夹紧式轮毂替代定制件，必须匹配接口。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "优先拆分为现成标准金属轴/销＋PLA 轮毂/连接体，检查止转和轴向定位；尚无匹配标准轴规格，可能仍是少量金属例外，不能声称已消除全部定制轴加工。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "e4",
+      "title": "finger_mount_adapter_A/B_4310",
+      "bom": [
+        {
+          "row": 53,
+          "name": "copy_end-efector_finger_mount_adapter_A_4310.SLDPRT",
+          "model": "MVBLK-ASN-4H8-TKJN6",
+          "pair_quantity": 2.0
+        },
+        {
+          "row": 57,
+          "name": "copy_end-efector_finger_mount_adapter_B_4310.SLDPRT",
+          "model": "MVBLK-ASN-4H8-AYSPN",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "end-efector_finger_mount_adapter_A_4310",
+        "end-efector_finger_mount_adapter_B_4310"
+      ],
+      "material": "v2 BOM 仅列 meviy 订货号；具体合金/材料未确认，不按代码猜测",
+      "load": "把驱动力传到夹指，承受夹持力与指尖偏心弯矩。",
+      "why": "负载由夹持控制决定；拿一件轻衣服时也可能因大电流或卡料受很大力。",
+      "verify": "指尖力标定、根部断裂、夹持保持、循环后回差、视觉遮挡。",
+      "baseline_decision": "hybrid",
+      "baseline_change": "可先做 PLA 加筋指根，驱动孔/轴孔保留金属衬套和压板；须同时限制夹持力。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "采用 PLA 加筋指根、短粗圆角过渡和标准轴套/穿透螺栓，夹持力与堵转电流同时标定；物品轻不代表夹持反力小。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "e5",
+      "title": "finger_L / finger_R_v5_4310",
+      "bom": [],
+      "cad": [
+        "end-efector_finger_L_v5_4310",
+        "end-efector_finger_R_v5_4310"
+      ],
+      "material": "CAD 可见；原材料未在该 BOM 中说明，不能宣称原版已验证 PLA",
+      "load": "直接接触衣物/小物品，传递夹持力和抓取偏心。",
+      "why": "没有证据说明必须整件金属；但长指尖仍受弯曲，硬 PLA 表面不等于柔软抓取。",
+      "verify": "CAD 有这些件，抽取 BOM 未列具体材料/打印参数；需检查夹持力、疲劳、指尖挠度和布料挂钩。",
+      "baseline_decision": "print",
+      "baseline_change": "优先 PLA 指体＋可更换橡胶/硅胶/泡棉接触垫；短粗指根、圆角、穿透螺栓，避开视觉区域。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "优先 PLA 指体＋可更换橡胶/硅胶/泡棉接触垫；短粗指根、圆角、穿透螺栓，避开视觉区域。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "e6",
+      "title": "camera_mount_4310 左右",
+      "bom": [
+        {
+          "row": 50,
+          "name": "copy_camera_mount_4310_mir.SLDPRT",
+          "model": "MVSHM-3N01548-4H8-14PDW",
+          "pair_quantity": 1.0
+        },
+        {
+          "row": 54,
+          "name": "copy_camera_mount_4310.SLDPRT",
+          "model": "MVSHM-3N01548-4H8-PT2ZR",
+          "pair_quantity": 1.0
+        }
+      ],
+      "cad": [
+        "camera_mount_4310"
+      ],
+      "material": "v2 BOM 仅列 meviy 订货号；具体合金/材料未确认，不按代码猜测",
+      "load": "腕部相机自重、线缆拉力和振动，不承担主臂传力。",
+      "why": "金属有利于薄和稳定，但轻载相机支架通常无需与关节强度同级。",
+      "verify": "相机姿态漂移、手眼标定、热态长时间运行、视野遮挡和震动。",
+      "baseline_decision": "print",
+      "baseline_change": "优先短而带三角筋的 PLA 支架＋螺钉/螺母和线缆卸力；留电机散热间隙。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "优先短而带三角筋的 PLA 支架＋螺钉/螺母和线缆卸力；留电机散热间隙。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "p1",
+      "title": "手臂与夹爪外罩",
+      "bom": [],
+      "cad": [
+        "J1-J2_cover_v1_1_A",
+        "J1-J2_cover_v1_1_B",
+        "J2-J3_cover",
+        "J3-J4_cover_v2_0",
+        "J4-J5_cover_v1_0",
+        "J6-J7_cover",
+        "end-efector_cover_4310",
+        "chest_cover"
+      ],
+      "material": "CAD 独立罩件；本次 BOM 未列材质，不视作整臂 PLA 许可",
+      "load": "保护、导线隔离与轻微触碰；不要承接主关节载荷。",
+      "why": "未发现必须用金属的受力理由；外罩与内部长板在 CAD 中是独立件。",
+      "verify": "原材未确认；检查全角度碰撞、内部温度、夹点、拆装与挂线。",
+      "baseline_decision": "print",
+      "baseline_change": "普通 PLA 分件打印可作为首版；螺钉可拆、圆角、适度通风；别紧贴电机或夹住转动部件。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "普通 PLA 分件打印可作为首版；螺钉可拆、圆角、适度通风；别紧贴电机或夹住转动部件。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "p2",
+      "title": "cable_holder_J4_A/B",
+      "bom": [],
+      "cad": [
+        "cable_holder_J4_A",
+        "cable_holder_J4_B"
+      ],
+      "material": "CAD 有件；材料未说明",
+      "load": "线缆自身重量、弯曲回弹和拉扯。",
+      "why": "没有必要按主承力件选材；最先影响的是线缆寿命与拉力卸载。",
+      "verify": "弯曲半径、关节全范围拉线、接插件卸力、热源附近温度。",
+      "baseline_decision": "print",
+      "baseline_change": "PLA 线夹＋软内衬，圆滑走线，预留活动余量。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "PLA 线夹＋软内衬，圆滑走线，预留活动余量。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "h1",
+      "title": "螺栓、轴承、销、支柱",
+      "bom": [
+        {
+          "row": 32,
+          "name": "M3x6 bolt",
+          "model": "CBE3-6",
+          "pair_quantity": 146.0
+        },
+        {
+          "row": 33,
+          "name": "M3x8 bolt",
+          "model": "CBE3-8",
+          "pair_quantity": 38.0
+        },
+        {
+          "row": 34,
+          "name": "M3x15 bolt",
+          "model": "CBE3-15",
+          "pair_quantity": 24.0
+        },
+        {
+          "row": 35,
+          "name": "M3x18 bolt",
+          "model": "CBE3-18",
+          "pair_quantity": 12.0
+        },
+        {
+          "row": 36,
+          "name": "M4x6 bolt",
+          "model": "CBE4-6",
+          "pair_quantity": 16.0
+        },
+        {
+          "row": 37,
+          "name": "M4x8 bolt",
+          "model": "CBE4-8",
+          "pair_quantity": 16.0
+        },
+        {
+          "row": 38,
+          "name": "M4x10 bolt",
+          "model": "CBE4-10",
+          "pair_quantity": 24.0
+        },
+        {
+          "row": 39,
+          "name": "M5x10 bolt",
+          "model": "CBE5-10",
+          "pair_quantity": 24.0
+        },
+        {
+          "row": 40,
+          "name": "Circular Post - Threaded on Both Ends",
+          "model": "AETTS8-61-SC0-M3-N3",
+          "pair_quantity": 2.0
+        },
+        {
+          "row": 41,
+          "name": "Circular Post - Threaded on Both Ends",
+          "model": "AETTS8-74.2-SC0-M3-N3",
+          "pair_quantity": 4.0
+        },
+        {
+          "row": 42,
+          "name": "Step Bolt",
+          "model": "DBSY4-6-5",
+          "pair_quantity": 4.0
+        },
+        {
+          "row": 43,
+          "name": "Single-row deep groove ball bearing",
+          "model": "MR106ZZ1",
+          "pair_quantity": 4.0
+        },
+        {
+          "row": 44,
+          "name": "Ball bearing, flanged, double shielded",
+          "model": "FL6700ZZ",
+          "pair_quantity": 4.0
+        },
+        {
+          "row": 45,
+          "name": "Ball bearing, flanged, double shielded",
+          "model": "FL6803ZZ",
+          "pair_quantity": 2.0
+        },
+        {
+          "row": 61,
+          "name": "M3x6 bolt",
+          "model": "CBE3-6",
+          "pair_quantity": 14.0
+        },
+        {
+          "row": 62,
+          "name": "M3x8 bolt",
+          "model": "CBE3-8",
+          "pair_quantity": 56.0
+        },
+        {
+          "row": 63,
+          "name": "M3x10 bolt",
+          "model": "CBE3-10",
+          "pair_quantity": 12.0
+        },
+        {
+          "row": 64,
+          "name": "M3x20 bolt",
+          "model": "CBE3-20",
+          "pair_quantity": 12.0
+        },
+        {
+          "row": 65,
+          "name": "Ultra Low Profile Socket Head Cap Screw",
+          "model": "CBSTNR3-6",
+          "pair_quantity": 12.0
+        },
+        {
+          "row": 66,
+          "name": "M2x4 bolt",
+          "model": "SCB2-4",
+          "pair_quantity": 8.0
+        },
+        {
+          "row": 68,
+          "name": "Ball bearing",
+          "model": "B6802ZZ",
+          "pair_quantity": 2.0
+        },
+        {
+          "row": 69,
+          "name": "General-Purpose Pin g6",
+          "model": "MSGS3-10",
+          "pair_quantity": 2.0
+        },
+        {
+          "row": 70,
+          "name": "General-Purpose Pin g6",
+          "model": "MSGS4-8",
+          "pair_quantity": 2.0
+        },
+        {
+          "row": 77,
+          "name": "M2x5 bolt",
+          "model": "SCB2-5",
+          "pair_quantity": 2.0
+        },
+        {
+          "row": 89,
+          "name": "M3x6 bolt for cameramount",
+          "model": "CBE3-6",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [
+        "FL6700ZZ_simplified",
+        "FL6803ZZ_simplified",
+        "MR106ZZ1__simplified",
+        "B6802ZZ_simplified",
+        "MSGS3-10_simplified",
+        "MSGS4-8_simplified",
+        "SETS8-61-SC0-M3-N3",
+        "SETS8-74_2-SC0-M3-N3"
+      ],
+      "material": "标准采购件，具体钢种/表面处理以供应商规格为准；金属功能件建议保留",
+      "load": "紧固预紧、转动支撑、剪切、定位和防止夹紧压溃。",
+      "why": "这些金属小件保留后能明显扩大 PLA 的可用范围；不能把“尽量打印”等同于打印轴承与螺栓。",
+      "verify": "订货/实物规格、支柱 BOM AETTS 与 CAD SETS 命名不一致，需核对；螺栓长度、底孔啮合和预紧。",
+      "baseline_decision": "keep",
+      "baseline_change": "保留标准件；穿透螺栓配定长金属套筒、压板和防转键。套筒端面对接金属面；靠大垫片仍不能消除 PLA 蠕变。",
+      "current_route": "retain_standard_hardware",
+      "pla_first_path": "保留标准件；穿透螺栓配定长金属套筒、压板和防转键。套筒端面对接金属面；靠大垫片仍不能消除 PLA 蠕变。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "h2",
+      "title": "夹爪齿轮 SL-GEAHS1.0…",
+      "bom": [
+        {
+          "row": 67,
+          "name": "Cleaned Spur Gear, Module 1.0, Machined Bore Type",
+          "model": "SL-GEAHS1.0-36-6-A-17-QFC24-M3",
+          "pair_quantity": 4.0
+        }
+      ],
+      "cad": [
+        "GEAHS1_0-36-6-A-17-QFC24-M3_b_simplified"
+      ],
+      "material": "BOM 给出成品齿轮型号，未在本次资料中确认具体合金",
+      "load": "传递夹持扭矩、同步两指。",
+      "why": "齿面磨损、齿根疲劳和回差影响抓取重复性，轻物品不能限定堵转力矩。",
+      "verify": "供应商材料、啮合间隙、润滑/磨屑与夹持循环。",
+      "baseline_decision": "keep",
+      "baseline_change": "首版保留原采购齿轮；打印齿轮另做消耗性试验，不和结构改版同时引入。",
+      "current_route": "retain_standard_hardware",
+      "pla_first_path": "首版保留原采购齿轮；打印齿轮另做消耗性试验，不和结构改版同时引入。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "h3",
+      "title": "SWSPS12-6-0.5 薄树脂垫片",
+      "bom": [
+        {
+          "row": 46,
+          "name": "Ultra-thin resin washer",
+          "model": "SWSPS12-6-0.5",
+          "pair_quantity": 8.0
+        }
+      ],
+      "cad": [],
+      "material": "BOM 明确称 Ultra-thin resin washer",
+      "load": "隔离、间隙/摩擦调整。",
+      "why": "它本来就是树脂，不应误计为必须保留的金属件。",
+      "verify": "具体材料、厚度公差和磨损。",
+      "baseline_decision": "original",
+      "baseline_change": "优先保留采购垫片；0.5 mm 功能垫片不以普通 PLA 薄片直接替代。",
+      "current_route": "retain_standard_hardware",
+      "pla_first_path": "优先保留采购垫片；0.5 mm 功能垫片不以普通 PLA 薄片直接替代。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "b1",
+      "title": "原版立柱、底板与型材角件",
+      "bom": [],
+      "cad": [
+        "HFSB6_6060_750_simplified",
+        "base_plate_STEP",
+        "HBLFSDW6_simplified",
+        "HFBL30A6-3060-123_simplified"
+      ],
+      "material": "立柱：官方明确铝型材；底板和角件具体合金未确认",
+      "load": "两条手臂的重量、合力矩和工作台固定反力。",
+      "why": "官方明确立柱为 MISUMI 铝型材；本地 CAD 是 60×60×750 mm 型材及固定台面底座，不是轮式底盘。",
+      "verify": "型材截面与接头刚度、脚轮支撑多边形、载荷重心；底板合金未确认。",
+      "baseline_decision": "keep",
+      "baseline_change": "原版仅作为受力路径参考。轮式版可改高度与形状，但无需复制 750 mm 立柱或厚底板。",
+      "current_route": "upstream_reference_only",
+      "pla_first_path": "原铝型材立柱和桌面底座仅作参考，轮式方案不照搬采购。新结构按 b2–b4 的 PLA 方案重新设计和验证。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "b2",
+      "title": "新双肩连接与肩桥",
+      "bom": [],
+      "cad": [],
+      "material": "尚未设计，无所谓“原版材质”；本行是新方案建议",
+      "load": "接收两臂同时前伸的俯仰合力矩，以及单臂伸侧造成的扭转。",
+      "why": "这里主导的是整臂自重和两侧连接刚度；纯 PLA 要做到同样细窄很困难，但并非已证明不可行。",
+      "verify": "新件尚无定稿 CAD。先核孔位、力流、梁截面、螺栓组、弯扭挠度；保留模型原坐标基线。",
+      "baseline_decision": "newmetal",
+      "baseline_change": "候选：左右小金属接口板＋一根窄金属横梁/短型材＋PLA 外形。紧固力经套筒/金属面闭合；避免额外外移肩轴。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "默认研究窄截面 PLA 箱形肩桥，分段时使用承剪键、重叠连接和可采购紧固件；先验证双臂前伸与单臂侧伸。不得继承旧概念额外外移 85 mm/侧。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "b3",
+      "title": "新躯干立柱/脊柱",
+      "bom": [],
+      "cad": [],
+      "material": "新设计；尺寸和金属截面尚未选定",
+      "load": "把肩桥力矩传到车架，承受整机弯扭及行走振动。",
+      "why": "多段 PLA 加长螺杆只解决部分夹紧问题，不能自动提供稳定的抗弯/抗扭；预紧仍可能因塑料压缩而松弛。",
+      "verify": "目标高度、质量重心、截面惯性矩、节点松动、热态长时漂移与制动载荷。",
+      "baseline_decision": "newmetal",
+      "baseline_change": "候选：一根金属矩形管或短型材主脊柱，上下小接板；PLA 打印线槽、电子仓和曲面外壳。全 PLA 分段躯干留作独立比较试样。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "默认研究带纵筋/隔板的 PLA 闭合躯干，按 P1S 成形空间分段；节点同时传弯矩和剪力。拉杆/套筒只解决对应功能，必须实测长期预紧、弯扭和热态漂移；金属脊柱保留为失败后的备选。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "b4",
+      "title": "新轮式底盘、轮轴与电池支承",
+      "bom": [],
+      "cad": [],
+      "material": "新设计；轮组/底盘电机和整机质量未选定",
+      "load": "轮轴冲击、制动反力、两臂前伸倾覆力矩、整机重量。",
+      "why": "原版台面锚固不能转用为移动底盘稳定性证据。轮径、轮距、质量和重心未知，不能给出已安全的窄底盘尺寸。",
+      "verify": "支撑点而非外壳轮廓、前后/左右防倾覆、刹车、越缝冲击、单轮卸载；电池托盘承重需单测。",
+      "baseline_decision": "newmetal",
+      "baseline_change": "候选：小金属车架/横梁＋金属电机轮轴支座；PLA 外裙、轻载托盘。电池低置并固定；不预设一整块厚钢板压重。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "车架、电池托盘和轮组连接体优先 PLA 加筋箱体/模块化梁；轮轴、轴承、紧固件及现有电机保留。轮距、低位电池和支撑点由真实重心与制动/越缝试验确定，尚无可制造定稿。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "b5",
+      "title": "头相机架与固定头部",
+      "bom": [
+        {
+          "row": 78,
+          "name": "cameramount_head_zed.SLDPRT",
+          "model": "MVSHM-3N01548-4HW-18966-L",
+          "pair_quantity": 2.0
+        }
+      ],
+      "cad": [],
+      "material": "v2 BOM 仅列 meviy 订货号；具体合金/材料未确认，不按代码猜测",
+      "load": "相机与头罩自重、线缆力和车体振动。",
+      "why": "固定轻头不需要复制臂部的金属等级；但头晃会污染视觉。",
+      "verify": "相机实际重量、热源、视野、姿态重复性；原相机支架材料待确认。",
+      "baseline_decision": "print",
+      "baseline_change": "短支座、三角筋和穿透紧固的 PLA 候选。若以后加云台电机，要另评轴/轴承座；当前不加购。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "短支座、三角筋和穿透紧固的 PLA 候选。若以后加云台电机，要另评轴/轴承座；当前不加购。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "b6",
+      "title": "新外罩、柔软外观与装饰",
+      "bom": [],
+      "cad": [],
+      "material": "新设计；装饰层和承力层分别选材",
+      "load": "自重、轻触、拆装；与骨架分工。",
+      "why": "PLA 可塑造外形但仍是硬塑料，不提供柔软皮肤。",
+      "verify": "散热、关节夹点、布料卷入、清洁与拆装；外罩不得顺带成为主骨架。",
+      "baseline_decision": "print",
+      "baseline_change": "PLA 薄壳＋可拆布料/泡棉或局部软垫，露出散热/检修区；不为“像人”扩大肩架。P1S 单色即可，不依赖 AMS。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "PLA 薄壳＋可拆布料/泡棉或局部软垫，露出散热/检修区；不为“像人”扩大肩架。P1S 单色即可，不依赖 AMS。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    },
+    {
+      "id": "b7",
+      "title": "外部/天花相机安装架",
+      "bom": [
+        {
+          "row": 90,
+          "name": "cameramount_ceiling.SLDPRT",
+          "model": "MVSHM-3N0154A-4EW-GGF9N",
+          "pair_quantity": 1.0
+        }
+      ],
+      "cad": [],
+      "material": "v2 BOM 仅列 meviy 订货号；具体合金/材料未确认，不按代码猜测",
+      "load": "独立场景相机自重和线缆拉力，与机器人承力链无关。",
+      "why": "无需跟随主臂一律用金属；长期姿态稳定仍重要。",
+      "verify": "相机位置、固定基面、姿态漂移及线缆卸力。",
+      "baseline_decision": "print",
+      "baseline_change": "若沿用此相机方案，可做短带筋 PLA 架＋穿透螺母；不是轮式机器人必须购买的部件。",
+      "current_route": "pla_first_redesign",
+      "pla_first_path": "若沿用此相机方案，可做短带筋 PLA 架＋穿透螺母；不是轮式机器人必须购买的部件。",
+      "validation_status": "未做实物强度、热态、蠕变或循环验证；原版 CAD 不是 PLA 制造图。"
+    }
+  ],
+  "baseline_note": "baseline_decision/baseline_change retain the initial conservative material assessment. They are not the current procurement or manufacturing requirement. CAD colors encode this baseline only."
+}

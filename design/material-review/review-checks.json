@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-19",
+  "status": "passed",
+  "checks": [
+    "34 unique functional groups with explicit current routes; all 38 custom manufacturing BOM rows covered",
+    "24 of 25 arm part numbers match the v1 material source exactly",
+    "Portable MuJoCo entry reproduced all saved static results and passed independent COM-Jacobian gravity check",
+    "Portable STEP entry reproduced all 73 saved component records",
+    "Existing Fault Injection protocol preserved verbatim",
+    "No personal absolute filesystem paths or template placeholders in published artifacts",
+    "Markdown relative links, HTML local links/anchors and images resolved",
+    "Headless Chromium loaded the real CAD with the pinned Three.js CDN",
+    "J1_A and J6_A selections showed their current PLA routes",
+    "All three current-route filters matched the matrix",
+    "390px viewport had no horizontal page overflow and no JavaScript errors"
+  ],
+  "runtime_versions": {
+    "mujoco": "3.16.0",
+    "load_numpy": "2.5.4",
+    "build123d": "0.13.0",
+    "cadquery-ocp-novtk": "8.0.1.1.0",
+    "cadquery-ocp-proxy": "8.0.1.1.0",
+    "cad_numpy": "2.5.5"
+  },
+  "artifact_sha256": {
+    "cad/arm.png": "b2a12bd920e0139f91652d17a4696105c3bd7711f1acf4a3a828cb090ce742f0",
+    "cad/covers.png": "6b1b20f2cf031ae840dfc0fab990f8cb702909dafbdca137aa2225770b83c58e",
+    "cad/forearm.png": "590969e7aa173e500a774a8ae7fb57dcbe522c1b7411a5e7589c1cb95cb172cf",
+    "cad/gripper.png": "2957c48b77a6d62a47058abfd71498ff157935769f9edab1b22f5e1b02b28cf1",
+    "cad/parts-contact-sheet.png": "05bcbe3e11690fd51d1d07c2d19dd8a4266b2d95bc05ce9e38426026c47e112c",
+    "cad/shoulder.png": "d0942680a02b4a0ea261f99414bbf19b6a6c129b3e9c7314020fa29dbc2e46ef",
+    "cad/upper-elbow.png": "763bb0088d33b48631d1654c966ebda287b6e634572316384f1ac7362b942207",
+    "cad/wrist.png": "f052f26923035c107dbca69f434f54e3798ecee297fd7624f3b026222375406e",
+    "cad-part-index.json": "326db496dc90c0746aeb52e79db6b8591bb8699b2671072d1babc378b9e3309d",
+    "LICENSE-CERN-OHL-S-2.0.txt": "253ad3f89603e728abfa60c36fbcaf8225cf55c1eab12725f19fb3d74d647f3a",
+    "load-calculation.json": "86b6f4e8519d3ef6f9a8ffa5f69d06ec1b22d084e3e0076cec9693986cd573a3",
+    "material-matrix.json": "9c0bb91b2797ca4c0efbc91385c77921271ecac29b4a89494004b4ffd9952a24",
+    "material-source-match.json": "e4ee835c8fb8ed1e8df9a7a6cd7398d92fc167a0ed186c24cfa76edff5a64ba5",
+    "openarm-material-review.html": "25e36caf327a68903a7f830d7c416bdb97ae407e7fad7e3c51492c69634a17b2",
+    "README.md": "1fe3598d27c1050721439ef4e145d65924ca826946081a32a7ed0a7056283a72",
+    "reproduce-cad-extraction.py": "bf4d92f1282cd79fa484a40acbd7c64fd9443eec163203d52d557360d094ac77",
+    "reproduce-load-calculation.py": "815a79440066a5d9d69d9c3f040a9b5ea3141c1ad60ed3cfe2a08cd97396a87c"
+  },
+  "limits": "Artifact/document/static-computation QA only. No new PLA manufacturing CAD, FEA, physical structural/thermal/creep/fatigue testing, robot motion or wheel stability validation."
+}

@@ -1,0 +1,280 @@
+{
+  "source_bom": "OpenArm 2.0/OpenArm 2.0 BOM.xlsx",
+  "bom_sha256": "ff76d3e67799fee5a284725efd0b0469f6480b603070cc2f465c660d11fc46cc",
+  "comparison_source": "https://docs.openarm.dev/1.0/hardware/bill-of-materials/arm-manufactured/",
+  "checked": "2026-11-19",
+  "matches": [
+    {
+      "bom_row": 7,
+      "name": "J1_A",
+      "part_number": "MVBLK-ASN-48S-4BGUX-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J1_A",
+        "method": "Metal Cutting (CNC)",
+        "material": "Al6061"
+      }
+    },
+    {
+      "bom_row": 8,
+      "name": "J1_B",
+      "part_number": "MVBLK-ASN-48S-HMK8D-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J1_B",
+        "method": "Metal Cutting (CNC)",
+        "material": "Al6061"
+      }
+    },
+    {
+      "bom_row": 9,
+      "name": "J1_C",
+      "part_number": "MVBLK-ASN-48S-EF9C9-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J1_C",
+        "method": "Metal Cutting (CNC)",
+        "material": "Al6061"
+      }
+    },
+    {
+      "bom_row": 10,
+      "name": "J1_D",
+      "part_number": "MVSHM-3N03040-48P-1STE8-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J1_D",
+        "method": "Sheet Metal Fabrication",
+        "material": "SUS304"
+      }
+    },
+    {
+      "bom_row": 11,
+      "name": "J1_E",
+      "part_number": "MVSHM-3N03040-48P-42E2H-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J1_E",
+        "method": "Sheet Metal Fabrication",
+        "material": "SUS304"
+      }
+    },
+    {
+      "bom_row": 12,
+      "name": "J2_A",
+      "part_number": "MVSHM-3N05042-48P-E2REY-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J2_A",
+        "method": "Sheet Metal Fabrication",
+        "material": "SUS304"
+      }
+    },
+    {
+      "bom_row": 13,
+      "name": "J2_B",
+      "part_number": "MVBLK-ASN-48S-6UB8Y-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J2_B",
+        "method": "Metal Cutting (CNC)",
+        "material": "Al6061"
+      }
+    },
+    {
+      "bom_row": 14,
+      "name": "J2_C",
+      "part_number": "MVSHM-3N01548-48P-P2GEJ-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J2_C",
+        "method": "Sheet Metal Fabrication",
+        "material": "SUS304"
+      }
+    },
+    {
+      "bom_row": 15,
+      "name": "J4_A",
+      "part_number": "MVSHM-3N02048-48P-EH8AF-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J4_A",
+        "method": "Sheet Metal Fabrication",
+        "material": "SUS304"
+      }
+    },
+    {
+      "bom_row": 16,
+      "name": "J4_B",
+      "part_number": "MVTUP-ASN-48P-DMN5U-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J4_B",
+        "method": "Metal Cutting (CNC)",
+        "material": "Al6061"
+      }
+    },
+    {
+      "bom_row": 17,
+      "name": "J4_C",
+      "part_number": "MVTUP-ASN-48P-XK7HZ-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J4_C",
+        "method": "Metal Cutting (CNC)",
+        "material": "Al6061"
+      }
+    },
+    {
+      "bom_row": 18,
+      "name": "J4_D",
+      "part_number": "MVSHM-3N02048-48P-WH1FY-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J4_D",
+        "method": "Sheet Metal Fabrication",
+        "material": "SUS304"
+      }
+    },
+    {
+      "bom_row": 19,
+      "name": "J4_E",
+      "part_number": "MVSHM-3N02048-48P-S94SN-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J4_E",
+        "method": "Sheet Metal Fabrication",
+        "material": "SUS304"
+      }
+    },
+    {
+      "bom_row": 20,
+      "name": "J5_A_rotate90.SLDPRT",
+      "part_number": "MVTUP-ASN-4EW-3BJ7T-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": null
+    },
+    {
+      "bom_row": 21,
+      "name": "J6_A",
+      "part_number": "MVSHM-3N01548-48P-LUEKH-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J6_A",
+        "method": "Sheet Metal Fabrication",
+        "material": "SUS304"
+      }
+    },
+    {
+      "bom_row": 22,
+      "name": "J6_B",
+      "part_number": "MVSHM-3N01548-48P-2G9M4-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J6_B",
+        "method": "Sheet Metal Fabrication",
+        "material": "SUS304"
+      }
+    },
+    {
+      "bom_row": 23,
+      "name": "J6_C_left",
+      "part_number": "MVSHM-3N0154A-48P-GWWD7-L",
+      "pair_quantity": 1.0,
+      "exact_v1_match": {
+        "name": "J6_C_left",
+        "method": "Sheet Metal Fabrication",
+        "material": "SUS304"
+      }
+    },
+    {
+      "bom_row": 24,
+      "name": "J6_C_right",
+      "part_number": "MVSHM-3N0154A-48P-H6RYM-L",
+      "pair_quantity": 1.0,
+      "exact_v1_match": {
+        "name": "J6_C_right",
+        "method": "Sheet Metal Fabrication",
+        "material": "SUS304"
+      }
+    },
+    {
+      "bom_row": 25,
+      "name": "J6_D",
+      "part_number": "MVSHM-3N03040-48P-7127C-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J6_D",
+        "method": "Sheet Metal Fabrication",
+        "material": "SUS304"
+      }
+    },
+    {
+      "bom_row": 26,
+      "name": "J7_A",
+      "part_number": "MVTUP-ASN-48P-XU5X7-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J7_A",
+        "method": "Metal Cutting (CNC)",
+        "material": "Al6061"
+      }
+    },
+    {
+      "bom_row": 27,
+      "name": "J7_B",
+      "part_number": "MVBLK-ASN-48S-G98W9-L",
+      "pair_quantity": 4.0,
+      "exact_v1_match": {
+        "name": "J7_B",
+        "method": "Metal Cutting (CNC)",
+        "material": "Al6061"
+      }
+    },
+    {
+      "bom_row": 28,
+      "name": "J7_C",
+      "part_number": "MVBLK-ASN-48S-HHRAL-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J7_C",
+        "method": "Metal Cutting (CNC)",
+        "material": "Al6061"
+      }
+    },
+    {
+      "bom_row": 29,
+      "name": "J7_D_left",
+      "part_number": "MVBLK-SUB-48P-DXLUA-L",
+      "pair_quantity": 1.0,
+      "exact_v1_match": {
+        "name": "J7_D_left",
+        "method": "Metal Cutting (CNC)",
+        "material": "SUS304"
+      }
+    },
+    {
+      "bom_row": 30,
+      "name": "J7_D_right",
+      "part_number": "MVBLK-SUB-48P-C2CHA-L",
+      "pair_quantity": 1.0,
+      "exact_v1_match": {
+        "name": "J7_D_right",
+        "method": "Metal Cutting (CNC)",
+        "material": "SUS304"
+      }
+    },
+    {
+      "bom_row": 31,
+      "name": "J7_E",
+      "part_number": "MVBLK-SUB-48S-U94SX-L",
+      "pair_quantity": 2.0,
+      "exact_v1_match": {
+        "name": "J7_E",
+        "method": "Metal Cutting (CNC)",
+        "material": "SUS304"
+      }
+    }
+  ],
+  "source_url": "https://github.com/enactic/openarm_hardware/releases/tag/2.0.0"
+}
