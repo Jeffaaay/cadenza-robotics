@@ -1,0 +1,882 @@
+{
+  "scope": "Linear elastic component screening; no hardware or full PLA assembly validation.",
+  "parts": {
+    "J1": {
+      "label": "肩根 J1_A",
+      "finest_h_mm": 4.0,
+      "mesh_refinement_max_relative_displacement_change": null,
+      "solid_equivalent_PLA_mass_g": 60.72299983205944,
+      "dofs": 86085,
+      "volume_relative_error": 0.003186562597383341,
+      "cases": [
+        {
+          "case": "in_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            -48.92024313
+          ],
+          "moment_Nmm": [
+            0.0,
+            12011.458451335842,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            0.0005703822419391147,
+            5.53348360512691e-05,
+            -0.001813153758837447
+          ],
+          "reference_displacement_norm_mm": 0.0019015584132985961,
+          "rotation_rad": [
+            1.0152863900232023e-05,
+            0.00018134027365291437,
+            1.5982974886067536e-06
+          ],
+          "max_displacement_mm": 0.008670958175560564,
+          "von_mises_max_MPa": 1.875024689025666,
+          "max_principal_tension_MPa": 2.6780684588749843,
+          "von_mises_cell_mean_p95_MPa": 0.5914350805881821,
+          "strain_energy_Nmm": 1.1334305426250815,
+          "relative_free_residual": 9.054726011479831e-14,
+          "relative_reaction_force_error": 3.7982574600483985e-14,
+          "relative_reaction_moment_error": 7.147811869559184e-15
+        },
+        {
+          "case": "out_of_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            -48.92024313,
+            0.0
+          ],
+          "moment_Nmm": [
+            12011.458451335842,
+            0.0,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            4.3877764730414656e-07,
+            -0.006604642886227087,
+            -0.0024255330716968656
+          ],
+          "reference_displacement_norm_mm": 0.00703594475028131,
+          "rotation_rad": [
+            0.00354897335483386,
+            4.879021816696547e-08,
+            -2.1075786425479794e-08
+          ],
+          "max_displacement_mm": 0.16963354803015251,
+          "von_mises_max_MPa": 12.648441623433577,
+          "max_principal_tension_MPa": 19.741874851451623,
+          "von_mises_cell_mean_p95_MPa": 2.9338440345994914,
+          "strain_energy_Nmm": 21.47572336613441,
+          "relative_free_residual": 8.332674814038576e-13,
+          "relative_reaction_force_error": 4.663067579847919e-13,
+          "relative_reaction_moment_error": 5.046519484626865e-14
+        },
+        {
+          "case": "in_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            -51.37274313
+          ],
+          "moment_Nmm": [
+            0.0,
+            13325.961528240341,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            0.0006328199152027267,
+            5.812253477290214e-05,
+            -0.0019039263901583646
+          ],
+          "reference_displacement_norm_mm": 0.0020071808521573424,
+          "rotation_rad": [
+            1.0664802535697716e-05,
+            0.0002011861973639299,
+            1.7729147574598655e-06
+          ],
+          "max_displacement_mm": 0.009506931664408958,
+          "von_mises_max_MPa": 2.057952562076267,
+          "max_principal_tension_MPa": 2.9926729689340528,
+          "von_mises_cell_mean_p95_MPa": 0.6523514183516077,
+          "strain_energy_Nmm": 1.389404723732323,
+          "relative_free_residual": 2.95919717121347e-14,
+          "relative_reaction_force_error": 4.4224509503508114e-14,
+          "relative_reaction_moment_error": 5.945820096568651e-15
+        },
+        {
+          "case": "out_of_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            -51.37274313,
+            0.0
+          ],
+          "moment_Nmm": [
+            13325.961528240341,
+            0.0,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            5.044180017528468e-07,
+            -0.007107695518264514,
+            -0.0026942451672210496
+          ],
+          "reference_displacement_norm_mm": 0.007601203382089507,
+          "rotation_rad": [
+            0.003936663562751558,
+            5.4185158838448694e-08,
+            -2.476453718259316e-08
+          ],
+          "max_displacement_mm": 0.1883826919579609,
+          "von_mises_max_MPa": 13.989699124532661,
+          "max_principal_tension_MPa": 21.836703089741903,
+          "von_mises_cell_mean_p95_MPa": 3.251825442749705,
+          "strain_energy_Nmm": 26.412484501478392,
+          "relative_free_residual": 1.0454515965240779e-12,
+          "relative_reaction_force_error": 1.1126031604665586e-13,
+          "relative_reaction_moment_error": 1.249939137422043e-13
+        },
+        {
+          "case": "in_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            -53.825243130000004
+          ],
+          "moment_Nmm": [
+            0.0,
+            14641.950151681165,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            0.0006953281663171145,
+            6.0910261894861515e-05,
+            -0.0019946987597157925
+          ],
+          "reference_displacement_norm_mm": 0.0021132946933378085,
+          "rotation_rad": [
+            1.1176747321086181e-05,
+            0.00022105454984344336,
+            1.9477290817642443e-06
+          ],
+          "max_displacement_mm": 0.010343895481200573,
+          "von_mises_max_MPa": 2.2410696786718236,
+          "max_principal_tension_MPa": 3.307654123393014,
+          "von_mises_cell_mean_p95_MPa": 0.7126518247419913,
+          "strain_energy_Nmm": 1.6720174226613618,
+          "relative_free_residual": 6.433195593197646e-14,
+          "relative_reaction_force_error": 4.2259798906630827e-14,
+          "relative_reaction_moment_error": 1.6358974757386025e-14
+        },
+        {
+          "case": "out_of_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            -53.825243130000004,
+            0.0
+          ],
+          "moment_Nmm": [
+            14641.950151681165,
+            0.0,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            5.701493722891845e-07,
+            -0.007611106732828291,
+            -0.002963264061758097
+          ],
+          "reference_displacement_norm_mm": 0.008167611641311159,
+          "rotation_rad": [
+            0.0043247912382050925,
+            5.9586249428275176e-08,
+            -2.845877720941892e-08
+          ],
+          "max_displacement_mm": 0.20715320439339893,
+          "von_mises_max_MPa": 15.332439562535642,
+          "max_principal_tension_MPa": 23.93384154320515,
+          "von_mises_cell_mean_p95_MPa": 3.565594010473011,
+          "strain_energy_Nmm": 31.866523698303475,
+          "relative_free_residual": 4.809394255659896e-13,
+          "relative_reaction_force_error": 1.0713236408645295e-12,
+          "relative_reaction_moment_error": 1.3557889469957192e-13
+        }
+      ],
+      "half_kg_screen": {
+        "max_reference_displacement_mm": 0.008167611641311159,
+        "max_rotation_deg": 0.24779228525319316,
+        "max_principal_tension_MPa": 23.93384154320515
+      },
+      "homogeneous_E_sensitivity": {
+        "1000": 0.013639911440989635,
+        "1670": 0.008167611641311159,
+        "1960": 0.006959138490300835
+      }
+    },
+    "J4": {
+      "label": "肘部 J4_A",
+      "finest_h_mm": 2.8,
+      "mesh_refinement_max_relative_displacement_change": 0.000687913243653274,
+      "solid_equivalent_PLA_mass_g": 30.61334505564004,
+      "dofs": 243693,
+      "volume_relative_error": 5.300373755756631e-05,
+      "cases": [
+        {
+          "case": "bend_X_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            24.46353054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            4380.724864077056
+          ],
+          "reference_displacement_mm": [
+            12.770672715552346,
+            0.6461290969611513,
+            -0.028637284038676717
+          ],
+          "reference_displacement_norm_mm": 12.787039708694506,
+          "rotation_rad": [
+            0.00013318636752548366,
+            0.0010333169340563536,
+            0.12195548031763173
+          ],
+          "max_displacement_mm": 16.294914667958086,
+          "von_mises_max_MPa": 124.11282902056446,
+          "max_principal_tension_MPa": 190.89645265823617,
+          "von_mises_cell_mean_p95_MPa": 17.134286392613014,
+          "strain_energy_Nmm": 423.3345735172661,
+          "relative_free_residual": 4.2386790597001406e-10,
+          "relative_reaction_force_error": 1.182661236728206e-10,
+          "relative_reaction_moment_error": 5.861499175025046e-11
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            24.46353054
+          ],
+          "moment_Nmm": [
+            -4380.724864077056,
+            0.0,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            -0.010576685608050742,
+            -0.003065654128589451,
+            76.62686771087694
+          ],
+          "reference_displacement_norm_mm": 76.62686850214321,
+          "rotation_rad": [
+            -0.01828549282269555,
+            -0.04319637768751801,
+            -0.00023404317637614952
+          ],
+          "max_displacement_mm": 77.97878644033302,
+          "von_mises_max_MPa": 112.34970304600091,
+          "max_principal_tension_MPa": 147.303388524021,
+          "von_mises_cell_mean_p95_MPa": 28.07968314588086,
+          "strain_energy_Nmm": 977.3337172951627,
+          "relative_free_residual": 4.4626192375875326e-10,
+          "relative_reaction_force_error": 6.503915466943986e-10,
+          "relative_reaction_moment_error": 2.0460432571757148e-10
+        },
+        {
+          "case": "bend_X_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            26.91603054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5155.690252141674
+          ],
+          "reference_displacement_mm": [
+            14.643153523344811,
+            0.7484941599570221,
+            -0.033305262231703665
+          ],
+          "reference_displacement_norm_mm": 14.662308749178202,
+          "rotation_rad": [
+            0.00015444300146921986,
+            0.0011979532900255245,
+            0.14022274475957008
+          ],
+          "max_displacement_mm": 18.69590103180598,
+          "von_mises_max_MPa": 141.67365208208483,
+          "max_principal_tension_MPa": 217.8936214402926,
+          "von_mises_cell_mean_p95_MPa": 19.624308146047397,
+          "strain_energy_Nmm": 558.5403029341601,
+          "relative_free_residual": 1.6818072177611377e-10,
+          "relative_reaction_force_error": 1.586742462327693e-10,
+          "relative_reaction_moment_error": 3.4621051781967087e-11
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            26.91603054
+          ],
+          "moment_Nmm": [
+            -5155.690252141674,
+            0.0,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            -0.012049681522258642,
+            -0.0035102093715922394,
+            84.4506472184806
+          ],
+          "reference_displacement_norm_mm": 84.45064815107496,
+          "rotation_rad": [
+            -0.020728181764248694,
+            -0.04902777868706067,
+            -0.0002654108331490552
+          ],
+          "max_displacement_mm": 85.98527854615499,
+          "von_mises_max_MPa": 123.88039860149436,
+          "max_principal_tension_MPa": 165.03530348557487,
+          "von_mises_cell_mean_p95_MPa": 31.020969597722242,
+          "strain_energy_Nmm": 1189.9721444138602,
+          "relative_free_residual": 4.826310955638639e-10,
+          "relative_reaction_force_error": 9.389776697460425e-10,
+          "relative_reaction_moment_error": 9.281975043489036e-11
+        },
+        {
+          "case": "bend_X_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            29.368530540000002,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5930.662072443046
+          ],
+          "reference_displacement_mm": [
+            16.515645675061194,
+            0.8508599430009883,
+            -0.03797327485021983
+          ],
+          "reference_displacement_norm_mm": 16.5375922272976,
+          "rotation_rad": [
+            0.00017569978682755932,
+            0.0013625908153350444,
+            0.1584901249207418
+          ],
+          "max_displacement_mm": 21.096904388371595,
+          "von_mises_max_MPa": 159.23457558669642,
+          "max_principal_tension_MPa": 244.89094302567315,
+          "von_mises_cell_mean_p95_MPa": 22.092670540524928,
+          "strain_energy_Nmm": 712.495808649251,
+          "relative_free_residual": 2.827961949894309e-10,
+          "relative_reaction_force_error": 1.270576451748636e-10,
+          "relative_reaction_moment_error": 3.588634739364151e-11
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            29.368530540000002
+          ],
+          "moment_Nmm": [
+            -5930.662072443046,
+            0.0,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            -0.013522685342257654,
+            -0.003954767243121271,
+            92.27442944306068
+          ],
+          "reference_displacement_norm_mm": 92.27443051867395,
+          "rotation_rad": [
+            -0.023170882381887217,
+            -0.054859208437133065,
+            -0.0002967786413446803
+          ],
+          "max_displacement_mm": 93.99179770652559,
+          "von_mises_max_MPa": 135.41111784093053,
+          "max_principal_tension_MPa": 182.76773923006135,
+          "von_mises_cell_mean_p95_MPa": 33.96215520626807,
+          "strain_energy_Nmm": 1423.6915373821857,
+          "relative_free_residual": 4.721748575726414e-10,
+          "relative_reaction_force_error": 4.063687517325554e-10,
+          "relative_reaction_moment_error": 2.5290083770917333e-10
+        }
+      ],
+      "half_kg_screen": {
+        "max_reference_displacement_mm": 92.27443051867395,
+        "max_rotation_deg": 9.081156425563545,
+        "max_principal_tension_MPa": 244.89094302567315
+      },
+      "homogeneous_E_sensitivity": {
+        "1000": 154.0982989661855,
+        "1670": 92.27443051867395,
+        "1960": 78.62158110519668
+      }
+    },
+    "J6": {
+      "label": "前臂 J6_A/B/C",
+      "finest_h_mm": 2.8,
+      "mesh_refinement_max_relative_displacement_change": 0.0009685963819173592,
+      "solid_equivalent_PLA_mass_g": 18.619454447479715,
+      "dofs": 268461,
+      "volume_relative_error": 0.0012718081381667685,
+      "cases": [
+        {
+          "case": "bend_Y_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            12.196007820000002,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -529.4159438824885
+          ],
+          "reference_displacement_mm": [
+            -0.1625243537266203,
+            1.8028248784838328,
+            0.3227938682355365
+          ],
+          "reference_displacement_norm_mm": 1.8386918146891726,
+          "rotation_rad": [
+            -0.0016069147465574848,
+            0.0005898288042778174,
+            -0.028954087296440056
+          ],
+          "max_displacement_mm": 2.1859492518224615,
+          "von_mises_max_MPa": 29.30097845329496,
+          "max_principal_tension_MPa": 42.1627853100191,
+          "von_mises_cell_mean_p95_MPa": 4.687564780701201,
+          "strain_energy_Nmm": 18.658010884257713,
+          "relative_free_residual": 1.9564596881850622e-11,
+          "relative_reaction_force_error": 1.112731722952691e-11,
+          "relative_reaction_moment_error": 9.961376345495929e-12
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            12.196007820000002
+          ],
+          "moment_Nmm": [
+            0.0,
+            529.4159438824885,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            -0.01638437360772044,
+            0.1875419369595068,
+            9.318295739561199
+          ],
+          "reference_displacement_norm_mm": 9.320197203693784,
+          "rotation_rad": [
+            -0.007544079146098598,
+            0.010222706069474993,
+            -0.0037055899219876733
+          ],
+          "max_displacement_mm": 9.4761130476334,
+          "von_mises_max_MPa": 85.26163226208206,
+          "max_principal_tension_MPa": 94.60839850660702,
+          "von_mises_cell_mean_p95_MPa": 7.518518201821745,
+          "strain_energy_Nmm": 59.529035566299484,
+          "relative_free_residual": 1.4068816217784467e-11,
+          "relative_reaction_force_error": 8.99670727578587e-11,
+          "relative_reaction_moment_error": 1.1226475087640542e-10
+        },
+        {
+          "case": "bend_Y_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            14.648507820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -773.9500169078069
+          ],
+          "reference_displacement_mm": [
+            -0.21497755716989528,
+            2.343294953124384,
+            0.4269292653955791
+          ],
+          "reference_displacement_norm_mm": 2.3915507908209173,
+          "rotation_rad": [
+            -0.0020727651281070092,
+            0.0007712617201893015,
+            -0.038228669431255545
+          ],
+          "max_displacement_mm": 2.848281558899624,
+          "von_mises_max_MPa": 37.38839401087565,
+          "max_principal_tension_MPa": 53.698056423941395,
+          "von_mises_cell_mean_p95_MPa": 6.116738813270177,
+          "strain_energy_Nmm": 31.956426896584826,
+          "relative_free_residual": 1.8587872603078334e-11,
+          "relative_reaction_force_error": 3.2748155633371935e-12,
+          "relative_reaction_moment_error": 8.812059543018867e-12
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            14.648507820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            773.9500169078069,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            -0.01966654216087758,
+            0.22920527215700862,
+            11.290495641725714
+          ],
+          "reference_displacement_norm_mm": 11.292839043637011,
+          "rotation_rad": [
+            -0.009307314441300764,
+            0.012678156910015783,
+            -0.004513572464147448
+          ],
+          "max_displacement_mm": 11.486144515146448,
+          "von_mises_max_MPa": 104.51299540166023,
+          "max_principal_tension_MPa": 115.94201684919392,
+          "von_mises_cell_mean_p95_MPa": 9.132175439581417,
+          "strain_energy_Nmm": 87.60058663402934,
+          "relative_free_residual": 2.0776064004642494e-11,
+          "relative_reaction_force_error": 3.4027865311974965e-10,
+          "relative_reaction_moment_error": 2.6503382293760624e-10
+        },
+        {
+          "case": "bend_Y_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            17.101007820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -1018.8283175816247
+          ],
+          "reference_displacement_mm": [
+            -0.2674800514594449,
+            2.884208643526415,
+            0.5311624524900519
+          ],
+          "reference_displacement_norm_mm": 2.944883465989185,
+          "rotation_rad": [
+            -0.002538971309282325,
+            0.0009528512609679453,
+            -0.04751185813740926
+          ],
+          "max_displacement_mm": 3.511183786188456,
+          "von_mises_max_MPa": 45.48128939187596,
+          "max_principal_tension_MPa": 65.24096218189439,
+          "von_mises_cell_mean_p95_MPa": 7.55089536277213,
+          "strain_energy_Nmm": 48.86465052569356,
+          "relative_free_residual": 9.003028169506872e-12,
+          "relative_reaction_force_error": 2.2051533852139088e-11,
+          "relative_reaction_moment_error": 2.4205003920089866e-11
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            17.101007820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            1018.8283175816247,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            -0.02294867937219946,
+            0.27087845612493533,
+            13.262940812832921
+          ],
+          "reference_displacement_norm_mm": 13.265726545673507,
+          "rotation_rad": [
+            -0.011071163514857747,
+            0.015134604388709519,
+            -0.005321711631174895
+          ],
+          "max_displacement_mm": 13.496446859901013,
+          "von_mises_max_MPa": 123.76962791870271,
+          "max_principal_tension_MPa": 137.28140398049644,
+          "von_mises_cell_mean_p95_MPa": 10.751831036116478,
+          "strain_energy_Nmm": 121.11460889914412,
+          "relative_free_residual": 8.884124680325818e-12,
+          "relative_reaction_force_error": 1.3270956543002504e-10,
+          "relative_reaction_moment_error": 1.994202277470254e-11
+        }
+      ],
+      "half_kg_screen": {
+        "max_reference_displacement_mm": 13.265726545673507,
+        "max_rotation_deg": 2.7266597131550125,
+        "max_principal_tension_MPa": 137.28140398049644
+      },
+      "homogeneous_E_sensitivity": {
+        "1000": 22.153763331274757,
+        "1670": 13.265726545673507,
+        "1960": 11.302940475140183
+      }
+    },
+    "box": {
+      "label": "闭合箱形概念（3 mm 壁厚）",
+      "finest_h_mm": 2.8,
+      "mesh_refinement_max_relative_displacement_change": 0.0007102406906477057,
+      "solid_equivalent_PLA_mass_g": 111.37698600000003,
+      "dofs": 162717,
+      "volume_relative_error": 6.846300886310776e-16,
+      "cases": [
+        {
+          "case": "bend_Y_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            12.196007820000002,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -529.4159438824885
+          ],
+          "reference_displacement_mm": [
+            1.1803840687787522e-08,
+            0.015756325775304926,
+            -3.243242564011297e-07
+          ],
+          "reference_displacement_norm_mm": 0.015756325778647252,
+          "rotation_rad": [
+            8.779447980101689e-10,
+            9.956773741014872e-11,
+            -0.00014633031964676797
+          ],
+          "max_displacement_mm": 0.016458429145447307,
+          "von_mises_max_MPa": 0.2953636166112744,
+          "max_principal_tension_MPa": 0.39867505380775703,
+          "von_mises_cell_mean_p95_MPa": 0.09987945353783372,
+          "strain_energy_Nmm": 0.13481693833163727,
+          "relative_free_residual": 2.598597941564201e-12,
+          "relative_reaction_force_error": 3.641155334295628e-13,
+          "relative_reaction_moment_error": 1.7545015448655407e-13
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            12.196007820000002
+          ],
+          "moment_Nmm": [
+            0.0,
+            529.4159438824885,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            -4.556014290828802e-08,
+            -3.2218671217021867e-07,
+            0.013714344156093268
+          ],
+          "reference_displacement_norm_mm": 0.01371434415995346,
+          "rotation_rad": [
+            -4.387126910369147e-09,
+            0.0001259926139989581,
+            -5.032786275433075e-11
+          ],
+          "max_displacement_mm": 0.014437191683167941,
+          "von_mises_max_MPa": 0.2739589121417878,
+          "max_principal_tension_MPa": 0.3733197397847544,
+          "von_mises_cell_mean_p95_MPa": 0.09364439069038671,
+          "strain_energy_Nmm": 0.11698137361808296,
+          "relative_free_residual": 2.2492678370385755e-12,
+          "relative_reaction_force_error": 2.5884854280444377e-13,
+          "relative_reaction_moment_error": 3.3313021784880984e-13
+        },
+        {
+          "case": "bend_Y_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            14.648507820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -773.9500169078069
+          ],
+          "reference_displacement_mm": [
+            1.4463501386600802e-08,
+            0.019845042588610213,
+            -3.8693489121387433e-07
+          ],
+          "reference_displacement_norm_mm": 0.019845042592387674,
+          "rotation_rad": [
+            1.0912700247967552e-09,
+            7.263881614036769e-11,
+            -0.00019271939441721262
+          ],
+          "max_displacement_mm": 0.0208100299778812,
+          "von_mises_max_MPa": 0.37196479339534155,
+          "max_principal_tension_MPa": 0.49994093009181284,
+          "von_mises_cell_mean_p95_MPa": 0.12744567820535807,
+          "strain_energy_Nmm": 0.2199277200566208,
+          "relative_free_residual": 1.5395941478301294e-12,
+          "relative_reaction_force_error": 1.7616641416393746e-13,
+          "relative_reaction_moment_error": 2.473143517043234e-13
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            14.648507820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            773.9500169078069,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            -5.962253532061924e-08,
+            -3.8381003640652745e-07,
+            0.017264533416884977
+          ],
+          "reference_displacement_norm_mm": 0.017264533421254193,
+          "rotation_rad": [
+            -5.233463461630603e-09,
+            0.00016593432782972492,
+            -1.3497368596387247e-11
+          ],
+          "max_displacement_mm": 0.018258138858386924,
+          "von_mises_max_MPa": 0.3452434773157335,
+          "max_principal_tension_MPa": 0.4686384353600035,
+          "von_mises_cell_mean_p95_MPa": 0.1193849355893188,
+          "strain_energy_Nmm": 0.1906622642974966,
+          "relative_free_residual": 1.6167200308805766e-12,
+          "relative_reaction_force_error": 4.291089933208094e-13,
+          "relative_reaction_moment_error": 1.477407058239102e-13
+        },
+        {
+          "case": "bend_Y_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            17.101007820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -1018.8283175816247
+          ],
+          "reference_displacement_mm": [
+            1.7123875132068813e-08,
+            0.0239360537052383,
+            -4.4953902431711986e-07
+          ],
+          "reference_displacement_norm_mm": 0.023936053709465784,
+          "rotation_rad": [
+            1.3046869446200785e-09,
+            4.559284389703914e-11,
+            -0.00023915076032155977
+          ],
+          "max_displacement_mm": 0.025166393091230286,
+          "von_mises_max_MPa": 0.4486107278081451,
+          "max_principal_tension_MPa": 0.6012651284105034,
+          "von_mises_cell_mean_p95_MPa": 0.1549579930155997,
+          "strain_energy_Nmm": 0.32649210418851893,
+          "relative_free_residual": 1.4940878807148246e-12,
+          "relative_reaction_force_error": 2.30927779945841e-13,
+          "relative_reaction_moment_error": 3.059460112543289e-13
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            17.101007820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            1018.8283175816247,
+            0.0
+          ],
+          "reference_displacement_mm": [
+            -7.369714544973484e-08,
+            -4.4542546923812723e-07,
+            0.02081669810527905
+          ],
+          "reference_displacement_norm_mm": 0.020816698110175003,
+          "rotation_rad": [
+            -6.079710579664111e-09,
+            0.00020591245501558466,
+            2.345017935768641e-11
+          ],
+          "max_displacement_mm": 0.02208360659290585,
+          "von_mises_max_MPa": 0.4165699196167441,
+          "max_principal_tension_MPa": 0.564012034411845,
+          "von_mises_cell_mean_p95_MPa": 0.14544026511932837,
+          "strain_energy_Nmm": 0.2828879785986993,
+          "relative_free_residual": 1.2518477445137315e-12,
+          "relative_reaction_force_error": 2.5759871781069067e-13,
+          "relative_reaction_moment_error": 6.084647613441078e-14
+        }
+      ],
+      "half_kg_screen": {
+        "max_reference_displacement_mm": 0.023936053709465784,
+        "max_rotation_deg": 0.013702329233974242,
+        "max_principal_tension_MPa": 0.6012651284105034
+      },
+      "homogeneous_E_sensitivity": {
+        "1000": 0.03997320969480786,
+        "1670": 0.023936053709465784,
+        "1960": 0.020394494742248907
+      }
+    }
+  },
+  "beam_validation": {
+    "Euler_Bernoulli_mm": 0.23952095808383234,
+    "FEA_mm": 0.23849778218706694,
+    "relative_error": 0.0042717593689955416
+  }
+}

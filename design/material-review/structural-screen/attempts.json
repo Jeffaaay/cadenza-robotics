@@ -1,0 +1,87 @@
+{
+  "attempts": [
+    {
+      "stage": "CAD extraction",
+      "status": "failed_then_corrected",
+      "error": "build123d export_step rejected a parented assembly leaf; exported a detached Compound with identical wrapped shape instead."
+    },
+    {
+      "stage": "PDF rendering",
+      "status": "fallback_completed",
+      "error": "Bundled Python lacked fitz; used installed Poppler to render and visually inspect material table and footnotes."
+    },
+    {
+      "stage": "beam solver validation",
+      "status": "solve_passed_output_failed_then_corrected",
+      "error": "NumPy int32 DOF count was not JSON serializable; cast counts to int and reran."
+    },
+    {
+      "stage": "initial part screening",
+      "status": "completed_exploratory_boundary",
+      "files": [
+        "exploratory/J4-h4.json",
+        "exploratory/J6-h4.json"
+      ],
+      "note": "Distributed end traction allowed local interface warping. Added rigid motor/bearing end coupling before final assessment; initial values are not final assembled-part predictions."
+    },
+    {
+      "stage": "parallel mesh refinement and shoulder screening",
+      "status": "aborted_for_resource_pressure_then_restarted_sequentially",
+      "cases": [
+        "J6-rigid-h2.8",
+        "J1-rigid-h4"
+      ],
+      "note": "While the first J4 rigid-port solve was active, concurrent assembly exhausted free physical RAM. Only these task-owned Python jobs were stopped; no unrelated applications or processes were terminated. No numerical output from the aborted runs is used."
+    }
+  ],
+  "final_completed_runs": {
+    "beam-rigid-h4.json": {
+      "part": "beam_check",
+      "cases": 1,
+      "elapsed_seconds": 1.2795993001200259,
+      "script_sha256": "ee127731c69fb7eefbabc015ebcbdcc58bd8352f971a823113c2433a278eb6fd"
+    },
+    "box-rigid-h2.8.json": {
+      "part": "box_3",
+      "cases": 6,
+      "elapsed_seconds": 155.3693911000155,
+      "script_sha256": "ee127731c69fb7eefbabc015ebcbdcc58bd8352f971a823113c2433a278eb6fd"
+    },
+    "box-rigid-h4.json": {
+      "part": "box_3",
+      "cases": 6,
+      "elapsed_seconds": 43.00802869955078,
+      "script_sha256": "ee127731c69fb7eefbabc015ebcbdcc58bd8352f971a823113c2433a278eb6fd"
+    },
+    "J1-rigid-h4.json": {
+      "part": "J1_A",
+      "cases": 6,
+      "elapsed_seconds": 191.43522730004042,
+      "script_sha256": "ee127731c69fb7eefbabc015ebcbdcc58bd8352f971a823113c2433a278eb6fd"
+    },
+    "J4-rigid-h2.8.json": {
+      "part": "J4_A",
+      "cases": 6,
+      "elapsed_seconds": 278.07255579996854,
+      "script_sha256": "ee127731c69fb7eefbabc015ebcbdcc58bd8352f971a823113c2433a278eb6fd"
+    },
+    "J4-rigid-h4.json": {
+      "part": "J4_A",
+      "cases": 6,
+      "elapsed_seconds": 239.51637059962377,
+      "script_sha256": "ee127731c69fb7eefbabc015ebcbdcc58bd8352f971a823113c2433a278eb6fd"
+    },
+    "J6-rigid-h2.8.json": {
+      "part": "J6_ABC",
+      "cases": 6,
+      "elapsed_seconds": 121.25117160007358,
+      "script_sha256": "ee127731c69fb7eefbabc015ebcbdcc58bd8352f971a823113c2433a278eb6fd"
+    },
+    "J6-rigid-h4.json": {
+      "part": "J6_ABC",
+      "cases": 6,
+      "elapsed_seconds": 131.43147179996595,
+      "script_sha256": "ee127731c69fb7eefbabc015ebcbdcc58bd8352f971a823113c2433a278eb6fd"
+    }
+  }
+}

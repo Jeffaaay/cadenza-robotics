@@ -1,0 +1,40 @@
+{
+  "scope": "Critical-part linear elastic screening of direct material substitution. Not full assembled-robot certification.",
+  "selected_before_reviewing_part_results": true,
+  "loads": {
+    "payloads_kg": [
+      0,
+      0.25,
+      0.5
+    ],
+    "source": "load-cases.json original rigid inertials including motors",
+    "orientations": "Two transverse force/moment envelope orientations; resultant norms applied, not claimed exact assembly pose mapping.",
+    "joint_and_mount_assumptions": "Final runs use bonded J6 A/B/C interfaces, rigid mounting faces or bolt-hole supports, and a six-DOF rigid motor/bearing end port. Initial exploratory runs used distributed end traction. No bolt slip or contact separation.",
+    "boundary_revision_note": "Rigid end coupling was introduced after initial results to remove unrealistic motor/bearing interface warping. Numerical acceptance criteria were not changed."
+  },
+  "material": {
+    "nominal_E_MPa": 1670,
+    "nu_assumed": 0.35,
+    "density_g_cm3": 1.31,
+    "E_sensitivity_MPa": [
+      1000,
+      1670,
+      1960
+    ],
+    "model": "Isotropic homogeneous surrogate, not measured orthotropic print. No creep or temperature law available."
+  },
+  "provisional_screening_criteria": {
+    "part_reference_displacement_mm": 1,
+    "part_reference_rotation_deg": 0.5,
+    "principal_tensile_stress_MPa": 6,
+    "stress_basis": "(TDS Z tensile typical 22 minus quoted spread 4)/3; project screening assumption, not statistical lower bound or certified allowable."
+  },
+  "solver_acceptance": {
+    "independent_beam_deflection_relative_error_max": 0.03,
+    "mesh_volume_relative_error_max": 0.01,
+    "successive_reference_displacement_change_max": 0.05,
+    "free_residual_max": 1e-06,
+    "reaction_force_and_moment_relative_error_max": 1e-05
+  },
+  "excluded": "Bolt pretension/slip, contact opening, bearings, motor-case flexibility, dynamic impact, layer fracture, buckling, creep, temperature, actual print defects."
+}

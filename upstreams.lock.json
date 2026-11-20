@@ -32,7 +32,12 @@
         }
       ],
       "material_review_date": "2026-11-19",
-      "material_review": "design/material-review/README.md"
+      "material_review": "design/material-review/README.md",
+      "structural_screen": {
+        "date": "2026-11-19",
+        "report": "design/material-review/structural-screen/README.md",
+        "scope": "Executed component linear FEA screening with original inertials and envelope directions; not complete PLA assembly or physical validation."
+      }
     },
     {
       "name": "openarm_mujoco",
@@ -44,6 +49,11 @@
         "path": "v2/openarm_bimanual.xml",
         "local_sha256": "bdcebc15daa0fb91bbe87e1f6fb58fd4373e4819f0fe5930532211faefbbb027",
         "scope": "Three static poses and COM-Jacobian gravity cross-check; no claim that the local model is byte-identical to the pinned upstream commit. Not a PLA model or physical test."
+      },
+      "structural_screen": {
+        "date": "2026-11-19",
+        "report": "design/material-review/structural-screen/README.md",
+        "scope": "Executed component linear FEA screening with original inertials and envelope directions; not complete PLA assembly or physical validation."
       }
     },
     {

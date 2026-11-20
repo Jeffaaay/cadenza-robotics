@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-19",
+  "status": "numerical_screen_completed_not_hardware_approved",
+  "beam": {
+    "Euler_Bernoulli_mm": 0.23952095808383234,
+    "FEA_mm": 0.23849778218706694,
+    "relative_error": 0.0042717593689955416
+  },
+  "coverage": [
+    "J1",
+    "J4",
+    "J6",
+    "box"
+  ],
+  "numerical_checks": "summarize.py assertions on beam, mesh volume, two-mesh displacement where present, residual and balance",
+  "material_TDS_sha256": "544f98056f3a142969983a97dcd75140b447bca397f99e17edeb260cd2d0d3f5",
+  "material_TDS_note": "Official PDF retrieved 2026-11-19; pages 2 and 4 rendered and visually inspected. PDF is linked, not redistributed.",
+  "limitations": "No complete PLA assembly, manufacturing CAD, hardware load/thermal/creep test or closed-loop task validation.",
+  "files_sha256": {
+    "attempts.json": "43deda0af26136ff46d657ed993782c73a1aa35bdf572b9adaa469109f0a51d0",
+    "exploratory/beam-h4.json": "6959fc191031f6859c33807050296b5e075e2a8c63fde10e8c1e19dc2603f4e2",
+    "exploratory/fea.py": "37b9153f2ddaa8666af255163837e3ffa668758db7db5ba260f02f2917c69222",
+    "exploratory/J4-h4.json": "3187f4afdee81d0df576fb3ee0c2803b6e0ab94e3ca5143eac9202bc8beda88a",
+    "exploratory/J6-h4.json": "6e2404fa59fd8959e0152a39ce17919ea469733d63ef2fb1df9d2dfe811c2385",
+    "extract_structure.py": "703d5ef746d46a947bbf4da9ada8f83e98ffe44e6ec6ba366e385eab975678ae",
+    "fea.py": "ee127731c69fb7eefbabc015ebcbdcc58bd8352f971a823113c2433a278eb6fd",
+    "geometry/.gitattributes": "e8dd327fbf73a5724e4ebf80f3e36cf039fd41d2d78032eaf3d3a735d4c51e13",
+    "geometry/J1_A.step": "c1f46cd53460f5903151a110b3a8bb5021534c4e601717fee7447766a62b1365",
+    "geometry/J4_A.step": "78fdfa73f5ec0f59daab36b863372266cb2fb8e54e86bd7eca50bafeb18f438f",
+    "geometry/J6_A.step": "98b41debe22f7ead0bd9bc47dde6cc21df3d6c590bfcb396f31f0c8b120c0b04",
+    "geometry/J6_B.step": "77627ce3c47e78a4ec8442a4055fc8628436fcc76e41ae3c2f8d53e0df80bee4",
+    "geometry/J6_C.step": "2d4ad577ebd68c8f6a6a3caa04293dd21393fee5b02b4498d2a9ef17eaeb16da",
+    "load-cases.json": "471c1cf1a98c86443281c00260e697f8cc9f23780b8db35950a2bea6869e192b",
+    "load_cases.py": "22eebb728b2baa519de027e6c59bd2f0ad20214759e7393eba01feb4685b6a30",
+    "mesh-and-boundaries.png": "87c8f690cd5fe1da23d88ae0cbcd41238e1e49a3c56edc2ba605b21694b2633d",
+    "README.md": "946cc83432b38b597a4d9a1fcda4e5ef2c483e4c309d42ebcf78c35e713df350",
+    "requirements.txt": "7fcbeecabc0130f21c3c3b6301d325ba5aeb92ec1033a90533917276800fad98",
+    "results/beam-rigid-h4.json": "a372ab79eae46917ce2c15b1d0ba048dccc073d6a26b195383cf22aacd0d9890",
+    "results/box-rigid-h2.8.json": "c9a22fb1aeb3d3b5ced4b1da63bf6977a833a20f502aab0804d857bfe64b1a97",
+    "results/box-rigid-h4.json": "36ca3796beb6b5d10976c3bee7b1da9d9ae779a15c5fd0baa61dbec4157f3f1c",
+    "results/J1-rigid-h4.json": "e99ac50aee2fe0bc936016ffc793256e53c35bb5f21ea36eddd70a836f38e601",
+    "results/J4-rigid-h2.8.json": "75a35b428c89bddaf89310998977957559206b451365c2503d87e5472f54fc65",
+    "results/J4-rigid-h4.json": "85d6e93feb68fbe564d777ad54bc9e2e75cd813b18d18e3db3b4818479c7cfef",
+    "results/J6-rigid-h2.8.json": "0185e2c96a796792d343f6045dc6e82913a136e27eb7510b669e434577c193d2",
+    "results/J6-rigid-h4.json": "a6a7e37fbeed22f5306ce0c052222b15f8bb3b8e2627fcb1cbd6902f20f44657",
+    "screening-contract.json": "ae65cfbcbaeb924e198d59764f4cf16b643085b59eb96fd7a5625b28dd52d4f2",
+    "screening-results.png": "bff974effab0e6f4f383bc1137784749cfc803cc99ebbb74ba895c39c3a10047",
+    "summarize.py": "31a4907786d38cdb764ac4d89eec752695997e65831e5c5d752605730cfa08b2",
+    "summary.json": "5c0c04c757d00901296766e6cb4d7f17eb3ce1ae206c6e9e313466a548e8b1b3"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "part": "beam_check",
+  "units": "N, mm, MPa",
+  "E_MPa": 1670,
+  "poisson_assumed": 0.35,
+  "element": "quadratic displacement tetrahedra on straight-sided CAD surface tessellation",
+  "mesh_hmax_mm": 4.0,
+  "tetrahedra": 944,
+  "dofs": 6033,
+  "cad_volume_mm3": 9999.999999999998,
+  "mesh_volume_mm3": 9999.999999999996,
+  "volume_relative_error": 1.8189894035458568e-16,
+  "fixed_boundary_triangles": 26,
+  "loaded_boundary_triangles": 26,
+  "reference_mm": [
+    100.0,
+    0.0,
+    0.0
+  ],
+  "cases": [
+    {
+      "case": "tip_1N",
+      "force_N": [
+        0,
+        0,
+        1
+      ],
+      "moment_Nmm": [
+        0,
+        0,
+        0
+      ],
+      "reference_displacement_mm": [
+        -1.5164028008045435e-07,
+        -6.057712263228827e-07,
+        0.23850556107586857
+      ],
+      "reference_displacement_norm_mm": 0.23850556107668608,
+      "rotation_rad": [
+        5.172971162246121e-08,
+        -0.003564004788238362,
+        -8.506708192739182e-09
+      ],
+      "max_displacement_mm": 0.23918721680023097,
+      "von_mises_max_MPa": 0.6137070345186577,
+      "max_principal_tension_MPa": 0.7438710156366872,
+      "von_mises_cell_mean_p95_MPa": 0.41490854468666083,
+      "strain_energy_Nmm": 0.11925278053095585,
+      "relative_free_residual": 2.2307197273077906e-10,
+      "relative_reaction_force_error": 4.1199920121693716e-11,
+      "relative_reaction_moment_error": 5.854740456910806e-10
+    }
+  ],
+  "elapsed_seconds": 1.3688070001080632,
+  "versions": {
+    "gmsh": "4.15.2",
+    "numpy": "2.5.5"
+  },
+  "script_sha256": "37b9153f2ddaa8666af255163837e3ffa668758db7db5ba260f02f2917c69222"
+}

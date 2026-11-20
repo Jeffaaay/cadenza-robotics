@@ -1,0 +1,876 @@
+{
+  "model_sha256": "bdcebc15daa0fb91bbe87e1f6fb58fd4373e4819f0fe5930532211faefbbb027",
+  "mujoco_version": "3.16.0",
+  "scope": "Original rigid-body inertials retained, including motors. Static load extraction plus 121 sampled configurations; no material stiffness, dynamics, controller or redesigned clearance validation.",
+  "object_point": "EE body local [0,0,-0.1] m; assumed, not measured",
+  "sections": [
+    {
+      "pose": "down",
+      "q_right_rad": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0,
+      "section": "shoulder",
+      "downstream_mass_kg": 4.9867729999999995,
+      "reference_world_m": [
+        0.0,
+        -0.0925,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -48.92024313
+      ],
+      "moment_world_Nm": [
+        2.728785283935636,
+        -0.07418929917302249,
+        0.0
+      ],
+      "force_norm_N": 48.92024313,
+      "moment_norm_Nm": 2.7297936145312294
+    },
+    {
+      "pose": "down",
+      "q_right_rad": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0,
+      "section": "elbow",
+      "downstream_mass_kg": 2.493734,
+      "reference_world_m": [
+        0.0,
+        -0.1525,
+        -0.22
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -24.46353054
+      ],
+      "moment_world_Nm": [
+        -0.037875004180647834,
+        0.014714221220989518,
+        0.0
+      ],
+      "force_norm_N": 24.46353054,
+      "moment_norm_Nm": 0.04063279768640487
+    },
+    {
+      "pose": "down",
+      "q_right_rad": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0,
+      "section": "wrist",
+      "downstream_mass_kg": 1.243222,
+      "reference_world_m": [
+        0.0,
+        -0.1525,
+        -0.436
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -12.196007820000002
+      ],
+      "moment_world_Nm": [
+        -0.04886930680589005,
+        0.038493376371266624,
+        0.0
+      ],
+      "force_norm_N": 12.196007820000002,
+      "moment_norm_Nm": 0.062208915535863496
+    },
+    {
+      "pose": "down",
+      "q_right_rad": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.25,
+      "section": "shoulder",
+      "downstream_mass_kg": 4.9867729999999995,
+      "reference_world_m": [
+        0.0,
+        -0.0925,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -51.37274313
+      ],
+      "moment_world_Nm": [
+        2.875935283935636,
+        -0.07418929917302249,
+        0.0
+      ],
+      "force_norm_N": 51.37274313,
+      "moment_norm_Nm": 2.876892039944796
+    },
+    {
+      "pose": "down",
+      "q_right_rad": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.25,
+      "section": "elbow",
+      "downstream_mass_kg": 2.493734,
+      "reference_world_m": [
+        0.0,
+        -0.1525,
+        -0.22
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -26.91603054
+      ],
+      "moment_world_Nm": [
+        -0.037875004180647834,
+        0.014714221220989518,
+        0.0
+      ],
+      "force_norm_N": 26.91603054,
+      "moment_norm_Nm": 0.04063279768640487
+    },
+    {
+      "pose": "down",
+      "q_right_rad": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.25,
+      "section": "wrist",
+      "downstream_mass_kg": 1.243222,
+      "reference_world_m": [
+        0.0,
+        -0.1525,
+        -0.436
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -14.648507820000003
+      ],
+      "moment_world_Nm": [
+        -0.04886930680589005,
+        0.038493376371266624,
+        0.0
+      ],
+      "force_norm_N": 14.648507820000003,
+      "moment_norm_Nm": 0.062208915535863496
+    },
+    {
+      "pose": "down",
+      "q_right_rad": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.5,
+      "section": "shoulder",
+      "downstream_mass_kg": 4.9867729999999995,
+      "reference_world_m": [
+        0.0,
+        -0.0925,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -53.825243130000004
+      ],
+      "moment_world_Nm": [
+        3.023085283935636,
+        -0.07418929917302249,
+        0.0
+      ],
+      "force_norm_N": 53.825243130000004,
+      "moment_norm_Nm": 3.0239954838028424
+    },
+    {
+      "pose": "down",
+      "q_right_rad": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.5,
+      "section": "elbow",
+      "downstream_mass_kg": 2.493734,
+      "reference_world_m": [
+        0.0,
+        -0.1525,
+        -0.22
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -29.368530540000002
+      ],
+      "moment_world_Nm": [
+        -0.037875004180647834,
+        0.014714221220989518,
+        0.0
+      ],
+      "force_norm_N": 29.368530540000002,
+      "moment_norm_Nm": 0.04063279768640487
+    },
+    {
+      "pose": "down",
+      "q_right_rad": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.5,
+      "section": "wrist",
+      "downstream_mass_kg": 1.243222,
+      "reference_world_m": [
+        0.0,
+        -0.1525,
+        -0.436
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -17.101007820000003
+      ],
+      "moment_world_Nm": [
+        -0.04886930680589005,
+        0.038493376371266624,
+        0.0
+      ],
+      "force_norm_N": 17.101007820000003,
+      "moment_norm_Nm": 0.062208915535863496
+    },
+    {
+      "pose": "horizontal",
+      "q_right_rad": [
+        1.5707963267948966,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0,
+      "section": "shoulder",
+      "downstream_mass_kg": 4.9867729999999995,
+      "reference_world_m": [
+        0.0,
+        -0.0925,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -48.92024313
+      ],
+      "moment_world_Nm": [
+        2.728785283935637,
+        11.697387101500212,
+        0.0
+      ],
+      "force_norm_N": 48.92024313,
+      "moment_norm_Nm": 12.011458451335843
+    },
+    {
+      "pose": "horizontal",
+      "q_right_rad": [
+        1.5707963267948966,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0,
+      "section": "elbow",
+      "downstream_mass_kg": 2.493734,
+      "reference_world_m": [
+        0.22000000000000003,
+        -0.15250000000000002,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -24.46353054
+      ],
+      "moment_world_Nm": [
+        -0.037875004180647834,
+        4.380561130586041,
+        0.0
+      ],
+      "force_norm_N": 24.46353054,
+      "moment_norm_Nm": 4.380724864077056
+    },
+    {
+      "pose": "horizontal",
+      "q_right_rad": [
+        1.5707963267948966,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0,
+      "section": "wrist",
+      "downstream_mass_kg": 1.243222,
+      "reference_world_m": [
+        0.43600000000000005,
+        -0.15250000000000002,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -12.196007820000002
+      ],
+      "moment_world_Nm": [
+        -0.04886930680589005,
+        0.5271556055751451,
+        0.0
+      ],
+      "force_norm_N": 12.196007820000002,
+      "moment_norm_Nm": 0.5294159438824885
+    },
+    {
+      "pose": "horizontal",
+      "q_right_rad": [
+        1.5707963267948966,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.25,
+      "section": "shoulder",
+      "downstream_mass_kg": 4.9867729999999995,
+      "reference_world_m": [
+        0.0,
+        -0.0925,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -51.37274313
+      ],
+      "moment_world_Nm": [
+        2.875935283935637,
+        13.011927101500213,
+        0.0
+      ],
+      "force_norm_N": 51.37274313,
+      "moment_norm_Nm": 13.325961528240342
+    },
+    {
+      "pose": "horizontal",
+      "q_right_rad": [
+        1.5707963267948966,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.25,
+      "section": "elbow",
+      "downstream_mass_kg": 2.493734,
+      "reference_world_m": [
+        0.22000000000000003,
+        -0.15250000000000002,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -26.91603054
+      ],
+      "moment_world_Nm": [
+        -0.037875004180647834,
+        5.155551130586041,
+        0.0
+      ],
+      "force_norm_N": 26.91603054,
+      "moment_norm_Nm": 5.1556902521416745
+    },
+    {
+      "pose": "horizontal",
+      "q_right_rad": [
+        1.5707963267948966,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.25,
+      "section": "wrist",
+      "downstream_mass_kg": 1.243222,
+      "reference_world_m": [
+        0.43600000000000005,
+        -0.15250000000000002,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -14.648507820000003
+      ],
+      "moment_world_Nm": [
+        -0.04886930680589005,
+        0.772405605575145,
+        0.0
+      ],
+      "force_norm_N": 14.648507820000003,
+      "moment_norm_Nm": 0.773950016907807
+    },
+    {
+      "pose": "horizontal",
+      "q_right_rad": [
+        1.5707963267948966,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.5,
+      "section": "shoulder",
+      "downstream_mass_kg": 4.9867729999999995,
+      "reference_world_m": [
+        0.0,
+        -0.0925,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -53.825243130000004
+      ],
+      "moment_world_Nm": [
+        3.0230852839356372,
+        14.326467101500212,
+        0.0
+      ],
+      "force_norm_N": 53.825243130000004,
+      "moment_norm_Nm": 14.641950151681165
+    },
+    {
+      "pose": "horizontal",
+      "q_right_rad": [
+        1.5707963267948966,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.5,
+      "section": "elbow",
+      "downstream_mass_kg": 2.493734,
+      "reference_world_m": [
+        0.22000000000000003,
+        -0.15250000000000002,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -29.368530540000002
+      ],
+      "moment_world_Nm": [
+        -0.037875004180647834,
+        5.930541130586041,
+        0.0
+      ],
+      "force_norm_N": 29.368530540000002,
+      "moment_norm_Nm": 5.930662072443046
+    },
+    {
+      "pose": "horizontal",
+      "q_right_rad": [
+        1.5707963267948966,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.5,
+      "section": "wrist",
+      "downstream_mass_kg": 1.243222,
+      "reference_world_m": [
+        0.43600000000000005,
+        -0.15250000000000002,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -17.101007820000003
+      ],
+      "moment_world_Nm": [
+        -0.04886930680589005,
+        1.0176556055751451,
+        0.0
+      ],
+      "force_norm_N": 17.101007820000003,
+      "moment_norm_Nm": 1.0188283175816246
+    },
+    {
+      "pose": "bent",
+      "q_right_rad": [
+        0.7,
+        0,
+        0,
+        1.1,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0,
+      "section": "shoulder",
+      "downstream_mass_kg": 4.9867729999999995,
+      "reference_world_m": [
+        0.0,
+        -0.0925,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -48.92024313
+      ],
+      "moment_world_Nm": [
+        2.728785283935636,
+        8.908287518962688,
+        0.0
+      ],
+      "force_norm_N": 48.92024313,
+      "moment_norm_Nm": 9.316858679100488
+    },
+    {
+      "pose": "bent",
+      "q_right_rad": [
+        0.7,
+        0,
+        0,
+        1.1,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0,
+      "section": "elbow",
+      "downstream_mass_kg": 2.493734,
+      "reference_world_m": [
+        0.141727891192292,
+        -0.1525,
+        -0.16826528120258744
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -24.46353054
+      ],
+      "moment_world_Nm": [
+        -0.037875004180647834,
+        4.262655977055137,
+        0.0
+      ],
+      "force_norm_N": 24.46353054,
+      "moment_norm_Nm": 4.262824239241581
+    },
+    {
+      "pose": "bent",
+      "q_right_rad": [
+        0.7,
+        0,
+        0,
+        1.1,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0,
+      "section": "wrist",
+      "downstream_mass_kg": 1.243222,
+      "reference_world_m": [
+        0.35207897946198213,
+        -0.1525,
+        -0.11918962874888064
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -12.196007820000002
+      ],
+      "moment_world_Nm": [
+        -0.04886930680589005,
+        0.5046234618501539,
+        0.0
+      ],
+      "force_norm_N": 12.196007820000002,
+      "moment_norm_Nm": 0.5069842674061218
+    },
+    {
+      "pose": "bent",
+      "q_right_rad": [
+        0.7,
+        0,
+        0,
+        1.1,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.25,
+      "section": "shoulder",
+      "downstream_mass_kg": 4.9867729999999995,
+      "reference_world_m": [
+        0.0,
+        -0.0925,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -51.37274313
+      ],
+      "moment_world_Nm": [
+        2.875935283935636,
+        10.010597347566076,
+        0.0
+      ],
+      "force_norm_N": 51.37274313,
+      "moment_norm_Nm": 10.415520294852433
+    },
+    {
+      "pose": "bent",
+      "q_right_rad": [
+        0.7,
+        0,
+        0,
+        1.1,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.25,
+      "section": "elbow",
+      "downstream_mass_kg": 2.493734,
+      "reference_world_m": [
+        0.141727891192292,
+        -0.1525,
+        -0.16826528120258744
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -26.91603054
+      ],
+      "moment_world_Nm": [
+        -0.037875004180647834,
+        5.017378152509429,
+        0.0
+      ],
+      "force_norm_N": 26.91603054,
+      "moment_norm_Nm": 5.017521105209286
+    },
+    {
+      "pose": "bent",
+      "q_right_rad": [
+        0.7,
+        0,
+        0,
+        1.1,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.25,
+      "section": "wrist",
+      "downstream_mass_kg": 1.243222,
+      "reference_world_m": [
+        0.35207897946198213,
+        -0.1525,
+        -0.11918962874888064
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -14.648507820000003
+      ],
+      "moment_world_Nm": [
+        -0.04886930680589005,
+        0.7434595933230314,
+        0.0
+      ],
+      "force_norm_N": 14.648507820000003,
+      "moment_norm_Nm": 0.7450640080232942
+    },
+    {
+      "pose": "bent",
+      "q_right_rad": [
+        0.7,
+        0,
+        0,
+        1.1,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.5,
+      "section": "shoulder",
+      "downstream_mass_kg": 4.9867729999999995,
+      "reference_world_m": [
+        0.0,
+        -0.0925,
+        0.0
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -53.825243130000004
+      ],
+      "moment_world_Nm": [
+        3.023085283935636,
+        11.112907176169465,
+        0.0
+      ],
+      "force_norm_N": 53.825243130000004,
+      "moment_norm_Nm": 11.516759550329553
+    },
+    {
+      "pose": "bent",
+      "q_right_rad": [
+        0.7,
+        0,
+        0,
+        1.1,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.5,
+      "section": "elbow",
+      "downstream_mass_kg": 2.493734,
+      "reference_world_m": [
+        0.141727891192292,
+        -0.1525,
+        -0.16826528120258744
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -29.368530540000002
+      ],
+      "moment_world_Nm": [
+        -0.037875004180647834,
+        5.772100327963722,
+        0.0
+      ],
+      "force_norm_N": 29.368530540000002,
+      "moment_norm_Nm": 5.772224589533969
+    },
+    {
+      "pose": "bent",
+      "q_right_rad": [
+        0.7,
+        0,
+        0,
+        1.1,
+        0,
+        0,
+        0
+      ],
+      "payload_kg": 0.5,
+      "section": "wrist",
+      "downstream_mass_kg": 1.243222,
+      "reference_world_m": [
+        0.35207897946198213,
+        -0.1525,
+        -0.11918962874888064
+      ],
+      "force_world_N": [
+        0.0,
+        0.0,
+        -17.101007820000003
+      ],
+      "moment_world_Nm": [
+        -0.04886930680589005,
+        0.9822957247959088,
+        0.0
+      ],
+      "force_norm_N": 17.101007820000003,
+      "moment_norm_Nm": 0.9835105998920438
+    }
+  ],
+  "motion_screen": {
+    "frames": 121,
+    "penetrations_over_1mm": []
+  }
+}
