@@ -1,0 +1,13 @@
+{
+  "field_name": "J6_ABC-h2.8-bend_Z_0.5kg.npz",
+  "field_sha256": "9990e3fcc494e225c3296f338fabee8f6122d3f8f037517aa9a5d2491c91c92c",
+  "base_result": "results/J6-rigid-h2.8.json",
+  "base_result_sha256": "0185e2c96a796792d343f6045dc6e82913a136e27eb7510b669e434577c193d2",
+  "case": "bend_Z_0.5kg",
+  "E_proxies_MPa": [
+    1670,
+    4730
+  ],
+  "displacement_display_multiplier": 1,
+  "note": "Second field is E-scaled at fixed nu; neither field is a nonlinear/fracture prediction."
+}

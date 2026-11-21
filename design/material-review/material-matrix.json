@@ -1115,5 +1115,11 @@
     }
   ],
   "baseline_note": "baseline_decision/baseline_change and CAD colors retain the initial assessment. pla_first_path preserves earlier PLA concepts. current_route/current_path reflect the later 2026-11-20 printed-structure preference, superseding the metal-first sourcing proposal in Git 8f2057e. Candidates are not released designs or validation results.",
-  "current_phase": "先单臂桌面轻物抓放，保持最终固定双臂目标；暂缓机身装饰、头部、下半身与移动电池。"
+  "current_phase": "先单臂桌面轻物抓放，保持最终固定双臂目标；暂缓机身装饰、头部、下半身与移动电池。",
+  "active_evaluation": {
+    "date": "2026-11-20",
+    "question": "Keep original CAD unchanged and evaluate material substitution before redesign.",
+    "report": "structural-screen/same-cad-materials.md",
+    "route_fields_note": "current_route/current_path retain the previous proposed manufacturing routes as fallbacks; they are not same-CAD test outcomes. Do not execute redesign before evaluating this question."
+  }
 }

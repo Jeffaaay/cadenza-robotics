@@ -1,5 +1,9 @@
 # Cadenza Robotics
 
+当前验证问题（2026-11-20 最新澄清）：**先保持原 CAD 的形状、厚度、孔位不变，比较换打印材料的可行性。** 不把改厚/加筋/箱梁当作这道问题的答案。已补 [同 CAD 材料参数筛查与变形图](design/material-review/structural-screen/same-cad-materials.md)，以及 [CAD 文件清单、逐件预览与 Fusion 兼容性](design/material-review/cad/README.md)。下方打印重设计仍是备选制作计划，先不实施；它不是本次同形替材的验证结果。
+
+仓库现有内容：`design/material-review/` 是 34 功能组材料评估、73 个选中 CAD 实例预览和载荷数据；其中 `structural-screen/` 有 5 个抽取 STEP、部件有限元代码/结果及材料参数比较。`experiments/offline-inference/` 是 SmolVLA/ACT 离线推理程序与记录。`BUILD.md` 记搭建/采购，`BASELINES.md` 记评估和研究协议。完整官方 CAD 发布包保留上游链接与本机副本，不重复上传；仓库不是完整的已验证打印生产包。
+
 基于 OpenArm 的双臂家用机器人与操作学习研究项目。当前先沿用已购电机，以**尽量避免定制金属、优先打印重设计**的方式探索固定上半身；第一轮只做一条桌面执行臂的轻物抓放模型演示，再扩展双臂，下半身暂缓。
 
 制造决策更新（2026-11-20 后续澄清）：取代同日“首版大批保留金属”的采购建议。现有 PLA 做配合/附件，J4/J6 重画闭合梁，肩根/电机座也纳入打印重设计，比较 PLA、PET-CF、PAHT-CF；现成轴承、紧固件和必要轴/套筒保留。**这不是已验证的全塑料制造方案**，原 J4/J6 同外形 PLA 已未过筛查，特殊轴仍可能需要少量定制例外。见 [图解与逐件材料安排](design/material-review/README.md)。

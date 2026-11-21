@@ -1,0 +1,2859 @@
+{
+  "date": "2026-11-20",
+  "scope": "Same unmodified CAD, original fixed loads, nu=0.35; scalar isotropic E sensitivity only. No redesigned box included.",
+  "method": "K scales with E at fixed nu. u(E)=u(1670)*1670/E. Directional TDS moduli are separate isotropic proxies, not physical orientation predictions or rigorous bounds.",
+  "limitations": [
+    "Retains original assembly inertials; not an all-plastic or all-316L reweighted assembly.",
+    "No full orthotropic stiffness tensor, layer paths, voids, interfaces, creep, thermal softening, nonlinear deformation, fracture or buckling.",
+    "Large displacement/high stress results are rejection indicators beyond the small-strain model validity, not actual sag distances.",
+    "The arbitrary engineering translation/rotation screens are not task-derived tolerances or a load rating.",
+    "Strength is NOT passed here. At fixed force, same nu and uniform E, this model stress field is unchanged by E alone; material-specific allowables are required.",
+    "The 316L comparison uses supplier reference elastic moduli only; no manufacturing process, fit, density substitution or whole-arm qualification.",
+    "Only J1_A, J4_A and J6_A/B/C assessed, not every part. TDS specimen processing differs from an arbitrary P1S print."
+  ],
+  "sources": {
+    "PLA Matte": "https://store.bblcdn.com/s7/default/5b061f2feeac4ba88f355a33248bbda7/Bambu_PLA_Matte_Technical_Data_Sheet.pdf",
+    "PET-CF": "https://store.bblcdn.eu/s8/default/df83cdd0401b4c169d7883a3e7bd2c8a/Bambu_PET-CF_Technical_Data_Sheet.pdf",
+    "PAHT-CF": "https://store.bblcdn.eu/s8/default/91dea87af3414d878a0696d2c51b98f7/Bambu_PAHT-CF_Technical_Data_Sheet_V2.pdf",
+    "Printed 316L reference": "https://www.tpc.toray/en/technology/additive-print/add_material/add_material_001.html"
+  },
+  "baseline_files": {
+    "J1_A": {
+      "path": "results/J1-rigid-h4.json",
+      "sha256": "e99ac50aee2fe0bc936016ffc793256e53c35bb5f21ea36eddd70a836f38e601"
+    },
+    "J4_A": {
+      "path": "results/J4-rigid-h2.8.json",
+      "sha256": "75a35b428c89bddaf89310998977957559206b451365c2503d87e5472f54fc65"
+    },
+    "J6_ABC": {
+      "path": "results/J6-rigid-h2.8.json",
+      "sha256": "0185e2c96a796792d343f6045dc6e82913a136e27eb7510b669e434577c193d2"
+    }
+  },
+  "geometry_sha256": {
+    "J1_A.step": "c1f46cd53460f5903151a110b3a8bb5021534c4e601717fee7447766a62b1365",
+    "J4_A.step": "78fdfa73f5ec0f59daab36b863372266cb2fb8e54e86bd7eca50bafeb18f438f",
+    "J6_A.step": "98b41debe22f7ead0bd9bc47dde6cc21df3d6c590bfcb396f31f0c8b120c0b04",
+    "J6_B.step": "77627ce3c47e78a4ec8442a4055fc8628436fcc76e41ae3c2f8d53e0df80bee4",
+    "J6_C.step": "2d4ad577ebd68c8f6a6a3caa04293dd21393fee5b02b4498d2a9ef17eaeb16da"
+  },
+  "loads_sha256": "471c1cf1a98c86443281c00260e697f8cc9f23780b8db35950a2bea6869e192b",
+  "independent_rerun": {
+    "path": "results/J4-rigid-h2.8-E4730.json",
+    "sha256": "039eb401acd628089d3359ec80a2518821a37608ae09774840e4ae7b4521f911",
+    "max_relative_translation_difference_vs_scaling": 7.599886053810678e-09,
+    "number_of_load_cases": 6,
+    "elapsed_seconds": 251.66076500015333
+  },
+  "records": [
+    {
+      "part": "J1_A",
+      "material_parameter_source": "PLA Matte",
+      "datasheet_test_direction": "Z",
+      "isotropic_E_proxy_MPa": 1670,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "in_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            -48.92024313
+          ],
+          "moment_Nmm": [
+            0.0,
+            12011.458451335842,
+            0.0
+          ],
+          "interface_translation_mm": 0.0019015584132985961,
+          "interface_rotation_deg": 0.010406707060856871,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            -48.92024313,
+            0.0
+          ],
+          "moment_Nmm": [
+            12011.458451335842,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.00703594475028131,
+          "interface_rotation_deg": 0.20334119485916616,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            -51.37274313
+          ],
+          "moment_Nmm": [
+            0.0,
+            13325.961528240341,
+            0.0
+          ],
+          "interface_translation_mm": 0.0020071808521573424,
+          "interface_rotation_deg": 0.011543751300664958,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            -51.37274313,
+            0.0
+          ],
+          "moment_Nmm": [
+            13325.961528240341,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.007601203382089507,
+          "interface_rotation_deg": 0.22555420753442748,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            -53.825243130000004
+          ],
+          "moment_Nmm": [
+            0.0,
+            14641.950151681165,
+            0.0
+          ],
+          "interface_translation_mm": 0.0021132946933378085,
+          "interface_rotation_deg": 0.012682162571468451,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            -53.825243130000004,
+            0.0
+          ],
+          "moment_Nmm": [
+            14641.950151681165,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.008167611641311159,
+          "interface_rotation_deg": 0.2477922852531932,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        }
+      ]
+    },
+    {
+      "part": "J1_A",
+      "material_parameter_source": "PLA Matte",
+      "datasheet_test_direction": "XY",
+      "isotropic_E_proxy_MPa": 1960,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "in_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            -48.92024313
+          ],
+          "moment_Nmm": [
+            0.0,
+            12011.458451335842,
+            0.0
+          ],
+          "interface_translation_mm": 0.001620205382759518,
+          "interface_rotation_deg": 0.008866939179403559,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            -48.92024313,
+            0.0
+          ],
+          "moment_Nmm": [
+            12011.458451335842,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.005994912108658055,
+          "interface_rotation_deg": 0.17325499766061606,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            -51.37274313
+          ],
+          "moment_Nmm": [
+            0.0,
+            13325.961528240341,
+            0.0
+          ],
+          "interface_translation_mm": 0.0017102000117871234,
+          "interface_rotation_deg": 0.00983574728168902,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            -51.37274313,
+            0.0
+          ],
+          "moment_Nmm": [
+            13325.961528240341,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.006476535534739529,
+          "interface_rotation_deg": 0.19218139111351729,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            -53.825243130000004
+          ],
+          "moment_Nmm": [
+            0.0,
+            14641.950151681165,
+            0.0
+          ],
+          "interface_translation_mm": 0.0018006133356500715,
+          "interface_rotation_deg": 0.010805720150179752,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            -53.825243130000004,
+            0.0
+          ],
+          "moment_Nmm": [
+            14641.950151681165,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.006959138490300834,
+          "interface_rotation_deg": 0.21112914100654726,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        }
+      ]
+    },
+    {
+      "part": "J1_A",
+      "material_parameter_source": "PET-CF",
+      "datasheet_test_direction": "Z",
+      "isotropic_E_proxy_MPa": 2160,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "in_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            -48.92024313
+          ],
+          "moment_Nmm": [
+            0.0,
+            12011.458451335842,
+            0.0
+          ],
+          "interface_translation_mm": 0.0014701863658373405,
+          "interface_rotation_deg": 0.008045926292421747,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            -48.92024313,
+            0.0
+          ],
+          "moment_Nmm": [
+            12011.458451335842,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.0054398276541526795,
+          "interface_rotation_deg": 0.15721286824759606,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            -51.37274313
+          ],
+          "moment_Nmm": [
+            0.0,
+            13325.961528240341,
+            0.0
+          ],
+          "interface_translation_mm": 0.0015518481588438712,
+          "interface_rotation_deg": 0.008925029940791888,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            -51.37274313,
+            0.0
+          ],
+          "moment_Nmm": [
+            13325.961528240341,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.005876856318559943,
+          "interface_rotation_deg": 0.1743868178622657,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            -53.825243130000004
+          ],
+          "moment_Nmm": [
+            0.0,
+            14641.950151681165,
+            0.0
+          ],
+          "interface_translation_mm": 0.0016338898786454352,
+          "interface_rotation_deg": 0.00980519050664459,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            -53.825243130000004,
+            0.0
+          ],
+          "moment_Nmm": [
+            14641.950151681165,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.006314773815272979,
+          "interface_rotation_deg": 0.191580146468904,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        }
+      ]
+    },
+    {
+      "part": "J1_A",
+      "material_parameter_source": "PET-CF",
+      "datasheet_test_direction": "XY",
+      "isotropic_E_proxy_MPa": 4730,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "in_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            -48.92024313
+          ],
+          "moment_Nmm": [
+            0.0,
+            12011.458451335842,
+            0.0
+          ],
+          "interface_translation_mm": 0.0006713747463443246,
+          "interface_rotation_deg": 0.0036742496388226164,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            -48.92024313,
+            0.0
+          ],
+          "moment_Nmm": [
+            12011.458451335842,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.0024841496264206737,
+          "interface_rotation_deg": 0.07179276858664006,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            -51.37274313
+          ],
+          "moment_Nmm": [
+            0.0,
+            13325.961528240341,
+            0.0
+          ],
+          "interface_translation_mm": 0.0007086663896623175,
+          "interface_rotation_deg": 0.0040757007763447105,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            -51.37274313,
+            0.0
+          ],
+          "moment_Nmm": [
+            13325.961528240341,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.002683722969997775,
+          "interface_rotation_deg": 0.07963541788213402,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            -53.825243130000004
+          ],
+          "moment_Nmm": [
+            0.0,
+            14641.950151681165,
+            0.0
+          ],
+          "interface_translation_mm": 0.0007461315302059493,
+          "interface_rotation_deg": 0.00447763456540218,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            -53.825243130000004,
+            0.0
+          ],
+          "moment_Nmm": [
+            14641.950151681165,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.002883702207397386,
+          "interface_rotation_deg": 0.08748691678072572,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        }
+      ]
+    },
+    {
+      "part": "J1_A",
+      "material_parameter_source": "PAHT-CF",
+      "datasheet_test_direction": "Z",
+      "isotropic_E_proxy_MPa": 2180,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "in_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            -48.92024313
+          ],
+          "moment_Nmm": [
+            0.0,
+            12011.458451335842,
+            0.0
+          ],
+          "interface_translation_mm": 0.001456698417526906,
+          "interface_rotation_deg": 0.007972110454876594,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            -48.92024313,
+            0.0
+          ],
+          "moment_Nmm": [
+            12011.458451335842,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.005389920978426508,
+          "interface_rotation_deg": 0.15577054835541626,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            -51.37274313
+          ],
+          "moment_Nmm": [
+            0.0,
+            13325.961528240341,
+            0.0
+          ],
+          "interface_translation_mm": 0.001537611019771909,
+          "interface_rotation_deg": 0.00884314893216077,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            -51.37274313,
+            0.0
+          ],
+          "moment_Nmm": [
+            13325.961528240341,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.005822940205545631,
+          "interface_rotation_deg": 0.17278693879930912,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            -53.825243130000004
+          ],
+          "moment_Nmm": [
+            0.0,
+            14641.950151681165,
+            0.0
+          ],
+          "interface_translation_mm": 0.0016189000632450183,
+          "interface_rotation_deg": 0.00971523463043684,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            -53.825243130000004,
+            0.0
+          ],
+          "moment_Nmm": [
+            14641.950151681165,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.006256840110545704,
+          "interface_rotation_deg": 0.1898225304462535,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        }
+      ]
+    },
+    {
+      "part": "J1_A",
+      "material_parameter_source": "PAHT-CF",
+      "datasheet_test_direction": "XY",
+      "isotropic_E_proxy_MPa": 3860,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "in_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            -48.92024313
+          ],
+          "moment_Nmm": [
+            0.0,
+            12011.458451335842,
+            0.0
+          ],
+          "interface_translation_mm": 0.0008226949611939521,
+          "interface_rotation_deg": 0.004502383624774863,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            -48.92024313,
+            0.0
+          ],
+          "moment_Nmm": [
+            12011.458451335842,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.003044048635484401,
+          "interface_rotation_deg": 0.0879740402629035,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            -51.37274313
+          ],
+          "moment_Nmm": [
+            0.0,
+            13325.961528240341,
+            0.0
+          ],
+          "interface_translation_mm": 0.000868391715829731,
+          "interface_rotation_deg": 0.0049943172725674815,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            -51.37274313,
+            0.0
+          ],
+          "moment_Nmm": [
+            13325.961528240341,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.0032886035357744758,
+          "interface_rotation_deg": 0.09758433331152691,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            -53.825243130000004
+          ],
+          "moment_Nmm": [
+            0.0,
+            14641.950151681165,
+            0.0
+          ],
+          "interface_translation_mm": 0.0009143010719881192,
+          "interface_rotation_deg": 0.005486842356049822,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            -53.825243130000004,
+            0.0
+          ],
+          "moment_Nmm": [
+            14641.950151681165,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.0035336558137278847,
+          "interface_rotation_deg": 0.10720547056291001,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        }
+      ]
+    },
+    {
+      "part": "J1_A",
+      "material_parameter_source": "Printed 316L reference",
+      "datasheet_test_direction": "Z",
+      "isotropic_E_proxy_MPa": 180000,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "in_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            -48.92024313
+          ],
+          "moment_Nmm": [
+            0.0,
+            12011.458451335842,
+            0.0
+          ],
+          "interface_translation_mm": 1.7642236390048085e-05,
+          "interface_rotation_deg": 9.655111550906097e-05,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            -48.92024313,
+            0.0
+          ],
+          "moment_Nmm": [
+            12011.458451335842,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 6.527793184983215e-05,
+          "interface_rotation_deg": 0.0018865544189711526,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            -51.37274313
+          ],
+          "moment_Nmm": [
+            0.0,
+            13325.961528240341,
+            0.0
+          ],
+          "interface_translation_mm": 1.8622177906126455e-05,
+          "interface_rotation_deg": 0.00010710035928950265,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            -51.37274313,
+            0.0
+          ],
+          "moment_Nmm": [
+            13325.961528240341,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 7.05222758227193e-05,
+          "interface_rotation_deg": 0.0020926418143471883,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            -53.825243130000004
+          ],
+          "moment_Nmm": [
+            0.0,
+            14641.950151681165,
+            0.0
+          ],
+          "interface_translation_mm": 1.960667854374522e-05,
+          "interface_rotation_deg": 0.00011766228607973507,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            -53.825243130000004,
+            0.0
+          ],
+          "moment_Nmm": [
+            14641.950151681165,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 7.577728578327575e-05,
+          "interface_rotation_deg": 0.002298961757626848,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        }
+      ]
+    },
+    {
+      "part": "J1_A",
+      "material_parameter_source": "Printed 316L reference",
+      "datasheet_test_direction": "XY",
+      "isotropic_E_proxy_MPa": 185000,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "in_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            -48.92024313
+          ],
+          "moment_Nmm": [
+            0.0,
+            12011.458451335842,
+            0.0
+          ],
+          "interface_translation_mm": 1.7165419190317057e-05,
+          "interface_rotation_deg": 9.394162590070796e-05,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            -48.92024313,
+            0.0
+          ],
+          "moment_Nmm": [
+            12011.458451335842,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 6.351366342145831e-05,
+          "interface_rotation_deg": 0.001835566461701662,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            -51.37274313
+          ],
+          "moment_Nmm": [
+            0.0,
+            13325.961528240341,
+            0.0
+          ],
+          "interface_translation_mm": 1.811887580055547e-05,
+          "interface_rotation_deg": 0.00010420575498438096,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            -51.37274313,
+            0.0
+          ],
+          "moment_Nmm": [
+            13325.961528240341,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 6.861626836805122e-05,
+          "interface_rotation_deg": 0.0020360839274729398,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "in_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            -53.825243130000004
+          ],
+          "moment_Nmm": [
+            0.0,
+            14641.950151681165,
+            0.0
+          ],
+          "interface_translation_mm": 1.907676831283319e-05,
+          "interface_rotation_deg": 0.00011448222429379628,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "out_of_plane_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            -53.825243130000004,
+            0.0
+          ],
+          "moment_Nmm": [
+            14641.950151681165,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 7.37292510323764e-05,
+          "interface_rotation_deg": 0.0022368276560693653,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        }
+      ]
+    },
+    {
+      "part": "J4_A",
+      "material_parameter_source": "PLA Matte",
+      "datasheet_test_direction": "Z",
+      "isotropic_E_proxy_MPa": 1670,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_X_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            24.46353054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            4380.724864077056
+          ],
+          "interface_translation_mm": 12.787039708694506,
+          "interface_rotation_deg": 6.987789290749363,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            24.46353054
+          ],
+          "moment_Nmm": [
+            -4380.724864077056,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 76.62686850214321,
+          "interface_rotation_deg": 2.6876185805447816,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_X_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            26.91603054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5155.690252141674
+          ],
+          "interface_translation_mm": 14.662308749178202,
+          "interface_rotation_deg": 8.034469527327063,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            26.91603054
+          ],
+          "moment_Nmm": [
+            -5155.690252141674,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 84.45064815107496,
+          "interface_rotation_deg": 3.0498641090160303,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_X_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            29.368530540000002,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5930.662072443046
+          ],
+          "interface_translation_mm": 16.5375922272976,
+          "interface_rotation_deg": 9.081156425563545,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            29.368530540000002
+          ],
+          "moment_Nmm": [
+            -5930.662072443046,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 92.27443051867395,
+          "interface_rotation_deg": 3.4121118941247772,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        }
+      ]
+    },
+    {
+      "part": "J4_A",
+      "material_parameter_source": "PLA Matte",
+      "datasheet_test_direction": "XY",
+      "isotropic_E_proxy_MPa": 1960,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_X_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            24.46353054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            4380.724864077056
+          ],
+          "interface_translation_mm": 10.895079751795828,
+          "interface_rotation_deg": 5.953881691607875,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            24.46353054
+          ],
+          "moment_Nmm": [
+            -4380.724864077056,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 65.28921959111182,
+          "interface_rotation_deg": 2.2899607293417272,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_X_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            26.91603054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5155.690252141674
+          ],
+          "interface_translation_mm": 12.492885515881428,
+          "interface_rotation_deg": 6.845695974814386,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            26.91603054
+          ],
+          "moment_Nmm": [
+            -5155.690252141674,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 71.95539918994652,
+          "interface_rotation_deg": 2.5986087051310056,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_X_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            29.368530540000002,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5930.662072443046
+          ],
+          "interface_translation_mm": 14.090703581421936,
+          "interface_rotation_deg": 7.737515934026082,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            29.368530540000002
+          ],
+          "moment_Nmm": [
+            -5930.662072443046,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 78.62158110519668,
+          "interface_rotation_deg": 2.9072586036675396,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        }
+      ]
+    },
+    {
+      "part": "J4_A",
+      "material_parameter_source": "PET-CF",
+      "datasheet_test_direction": "Z",
+      "isotropic_E_proxy_MPa": 2160,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_X_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            24.46353054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            4380.724864077056
+          ],
+          "interface_translation_mm": 9.886276071073993,
+          "interface_rotation_deg": 5.402596349792331,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            24.46353054
+          ],
+          "moment_Nmm": [
+            -4380.724864077056,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 59.24392148082369,
+          "interface_rotation_deg": 2.0779273284767523,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_X_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            26.91603054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5155.690252141674
+          ],
+          "interface_translation_mm": 11.336136857003517,
+          "interface_rotation_deg": 6.211835236405646,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            26.91603054
+          ],
+          "moment_Nmm": [
+            -5155.690252141674,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 65.29286222791444,
+          "interface_rotation_deg": 2.357996787989246,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_X_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            29.368530540000002,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5930.662072443046
+          ],
+          "interface_translation_mm": 12.786008805364348,
+          "interface_rotation_deg": 7.021079273468112,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            29.368530540000002
+          ],
+          "moment_Nmm": [
+            -5930.662072443046,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 71.34180507693773,
+          "interface_rotation_deg": 2.6380679922168415,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        }
+      ]
+    },
+    {
+      "part": "J4_A",
+      "material_parameter_source": "PET-CF",
+      "datasheet_test_direction": "XY",
+      "isotropic_E_proxy_MPa": 4730,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_X_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            24.46353054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            4380.724864077056
+          ],
+          "interface_translation_mm": 4.514663068397426,
+          "interface_rotation_deg": 2.4671475931398383,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            24.46353054
+          ],
+          "moment_Nmm": [
+            -4380.724864077056,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 27.05430663817741,
+          "interface_rotation_deg": 0.9489055030676079,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_X_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            26.91603054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5155.690252141674
+          ],
+          "interface_translation_mm": 5.17675594315594,
+          "interface_rotation_deg": 2.836694315145073,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            26.91603054
+          ],
+          "moment_Nmm": [
+            -5155.690252141674,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 29.816613617821393,
+          "interface_rotation_deg": 1.0768019158682391,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_X_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            29.368530540000002,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5930.662072443046
+          ],
+          "interface_translation_mm": 5.838853915346087,
+          "interface_rotation_deg": 3.2062433891524567,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            29.368530540000002
+          ],
+          "moment_Nmm": [
+            -5930.662072443046,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 32.57892155733309,
+          "interface_rotation_deg": 1.2046991254098052,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        }
+      ]
+    },
+    {
+      "part": "J4_A",
+      "material_parameter_source": "PAHT-CF",
+      "datasheet_test_direction": "Z",
+      "isotropic_E_proxy_MPa": 2180,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_X_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            24.46353054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            4380.724864077056
+          ],
+          "interface_translation_mm": 9.795576290605423,
+          "interface_rotation_deg": 5.353031245665796,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            24.46353054
+          ],
+          "moment_Nmm": [
+            -4380.724864077056,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 58.700399265403284,
+          "interface_rotation_deg": 2.0588637750044887,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_X_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            26.91603054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5155.690252141674
+          ],
+          "interface_translation_mm": 11.232135601434678,
+          "interface_rotation_deg": 6.154845922310181,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            26.91603054
+          ],
+          "moment_Nmm": [
+            -5155.690252141674,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 64.69384514325466,
+          "interface_rotation_deg": 2.3363637899342984,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_X_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            29.368530540000002,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5930.662072443046
+          ],
+          "interface_translation_mm": 12.668705972287611,
+          "interface_rotation_deg": 6.95666570215189,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            29.368530540000002
+          ],
+          "moment_Nmm": [
+            -5930.662072443046,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 70.68729310375481,
+          "interface_rotation_deg": 2.61386553357265,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        }
+      ]
+    },
+    {
+      "part": "J4_A",
+      "material_parameter_source": "PAHT-CF",
+      "datasheet_test_direction": "XY",
+      "isotropic_E_proxy_MPa": 3860,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_X_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            24.46353054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            4380.724864077056
+          ],
+          "interface_translation_mm": 5.532216661533633,
+          "interface_rotation_deg": 3.023214537707626,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            24.46353054
+          ],
+          "moment_Nmm": [
+            -4380.724864077056,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 33.15203896336248,
+          "interface_rotation_deg": 1.1627779869196335,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_X_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            26.91603054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5155.690252141674
+          ],
+          "interface_translation_mm": 6.3435377230900505,
+          "interface_rotation_deg": 3.4760528784031592,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            26.91603054
+          ],
+          "moment_Nmm": [
+            -5155.690252141674,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 36.536938448781136,
+          "interface_rotation_deg": 1.319500793278956,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_X_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            29.368530540000002,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5930.662072443046
+          ],
+          "interface_translation_mm": 7.154865030981086,
+          "interface_rotation_deg": 3.9288941012153162,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            29.368530540000002
+          ],
+          "moment_Nmm": [
+            -5930.662072443046,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 39.92183911041075,
+          "interface_rotation_deg": 1.4762245759555384,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        }
+      ]
+    },
+    {
+      "part": "J4_A",
+      "material_parameter_source": "Printed 316L reference",
+      "datasheet_test_direction": "Z",
+      "isotropic_E_proxy_MPa": 180000,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_X_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            24.46353054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            4380.724864077056
+          ],
+          "interface_translation_mm": 0.1186353128528879,
+          "interface_rotation_deg": 0.06483115619750797,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            24.46353054
+          ],
+          "moment_Nmm": [
+            -4380.724864077056,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.7109270577698842,
+          "interface_rotation_deg": 0.02493512794172103,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_X_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            26.91603054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5155.690252141674
+          ],
+          "interface_translation_mm": 0.1360336422840422,
+          "interface_rotation_deg": 0.07454202283686776,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            26.91603054
+          ],
+          "moment_Nmm": [
+            -5155.690252141674,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.7835143467349732,
+          "interface_rotation_deg": 0.028295961455870947,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_X_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            29.368530540000002,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5930.662072443046
+          ],
+          "interface_translation_mm": 0.15343210566437218,
+          "interface_rotation_deg": 0.08425295128161733,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            29.368530540000002
+          ],
+          "moment_Nmm": [
+            -5930.662072443046,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.8561016609232527,
+          "interface_rotation_deg": 0.0316568159066021,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        }
+      ]
+    },
+    {
+      "part": "J4_A",
+      "material_parameter_source": "Printed 316L reference",
+      "datasheet_test_direction": "XY",
+      "isotropic_E_proxy_MPa": 185000,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_X_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            24.46353054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            4380.724864077056
+          ],
+          "interface_translation_mm": 0.11542895304605309,
+          "interface_rotation_deg": 0.06307896278676452,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            24.46353054
+          ],
+          "moment_Nmm": [
+            -4380.724864077056,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.6917128129652927,
+          "interface_rotation_deg": 0.024261205564917756,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_X_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            26.91603054,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5155.690252141674
+          ],
+          "interface_translation_mm": 0.13235705735744646,
+          "interface_rotation_deg": 0.07252737357100646,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            26.91603054
+          ],
+          "moment_Nmm": [
+            -5155.690252141674,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.7623382833097037,
+          "interface_rotation_deg": 0.027531205740847407,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_X_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            29.368530540000002,
+            0.0,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            5930.662072443046
+          ],
+          "interface_translation_mm": 0.14928529199776752,
+          "interface_rotation_deg": 0.08197584449022227,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            29.368530540000002
+          ],
+          "moment_Nmm": [
+            -5930.662072443046,
+            0.0,
+            0.0
+          ],
+          "interface_translation_mm": 0.8329637781955972,
+          "interface_rotation_deg": 0.030801226287504743,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        }
+      ]
+    },
+    {
+      "part": "J6_ABC",
+      "material_parameter_source": "PLA Matte",
+      "datasheet_test_direction": "Z",
+      "isotropic_E_proxy_MPa": 1670,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_Y_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            12.196007820000002,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -529.4159438824885
+          ],
+          "interface_translation_mm": 1.8386918146891726,
+          "interface_rotation_deg": 1.661843559694946,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            12.196007820000002
+          ],
+          "moment_Nmm": [
+            0.0,
+            529.4159438824885,
+            0.0
+          ],
+          "interface_translation_mm": 9.320197203693784,
+          "interface_rotation_deg": 0.7582728894463998,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Y_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            14.648507820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -773.9500169078069
+          ],
+          "interface_translation_mm": 2.3915507908209173,
+          "interface_rotation_deg": 2.194003731899109,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            14.648507820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            773.9500169078069,
+            0.0
+          ],
+          "interface_translation_mm": 11.292839043637011,
+          "interface_rotation_deg": 0.9375069105426395,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Y_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            17.101007820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -1018.8283175816247
+          ],
+          "interface_translation_mm": 2.944883465989185,
+          "interface_rotation_deg": 2.726659713155013,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            17.101007820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            1018.8283175816247,
+            0.0
+          ],
+          "interface_translation_mm": 13.265726545673507,
+          "interface_rotation_deg": 1.1168232411086167,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        }
+      ]
+    },
+    {
+      "part": "J6_ABC",
+      "material_parameter_source": "PLA Matte",
+      "datasheet_test_direction": "XY",
+      "isotropic_E_proxy_MPa": 1960,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_Y_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            12.196007820000002,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -529.4159438824885
+          ],
+          "interface_translation_mm": 1.5666404747606726,
+          "interface_rotation_deg": 1.4159585432094692,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            12.196007820000002
+          ],
+          "moment_Nmm": [
+            0.0,
+            529.4159438824885,
+            0.0
+          ],
+          "interface_translation_mm": 7.9411884337595,
+          "interface_rotation_deg": 0.6460794517221876,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Y_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            14.648507820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -773.9500169078069
+          ],
+          "interface_translation_mm": 2.037698888097414,
+          "interface_rotation_deg": 1.8693807307507713,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            14.648507820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            773.9500169078069,
+            0.0
+          ],
+          "interface_translation_mm": 9.621959797384596,
+          "interface_rotation_deg": 0.7987941533705142,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Y_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            17.101007820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -1018.8283175816247
+          ],
+          "interface_translation_mm": 2.509160912347928,
+          "interface_rotation_deg": 2.323225367841261,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            17.101007820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            1018.8283175816247,
+            0.0
+          ],
+          "interface_translation_mm": 11.302940475140183,
+          "interface_rotation_deg": 0.9515789860466275,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        }
+      ]
+    },
+    {
+      "part": "J6_ABC",
+      "material_parameter_source": "PET-CF",
+      "datasheet_test_direction": "Z",
+      "isotropic_E_proxy_MPa": 2160,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_Y_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            12.196007820000002,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -529.4159438824885
+          ],
+          "interface_translation_mm": 1.4215811715420918,
+          "interface_rotation_deg": 1.2848512706900739,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            12.196007820000002
+          ],
+          "moment_Nmm": [
+            0.0,
+            529.4159438824885,
+            0.0
+          ],
+          "interface_translation_mm": 7.205893208411398,
+          "interface_rotation_deg": 0.5862572802664294,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Y_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            14.648507820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -773.9500169078069
+          ],
+          "interface_translation_mm": 1.8490230651254314,
+          "interface_rotation_deg": 1.696289922347922,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            14.648507820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            773.9500169078069,
+            0.0
+          ],
+          "interface_translation_mm": 8.731037593923059,
+          "interface_rotation_deg": 0.7248317317621332,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Y_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            17.101007820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -1018.8283175816247
+          ],
+          "interface_translation_mm": 2.2768311982416383,
+          "interface_rotation_deg": 2.108111907855959,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            17.101007820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            1018.8283175816247,
+            0.0
+          ],
+          "interface_translation_mm": 10.256371912627202,
+          "interface_rotation_deg": 0.8634698206719398,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        }
+      ]
+    },
+    {
+      "part": "J6_ABC",
+      "material_parameter_source": "PET-CF",
+      "datasheet_test_direction": "XY",
+      "isotropic_E_proxy_MPa": 4730,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_Y_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            12.196007820000002,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -529.4159438824885
+          ],
+          "interface_translation_mm": 0.6491787168141476,
+          "interface_rotation_deg": 0.5867396923235856,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            12.196007820000002
+          ],
+          "moment_Nmm": [
+            0.0,
+            529.4159438824885,
+            0.0
+          ],
+          "interface_translation_mm": 3.2906404503527735,
+          "interface_rotation_deg": 0.2677200265064456,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Y_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            14.648507820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -773.9500169078069
+          ],
+          "interface_translation_mm": 0.8443741692750384,
+          "interface_rotation_deg": 0.7746271104168101,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            14.648507820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            773.9500169078069,
+            0.0
+          ],
+          "interface_translation_mm": 3.987112305047317,
+          "interface_rotation_deg": 0.33100138279201013,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Y_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            17.101007820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -1018.8283175816247
+          ],
+          "interface_translation_mm": 1.0397368685416362,
+          "interface_rotation_deg": 0.9626895816001843,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            17.101007820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            1018.8283175816247,
+            0.0
+          ],
+          "interface_translation_mm": 4.683670894561259,
+          "interface_rotation_deg": 0.3943117997148816,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": true
+        }
+      ]
+    },
+    {
+      "part": "J6_ABC",
+      "material_parameter_source": "PAHT-CF",
+      "datasheet_test_direction": "Z",
+      "isotropic_E_proxy_MPa": 2180,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_Y_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            12.196007820000002,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -529.4159438824885
+          ],
+          "interface_translation_mm": 1.4085391424453753,
+          "interface_rotation_deg": 1.2730636443534677,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            12.196007820000002
+          ],
+          "moment_Nmm": [
+            0.0,
+            529.4159438824885,
+            0.0
+          ],
+          "interface_translation_mm": 7.139784096407623,
+          "interface_rotation_deg": 0.5808787731080218,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Y_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            14.648507820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -773.9500169078069
+          ],
+          "interface_translation_mm": 1.8320595507664823,
+          "interface_rotation_deg": 1.6807276294823448,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            14.648507820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            773.9500169078069,
+            0.0
+          ],
+          "interface_translation_mm": 8.65093633159349,
+          "interface_rotation_deg": 0.7181818993606458,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Y_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            17.101007820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -1018.8283175816247
+          ],
+          "interface_translation_mm": 2.2559428386247427,
+          "interface_rotation_deg": 2.088771431637097,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            17.101007820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            1018.8283175816247,
+            0.0
+          ],
+          "interface_translation_mm": 10.162276757465484,
+          "interface_rotation_deg": 0.8555480791978852,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        }
+      ]
+    },
+    {
+      "part": "J6_ABC",
+      "material_parameter_source": "PAHT-CF",
+      "datasheet_test_direction": "XY",
+      "isotropic_E_proxy_MPa": 3860,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_Y_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            12.196007820000002,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -529.4159438824885
+          ],
+          "interface_translation_mm": 0.7954961996194089,
+          "interface_rotation_deg": 0.7189841307488496,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            12.196007820000002
+          ],
+          "moment_Nmm": [
+            0.0,
+            529.4159438824885,
+            0.0
+          ],
+          "interface_translation_mm": 4.032313297971145,
+          "interface_rotation_deg": 0.3280610687501263,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Y_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            14.648507820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -773.9500169078069
+          ],
+          "interface_translation_mm": 1.0346864820391015,
+          "interface_rotation_deg": 0.9492192311584227,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            14.648507820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            773.9500169078069,
+            0.0
+          ],
+          "interface_translation_mm": 4.885761969656427,
+          "interface_rotation_deg": 0.405605321400572,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Y_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            17.101007820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -1018.8283175816247
+          ],
+          "interface_translation_mm": 1.274081706788067,
+          "interface_rotation_deg": 1.1796688396292414,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": false
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            17.101007820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            1018.8283175816247,
+            0.0
+          ],
+          "interface_translation_mm": 5.739316925200714,
+          "interface_rotation_deg": 0.4831851846247124,
+          "translation_screen_1mm": false,
+          "rotation_screen_0_5deg": true
+        }
+      ]
+    },
+    {
+      "part": "J6_ABC",
+      "material_parameter_source": "Printed 316L reference",
+      "datasheet_test_direction": "Z",
+      "isotropic_E_proxy_MPa": 180000,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_Y_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            12.196007820000002,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -529.4159438824885
+          ],
+          "interface_translation_mm": 0.0170589740585051,
+          "interface_rotation_deg": 0.015418215248280886,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            12.196007820000002
+          ],
+          "moment_Nmm": [
+            0.0,
+            529.4159438824885,
+            0.0
+          ],
+          "interface_translation_mm": 0.08647071850093677,
+          "interface_rotation_deg": 0.0070350873631971535,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Y_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            14.648507820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -773.9500169078069
+          ],
+          "interface_translation_mm": 0.022188276781505176,
+          "interface_rotation_deg": 0.020355479068175062,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            14.648507820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            773.9500169078069,
+            0.0
+          ],
+          "interface_translation_mm": 0.10477245112707671,
+          "interface_rotation_deg": 0.008697980781145599,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Y_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            17.101007820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -1018.8283175816247
+          ],
+          "interface_translation_mm": 0.027321974378899657,
+          "interface_rotation_deg": 0.025297342894271508,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            17.101007820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            1018.8283175816247,
+            0.0
+          ],
+          "interface_translation_mm": 0.12307646295152642,
+          "interface_rotation_deg": 0.010361637848063278,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        }
+      ]
+    },
+    {
+      "part": "J6_ABC",
+      "material_parameter_source": "Printed 316L reference",
+      "datasheet_test_direction": "XY",
+      "isotropic_E_proxy_MPa": 185000,
+      "assumed_nu": 0.35,
+      "cases": [
+        {
+          "case": "bend_Y_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            12.196007820000002,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -529.4159438824885
+          ],
+          "interface_translation_mm": 0.01659792070557253,
+          "interface_rotation_deg": 0.015001506728057078,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Z_0kg",
+          "payload_kg": 0,
+          "force_N": [
+            0.0,
+            0.0,
+            12.196007820000002
+          ],
+          "moment_Nmm": [
+            0.0,
+            529.4159438824885,
+            0.0
+          ],
+          "interface_translation_mm": 0.0841336720549655,
+          "interface_rotation_deg": 0.006844949866894528,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Y_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            14.648507820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -773.9500169078069
+          ],
+          "interface_translation_mm": 0.02158859362524828,
+          "interface_rotation_deg": 0.019805330985251415,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Z_0.25kg",
+          "payload_kg": 0.25,
+          "force_N": [
+            0.0,
+            0.0,
+            14.648507820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            773.9500169078069,
+            0.0
+          ],
+          "interface_translation_mm": 0.10194076325877734,
+          "interface_rotation_deg": 0.008462900219493015,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Y_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            17.101007820000003,
+            0.0
+          ],
+          "moment_Nmm": [
+            0.0,
+            0.0,
+            -1018.8283175816247
+          ],
+          "interface_translation_mm": 0.026583542638929397,
+          "interface_rotation_deg": 0.02461363092415606,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        },
+        {
+          "case": "bend_Z_0.5kg",
+          "payload_kg": 0.5,
+          "force_N": [
+            0.0,
+            0.0,
+            17.101007820000003
+          ],
+          "moment_Nmm": [
+            0.0,
+            1018.8283175816247,
+            0.0
+          ],
+          "interface_translation_mm": 0.11975007206094462,
+          "interface_rotation_deg": 0.010081593581899405,
+          "translation_screen_1mm": true,
+          "rotation_screen_0_5deg": true
+        }
+      ]
+    }
+  ]
+}

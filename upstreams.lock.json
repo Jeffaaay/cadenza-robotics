@@ -13,7 +13,7 @@
       "archive_url": "https://github.com/enactic/openarm_hardware/releases/download/2.0.0/openarm-hardware-2.0.0.tar.gz",
       "archive_sha256_from_github_release": "247ce0141a9be6ebbb5a6c206cf0557574929ea0b80e20dddbff7c0c0919db75",
       "state": "local_extracted_files_inspected_not_manufacturing_validated",
-      "archive_digest_note": "Digest read from GitHub release metadata. No local archive digest was computed during this review.",
+      "archive_digest_note": "On 2026-11-20 the local release archive SHA256 was recomputed and matched the GitHub release digest. This validates the archive identity, not manufacture or Fusion import.",
       "inspected_files": [
         {
           "path_in_archive_root": "OpenArm 2.0/OpenArm 2.0 BOM.xlsx",
@@ -37,7 +37,10 @@
         "date": "2026-11-19",
         "report": "design/material-review/structural-screen/README.md",
         "scope": "Executed component linear FEA screening with original inertials and envelope directions; not complete PLA assembly or physical validation."
-      }
+      },
+      "archive_local_sha256_verified_2026_11_20": "247ce0141a9be6ebbb5a6c206cf0557574929ea0b80e20dddbff7c0c0919db75",
+      "cad_inventory": "design/material-review/cad/README.md",
+      "same_cad_material_sensitivity": "design/material-review/structural-screen/same-cad-materials.md"
     },
     {
       "name": "openarm_mujoco",
