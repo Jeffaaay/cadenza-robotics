@@ -12,6 +12,84 @@
 - 平台门槛见 [M1](README.md#research-milestones)，材料进入条件与双臂数据接口见 [BASELINES.md](BASELINES.md)。
 - 当前运行主机实测为 RTX 5060 Laptop、8151 MiB 显存、约 32 GB 系统内存，Windows/Python 3.12.10；不是下方历史订单中的 RTX 4060 Ti 16 GB 台式机。已在独立环境完成 [SmolVLA/ACT 离线推理](experiments/offline-inference/README.md)，不据此推断 Jetson、folding_final、训练或实机运行性能。
 
+<a id="procurement-budget"></a>
+
+## 新增预算与采购安排（2026-11-20）
+
+用户要求估算在美国取得金属件、线束及其余缺件的费用，并安排采购顺序。按固定双臂上半身、两只夹爪、美国加州收货比较；沿用已购电机、P1S、电脑，先验证现有 D405 和 CANable。具体邮编、收货地址和联系方式不写入公开仓库。本次完成预算、供应商入口和询价草稿，尚未联系供应商、收到定制报价或下单。
+
+金属加工是新增比较路线，不据此次询价自动取消 PLA 优先重设计，也不把尚未验证的混合结构当作可装配方案。所有估价都不包含下半身、移动电池、新 GPU、人工设计/装配费、Mini 示教器缺件及新增相机；因此不是完整 VLA 项目的全包价格。
+
+### 先用多少预算判断是否值得做
+
+若双臂和夹爪的原版定制金属件都按美国小批量逐件加工来安排，**暂留约 $4,000–$10,000 新增资金**。这是用于比较路线的宽范围预算，精度低，最大变量是加工费；不是供应商报价，也不保证上限。只补少量金属件的 PLA 混合方案须等设计和件数确定后另算，不能套用本表或据此承诺省多少钱。
+
+| 项目 | 暂估预留 USD | 范围与依据 | 实际报价 |
+|---|---:|---|---|
+| 双臂＋夹爪定制金属件 | 2,500–6,500 | 参考下面的件数与单件预算假设；不含标准件和支承 | 未取得 |
+| 轴承、螺栓、标准轴/销、齿轮等 | 200–500 | 按两侧留补件额；特殊轴已列在加工组，避免重复。若机械包已含这些件，删除本行对应费用 | 待逐项核价 |
+| 电机供电/CAN 线束及线材附件 | 100–250 | 两侧，含接头、延长/分支线和少量备件；非完整定制线束报价，不含电源和 CAN 设备 | 未取得匹配套件价 |
+| 电源、配电、停止回路、CAN/调试接口 | 250–600 | 两侧系统预留；优先复用现有 CANable，容量、回生处理及驱动兼容性尚未冻结 | 未取得系统报价 |
+| 固定支承、桌面连接件 | 100–250 | 短支承和固定件；假设已有合适工作台，不含购置桌子 | 待设计后报价 |
+| PLA、装配耗材、少量工具补缺 | 100–200 | 包括试片、外罩和常用工具差额；先扣除现有库存，不覆盖无限次改版 | 仅部分商品有现价 |
+| 小计 | 3,250–8,300 | 上面六行相加 | 非报价合计 |
+| 运费、税费与价格变化暂留 20% | 650–1,660 | 纯预算缓冲，**不是税率或运费计算**；结账/询价后替换，进口费用仍未知 | 未核 |
+| 含缓冲合计 | **3,900–9,960** | 对外概括为约 **4,000–10,000** | 不构成交付承诺 |
+
+加工预留的计算：从 [材料矩阵](design/material-review/material-matrix.json)按 BOM 行号去重，主臂行 7–31、夹爪行 50–60 共 **36 行、66 件**；不含相机架行 78/90。按货号家族仅作询价分组，MVSHM 组为 14 行/24 件，其他组 22 行/42 件。暂假设前者每件 $20–60、后者每件 $50–120，得到 $480–1,440＋$2,100–5,040＝$2,580–6,480，取整预留 $2,500–6,500。**单件区间是本项目的预算假设，不是查到的这些零件售价**；实际加工方法、装夹、攻牙、精度、材料、最低订单和批量合并效果仍需报价。不得由货号推断未确认合金。原版数量也不等于 PLA 改版采购数量。
+
+### 本次查到的商品价格，只作量级参考
+
+查价日期 2026-11-20；均非含税到手价，未提交购物车，也未确认具体选项库存。
+
+| 商品/渠道 | 页面价格 USD | 对本项目的限制 |
+|---|---:|---|
+| [Foxtech Damiao 电机线](https://store.foxtech.com/damiao-joint-motor-cables/) | 0.60–3.60 / 所选线材选项 | 不能乘一个猜测数量冒充整套线束；先核接头、针脚、线径和长度 |
+| [Bravo Electro / Mean Well LRS-350-24](https://www.bravoelectro.com/lrs-350-24.html) | 32.10 / 电源本体 | 仅价格参照，未选定为本项目电源；不含完整配电/停止/回生处理，不能认定一只足够双臂 |
+| [Waveshare USB-CAN-FD 系列](https://www.waveshare.com/product/usb-can-fd.htm) | 69.99–86.99 / 所选版本 | 有 Windows-only 与 Windows/Linux 版本；标注 Linux 支持仍不等于已验证 OpenArm/SocketCAN 可用，不直接加入采购清单 |
+| [3D Universe / Bambu PLA 补充装](https://shop3duniverse.com/collections/bambu-lab-filament-refills) | Basic 16.99/kg；Matte 19.99/kg | 无线盘的补充装；库存余量、是否需线盘另核；Basic 价格不代表它与现有 Matte 性能相同 |
+| [WowRobo 1→2 升级包，不含顶部 ZED](https://shop.wowrobo.com/products/openarm-1-to-2-upgrade-kit) | 邮件价 1,000；在线价 1,080 | **只升级部分结构，不是从零搭建的完整无电机机械包**；不能用作本表金属加工费或整臂成本 |
+
+### 分批执行，先形成可核对的清单
+
+| 顺序 | 具体工作 | 交付/通过条件 | 当前状态 |
+|---|---|---|---|
+| 1：盘点与接口 | 核对已购电机的型号、数量、修订、接头；检查 CANable、D405、耗材和标准件 | 每个电机接口有针脚定义；记录可复用库存；不用 BOM 代替实物 | 待实物信息 |
+| 2：两条路线询价 | 原版金属件分 CNC/车削与钣金询美国渠道；同时询同版、不含电机的完整机械包 | 逐行材料、件数、遗漏、税运、产地、交期和左右件对应关系；两种价格范围一致 | 渠道及草稿已备，未发送 |
+| 3：首批验证 | 配齐一个受控电机/接口台架所需电气，打印安装接口试片；必要的小金属样件单列报价 | 接头/线序、通信、停止与固定方式完成现场检查；不据此认定一整臂可运行 | 建议首批资金 **$300–600**，不是已批准开支或完整单臂预算 |
+| 4：一侧结构与布线 | PLA 路线继续先做带真实接口的 J6；如选金属路线，按核准件单加工一侧，首件检查关键孔位 | 结构与接头检查通过，实测关节运动范围内线长、弯曲和拉力余量；完成该侧装配验收 | 等设计/报价/首件结果 |
+| 5：补齐第二侧 | 使用通过验证的接口/工艺，按另一侧专用件补齐；公共电气按双侧负载复核 | 左右件不误复制；两侧 CAN 通道、供电和公共工作区通过检查 | 后续 |
+
+首批 $300–600 是上面总预算的一部分，不再额外相加。若实际配电、停止、工具或样件报价超过预留，先更新清单和预算，不能为凑数省略必要部件。制造/运输交期以报价为准，本次没有承诺到货日期；不安排未请求的定时任务。
+
+### 供应商队列与询价范围
+
+| 优先级 | 渠道 | 要求报价的内容 | 准备材料/剩余缺项 |
+|---|---|---|---|
+| P1 | [MISUMI meviy 美国站](https://prs.meviy.misumi-ec.com/en_us-us/) | 机加工/车削件；单侧首批与双侧分别报价 | 2.0.0 分件 STEP、逐件材料、公差和数量；美国站接单不自动证明美国生产，要求列产地 |
+| P1 | [SendCutSend](https://sendcutsend.com/services/cnc-bending/) | 薄板、折弯和需要的攻牙/沉孔 | 按其板厚、折弯半径/展开要求复核 STEP/DXF；不得静默把原公制板厚换成近似英制库存 |
+| P1 | [WowRobo](https://shop.wowrobo.com/collections/openarm) / [Cereboto](https://cereboto.com/product/openarm-2-robotic-arm-kit/) | **从零装配双臂＋夹爪的完整机械包，去除电机**；标准件、线束、电源分别列价 | 是否拆售、是否匹配已购电机、是否含支承待回复；不是 1→2 升级包，不用整机价减电机零售价推算 |
+| P1 | [Foxtech](https://store.foxtech.com/damiao-joint-motor-cables/)；不足时 [LCSC 定制线束](https://www.lcsc.com/help-center/custom-cables/custom-cables-solution) | 先报价匹配电机的样线，再按布线表报价左右臂整套线束 | 接头料号/性别、逐针连接、线径、长度、分支、标签和测试；完整 2.0 线束兼容性尚未确认 |
+| P2 | [Protolabs 金属打印](https://www.protolabs.com/services/3d-printing/direct-metal-laser-sintering/) | 仅对具体零件作替代工艺比较 | 合金、后处理和配合孔精加工另列；本次未给整套金属打印成本，也不默认采用 |
+
+供应商页面的示例价不能替代我们的图纸报价。Eckstein 的制造文章提到机械包和线束包，但本次点击两个商品入口都为占位链接并返回 404，未列为已找到的可购套件。
+
+### 可复用的英文询价草稿（尚未发送）
+
+**给整套机械件供应商：**
+
+> Please quote a complete mechanical parts package for one fixed bimanual OpenArm 2.0 system (left and right arms, including both gripper mechanisms), excluding all motors, computers, cameras and plastic covers. We already own the motors; their exact revisions and connectors will be confirmed before ordering. The reference is Enactic openarm_hardware release 2.0.0, commit eefc9fa5509562e5e4d630db9a52027afdbc6af1. This is a from-scratch mechanical assembly, not a V1-to-V2 upgrade. Please identify every included part, material and quantity, and list bearings, fasteners, shafts/gears, fixed support, cables and electrical parts separately. Quote a first-side package and the complete bimanual package separately. Please state substitutions, tolerances, manufacturing origin, lead time, shipping, taxes/duties and delivery terms for California, USA; the ZIP code will be provided privately. This request is for quotation only, not a purchase order.
+
+**给美国加工服务：**
+
+> Please provide a budgetary quote against the selected individual STEP files and part list from Enactic OpenArm hardware release 2.0.0. Quote each line separately, including material, machining or sheet-metal operations, threads, finishes, inspection and any minimum/setup charge. Please flag missing tolerances or unavailable stock thicknesses before proposing substitutions. Identify the manufacturing country and quote first-side and bimanual quantities separately. The source assembly is reference geometry, not a complete manufacturing drawing package. No production is authorized by this RFQ.
+
+**给线束供应商：**
+
+> Please advise availability and quote sample power/CAN cables for our existing Damiao motors, followed by a matched left/right OpenArm 2.0 harness. Before final quotation we will confirm each motor revision, connector part number and pinout, wire gauge, branch layout and cable length. Please identify all included cables, provide a wiring drawing and continuity/polarity test coverage, and list extension cables, USB/CAN hardware, distribution boards, power supplies and stop circuitry separately. Please confirm shipping costs and delivery terms to California, USA. A generic assortment of Damiao cables is not a confirmed complete harness for this build.
+
+后续把实物接口和制造图纸补齐，再发送对应询价；目前实际供应商报价栏保持未知。无需为了预算先购买全套零件。
+
 ### 历史询价依据（2026-10-22）
 
 以下至“用直白的话理解整套系统”之前的报价、法规链接和采购建议完整保留为 2026-10-22 历史记录，本次未重新核价或核验。段落中的“当前/本次”均指当时的单臂方案，不是 2026-11-19 的采购结论；新的默认制造路线以本页顶部和 PLA 章节为准。
