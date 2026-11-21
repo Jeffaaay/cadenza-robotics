@@ -6,6 +6,12 @@
 
 检查了原 CAD 的肩根 J1_A、肘部 J4_A、前臂 J6_A/B/C；并对一个 J6 尺度的理想闭合箱形截面作对照。J4/J6 的失败足以拒绝“原尺寸直接换材”的当前候选，不需要等所有零件都算完才指出问题。**它不能否定经过重设计的 PLA 路线，也不能批准其余未测零件。**
 
+2026-11-20 阅读补充：用户选择尽量避免定制金属，以单侧桌面轻物抓放为最小演示，再扩展双臂。下面的简图仅重绘已有求解；拟 100 g 演示尚未仿真/实测，PET-CF/PAHT-CF 候选也未重新求解。
+
+![空手与轻载结果的直观解释](minimum-explained.png)
+
+重绘命令：`python design/material-review/structural-screen/explain_minimum.py`，输入为已提交的 `summary.json`，需要 matplotlib。示意截面不是制造图；完整数值图如下。
+
 ![部件筛查结果](screening-results.png)
 
 ## 实际计算结果

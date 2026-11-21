@@ -1,5 +1,5 @@
 {
-  "status": "2026-11-20 cost-first hybrid plan: PLA accessories and tested candidates; metal precision interfaces and first-build load-bearing plates. Recommendations, not a validated manufacturing release.",
+  "status": "2026-11-20 后续澄清：尽量避免定制金属件，优先重设计为可打印结构；普通 PLA 先做配合/附件，承力候选比较 PLA、PET-CF、PAHT-CF。保留已购电机和必要标准五金。先单侧桌面轻物抓放，再扩展固定双臂；不是已完成的全塑料制造方案。",
   "groups": [
     {
       "id": "a1",
@@ -21,12 +21,12 @@
       "verify": "实物孔距与孔型、配合面、紧固预紧力、最小净截面；肩根受力和温升。",
       "baseline_decision": "keep",
       "baseline_change": "第一版保留金属。若改造，用标准短型材/板材承担力流，PLA 做定位与外形；禁止按原 12 mm 包络直接照抄打印。",
-      "current_route": "metal_interface",
+      "current_route": "printed_interface",
       "pla_first_path": "肩根改为带闭合背腔和宽支承面的 PLA 座；先打印电机/安装孔配合试片，再测整臂根部弯扭。用穿透螺栓、可采购套筒和防转键，保持原肩轴位置；不直接照抄原金属外形。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "首版用金属肩根；优先中国同版现成包，缺件才单独 CNC。承担整臂弯矩且孔边/连接未验证，PLA 只做配合试片和不承力罩体。",
-      "route_label": "首版金属接口/轴"
+      "current_path": "肩根改为带闭合背腔和宽支承面的 打印 座；先打印电机/安装孔配合试片，再测整臂根部弯扭。用穿透螺栓、可采购套筒和防转键，保持原肩轴位置；不直接照抄原金属外形。 配合先用现有 PLA；PAHT-CF/PET-CF 是热态承力候选，须核孔座、夹紧、层向和实测温升。",
+      "route_label": "打印接口重设计，待验证"
     },
     {
       "id": "a2",
@@ -55,12 +55,12 @@
       "verify": "剖面/公差图、螺纹有效深度、转接刚度、重复拆装与热态松动。",
       "baseline_decision": "keep",
       "baseline_change": "保留关键金属配合面和压块；外围非接触体积可打印，但需重新划分接口，不能仅加热熔螺母。",
-      "current_route": "metal_interface",
+      "current_route": "printed_interface",
       "pla_first_path": "重画 PLA 分体夹持座和加强桥，增大承压面并留真实电机接口；定位/夹紧与主梁分工，验证热态夹紧漂移。标准套筒可用，定制金属压块不列为默认前置条件。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J1_B/C 首版用金属转接/夹持件，保持电机定位面。外部罩体可 PLA；不能把罩体可打印推成夹持座已可打印。",
-      "route_label": "首版金属接口/轴"
+      "current_path": "重画 打印 分体夹持座和加强桥，增大承压面并留真实电机接口；定位/夹紧与主梁分工，验证热态夹紧漂移。标准套筒可用，定制金属压块不列为默认前置条件。 配合先用现有 PLA；PAHT-CF/PET-CF 是热态承力候选，须核孔座、夹紧、层向和实测温升。",
+      "route_label": "打印接口重设计，待验证"
     },
     {
       "id": "a3",
@@ -89,12 +89,12 @@
       "verify": "孔边应力、耳根圆角、打印方向、扭转刚度、肩部扫掠间隙。",
       "baseline_decision": "keep",
       "baseline_change": "第一版保留薄板；若取消整片板，应由金属耳座＋带闭合截面的打印件替代，不能只增加填充率。",
-      "current_route": "metal_sheet",
+      "current_route": "printed_structure",
       "pla_first_path": "两片薄板优先合并为 PLA 箱形或带横向联系的双侧结构，圆角耳根、穿透紧固；通过新截面承载，检查肩部扫掠及层间拉开。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J1_D/E 首版保留 3 mm 金属侧板，与其他薄板合批切割/折弯询价。若改成 PLA 必须重画箱形结构并验证肩部空间，不直接照抄薄板。",
-      "route_label": "首版金属薄板"
+      "current_path": "两片薄板优先合并为 打印 箱形或带横向联系的双侧结构，圆角耳根、穿透紧固；通过新截面承载，检查肩部扫掠及层间拉开。 普通 PLA 可作结构台架对照，PET-CF 为提高刚度/耐热的候选；先改变截面，不能只换料或提高填充率。",
+      "route_label": "打印承力结构重设计，待验证"
     },
     {
       "id": "a4",
@@ -116,12 +116,12 @@
       "verify": "法兰孔/定位精度、板外弯曲、失速或急停受力、与 J2_B 的组合刚度。",
       "baseline_decision": "keep",
       "baseline_change": "第一版保留金属，可评估平板切割/钻孔替代复杂加工；若打印必须改截面并保留金属法兰。",
-      "current_route": "metal_sheet",
+      "current_route": "printed_structure",
       "pla_first_path": "把原 5 mm 平板重新设计成带深截面和圆角过渡的 PLA 输出连接体，沿电机孔圈分布载荷；先验证孔座、输出面跳动与板外弯曲。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J2_A 首版保留 5 mm 金属输出板；询平板切割、孔加工和必要精加工，避免默认全件 CNC。孔圈、平面度及偏心弯曲仍需验收。",
-      "route_label": "首版金属薄板"
+      "current_path": "把原 5 mm 平板重新设计成带深截面和圆角过渡的 打印 输出连接体，沿电机孔圈分布载荷；先验证孔座、输出面跳动与板外弯曲。 普通 PLA 可作结构台架对照，PET-CF 为提高刚度/耐热的候选；先改变截面，不能只换料或提高填充率。",
+      "route_label": "打印承力结构重设计，待验证"
     },
     {
       "id": "a5",
@@ -143,12 +143,12 @@
       "verify": "接触面与轴线、安装螺纹、热态加载和拆装重复性。",
       "baseline_decision": "keep",
       "baseline_change": "保留金属接口块；允许把不承力的罩体独立打印。",
-      "current_route": "metal_interface",
+      "current_route": "printed_interface",
       "pla_first_path": "采用 PLA 闭合转接座和宽根部筋，保留既有电机安装基准；用实际孔轴试片确定配合，再验证上臂根部持载、温升和松弛。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J2_B 首版用金属接口块，保留电机安装基准、螺纹和支承面；独立外罩用 PLA。",
-      "route_label": "首版金属接口/轴"
+      "current_path": "采用 打印 闭合转接座和宽根部筋，保留既有电机安装基准；用实际孔轴试片确定配合，再验证上臂根部持载、温升和松弛。 配合先用现有 PLA；PAHT-CF/PET-CF 是热态承力候选，须核孔座、夹紧、层向和实测温升。",
+      "route_label": "打印接口重设计，待验证"
     },
     {
       "id": "a6",
@@ -170,12 +170,12 @@
       "verify": "装配约束、面外弯曲、夹紧力保持、层间开裂；不能凭它像罩子就删掉。",
       "baseline_decision": "keep",
       "baseline_change": "保留首版；第二轮可与相邻打印壳合并为封闭承力段，保留端部压板/套筒。",
-      "current_route": "metal_sheet",
+      "current_route": "printed_structure",
       "pla_first_path": "用 PLA 带筋桥接/端盖整合支承面，避免孤立薄耳和仅靠塑料螺纹传力；验证横向变形、孔位和全范围间隙。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J2_C 首版保留 1.5 mm 金属折弯件，合批加工。它参与根部连接/抗扭，不能因外形像盖子就改成装饰 PLA。",
-      "route_label": "首版金属薄板"
+      "current_path": "用 打印 带筋桥接/端盖整合支承面，避免孤立薄耳和仅靠塑料螺纹传力；验证横向变形、孔位和全范围间隙。 普通 PLA 可作结构台架对照，PET-CF 为提高刚度/耐热的候选；先改变截面，不能只换料或提高填充率。",
+      "route_label": "打印承力结构重设计，待验证"
     },
     {
       "id": "a7",
@@ -197,12 +197,12 @@
       "verify": "肘轴同轴度、两端连接、弯曲/扭转挠度、最弱打印方向、热态 24–72 h 蠕变、活动空间。",
       "baseline_decision": "hybrid",
       "baseline_change": "适合后续改成闭合箱形/双侧带筋 PLA 长段；圆孔端保留金属轴承座或夹片，穿透螺栓＋金属定长套筒。不能仅在原薄板上加厚。",
-      "current_route": "metal_sheet",
+      "current_route": "printed_structure",
       "pla_first_path": "J4_A 在 J6 及 J4_D/E 试验之后推进：用 PLA 闭合梁代替原薄板，加大端部过渡；保留原轴线/臂长作对照，重算质量、挠度和碰撞。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J4_A 首版询原金属薄板价格；同外形 PLA 已未过刚度筛查。后续可研究金属端部＋PLA 闭合长梁，真实孔座、弯扭、温升及持载试验通过后才替换。",
-      "route_label": "首版金属薄板"
+      "current_path": "J4_A 在 J6 及 J4_D/E 试验之后推进：用 打印 闭合梁代替原薄板，加大端部过渡；保留原轴线/臂长作对照，重算质量、挠度和碰撞。 普通 PLA 可作结构台架对照，PET-CF 为提高刚度/耐热的候选；先改变截面，不能只换料或提高填充率。",
+      "route_label": "打印承力结构重设计，待验证"
     },
     {
       "id": "a8",
@@ -231,12 +231,12 @@
       "verify": "配合直径、轴向夹紧、孔位、温升后的同轴度和游隙。",
       "baseline_decision": "keep",
       "baseline_change": "保留小型金属端部；长段可以换 PLA，不要求连整个框架都 CNC。",
-      "current_route": "metal_interface",
+      "current_route": "printed_interface",
       "pla_first_path": "精密接口也纳入 PLA 重设计：分体轴承座、宽支承肩台和穿透夹紧；轴承与标准轴保留，打印配合先试片/实测，不把原孔尺寸当成成品公差。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J4_B/C 首版保留金属电机/轴承接口。长段以后改 PLA 时仍优先复用这些端部；须确认连接方式和同轴度，不预设已能接上新梁。",
-      "route_label": "首版金属接口/轴"
+      "current_path": "精密接口也纳入 打印 重设计：分体轴承座、宽支承肩台和穿透夹紧；轴承与标准轴保留，打印配合先试片/实测，不把原孔尺寸当成成品公差。 配合先用现有 PLA；PAHT-CF/PET-CF 是热态承力候选，须核孔座、夹紧、层向和实测温升。",
+      "route_label": "打印接口重设计，待验证"
     },
     {
       "id": "a9",
@@ -265,12 +265,12 @@
       "verify": "双侧同轴、端部剥离、关节间隙、对线缆和关节范围的影响；低速循环与恒载。",
       "baseline_decision": "hybrid",
       "baseline_change": "改为一体打印的中空连接体，保留两端金属小法兰/轴承座；保持原轴间距，先不缩臂。",
-      "current_route": "metal_sheet",
+      "current_route": "printed_structure",
       "pla_first_path": "J4_D/E 作为第二组结构试件，合并成带筋闭合 PLA 连杆，端部局部加厚并采用可更换标准轴套；先测扭转与热态孔距稳定。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J4_D/E 首版保留 2 mm 金属肘侧板，与 J4_A 合批。可作为后续闭合 PLA 肘段候选，但现在没有真实接口和循环验证。",
-      "route_label": "首版金属薄板"
+      "current_path": "J4_D/E 作为第二组结构试件，合并成带筋闭合 打印 连杆，端部局部加厚并采用可更换标准轴套；先测扭转与热态孔距稳定。 普通 PLA 可作结构台架对照，PET-CF 为提高刚度/耐热的候选；先改变截面，不能只换料或提高填充率。",
+      "route_label": "打印承力结构重设计，待验证"
     },
     {
       "id": "a10",
@@ -292,12 +292,12 @@
       "verify": "新版订货图、公差、法兰传力、承压面与电机热接触。",
       "baseline_decision": "keep",
       "baseline_change": "先核实新版图纸/材料；若降成本，优先标准金属座＋打印外围，不直接宣布它是 6061。",
-      "current_route": "metal_interface",
+      "current_route": "printed_interface",
       "pla_first_path": "先核对 J5_A_rotate90 实物接口和载荷，再设计 PLA 带筋法兰/连接座；原材质尚未确认不妨碍提出候选，但不得拿旧 J5_A 材质当验证依据。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J5_A 首版按匹配电机的金属转接件询价；上游材料未确认，不能擅自填 6061 或 7075。先确认台阶、孔圈、材料与公差。",
-      "route_label": "首版金属接口/轴"
+      "current_path": "先核对 J5_A_rotate90 实物接口和载荷，再设计 打印 带筋法兰/连接座；原材质尚未确认不妨碍提出候选，但不得拿旧 J5_A 材质当验证依据。 配合先用现有 PLA；PAHT-CF/PET-CF 是热态承力候选，须核孔座、夹紧、层向和实测温升。",
+      "route_label": "打印接口重设计，待验证"
     },
     {
       "id": "a11",
@@ -326,12 +326,12 @@
       "verify": "扭转刚度和末端漂移、孔座蠕变、J6 电机温升、层间强度和线缆间隙。",
       "baseline_decision": "hybrid",
       "baseline_change": "优先结构试验件：PLA 闭合薄壁梁＋纵向筋，端部金属耳/套；保持外包络，新增筋朝空腔内长。",
-      "current_route": "metal_sheet",
+      "current_route": "printed_structure",
       "pla_first_path": "第一组承力原型：J6_A/B 与 C 合并为 PLA 闭合薄壁梁，端部短而宽、内侧加筋，使用穿透螺栓和可采购定长套筒；先做独立台架件，量挠度、扭转、温升与持载漂移。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J6_A/B 首版保留 1.5 mm 金属长板并询合批价；同外形 PLA 已未过筛查。若要增加承力塑料比例，先做带真实金属端部的闭合 PLA 梁台架，不直接打印原板。",
-      "route_label": "首版金属薄板"
+      "current_path": "第一组承力原型：J6_A/B 与 C 合并为 打印 闭合薄壁梁，端部短而宽、内侧加筋，使用穿透螺栓和可采购定长套筒；先做独立台架件，量挠度、扭转、温升与持载漂移。 普通 PLA 可作结构台架对照，PET-CF 为提高刚度/耐热的候选；先改变截面，不能只换料或提高填充率。",
+      "route_label": "打印承力结构重设计，待验证"
     },
     {
       "id": "a12",
@@ -359,12 +359,12 @@
       "verify": "两侧间距变化、连接扭转、分层开口；左右件分别确认方向。",
       "baseline_decision": "hybrid",
       "baseline_change": "与 J6_A/B 的打印闭合体整合，减少拼缝；保留穿透紧固和定长金属套筒。",
-      "current_route": "metal_sheet",
+      "current_route": "printed_structure",
       "pla_first_path": "与 J6_A/B 一体或键合拼装为 PLA 闭合梁，承担侧板间距和抗扭；拼接面传剪不能只靠螺栓摩擦，左右形状分别核对。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J6_C 左右跨接件首版保留金属，与 A/B 成套报价；它是抗扭连接的一部分。后续与 PLA 梁一体重画时需验证连接和装配，左右件不互相替代。",
-      "route_label": "首版金属薄板"
+      "current_path": "与 J6_A/B 一体或键合拼装为 打印 闭合梁，承担侧板间距和抗扭；拼接面传剪不能只靠螺栓摩擦，左右形状分别核对。 普通 PLA 可作结构台架对照，PET-CF 为提高刚度/耐热的候选；先改变截面，不能只换料或提高填充率。",
+      "route_label": "打印承力结构重设计，待验证"
     },
     {
       "id": "a13",
@@ -386,12 +386,12 @@
       "verify": "作用面、是否承担硬限位、螺栓载荷与接触磨损。",
       "baseline_decision": "keep",
       "baseline_change": "首版保留金属；确认仅作非受力罩支座之后才下调等级。",
-      "current_route": "metal_sheet",
+      "current_route": "printed_interface",
       "pla_first_path": "核实环形件是否承担止挡或轴向夹持，再设计 PLA 加宽分体环；标准销/轴可保留。若是硬止挡，单独测冲击与开口根部，不能凭静态夹紧通过。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J6_D 首版保留金属环形件；先确认夹持/限位实际作用与接触载荷，再决定能否将非接触区域改 PLA，不能当普通线夹打印。",
-      "route_label": "首版金属薄板"
+      "current_path": "核实环形件是否承担止挡或轴向夹持，再设计 打印 加宽分体环；标准销/轴可保留。若是硬止挡，单独测冲击与开口根部，不能凭静态夹紧通过。 配合先用现有 PLA；PAHT-CF/PET-CF 是热态承力候选，须核孔座、夹紧、层向和实测温升。",
+      "route_label": "打印接口重设计，待验证"
     },
     {
       "id": "a14",
@@ -413,12 +413,12 @@
       "verify": "环的配合、侧孔螺纹、热态游隙、工具碰撞的横向弯矩。",
       "baseline_decision": "keep",
       "baseline_change": "保留金属薄环；外罩和线缆支架打印。",
-      "current_route": "metal_interface",
+      "current_route": "printed_interface",
       "pla_first_path": "腕部薄金属环改为带轴向筋的 PLA 分体环/壳，保持电机接口和相机视野；先检查增加截面后能否满足细腕包络，再做热态游隙试验。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J7_A 首版保留金属腕部定位/转接座；紧凑孔圈与预紧保持优先于这部分少量材料节省。",
-      "route_label": "首版金属接口/轴"
+      "current_path": "腕部薄金属环改为带轴向筋的 打印 分体环/壳，保持电机接口和相机视野；先检查增加截面后能否满足细腕包络，再做热态游隙试验。 配合先用现有 PLA；PAHT-CF/PET-CF 是热态承力候选，须核孔座、夹紧、层向和实测温升。",
+      "route_label": "打印接口重设计，待验证"
     },
     {
       "id": "a15",
@@ -447,12 +447,12 @@
       "verify": "轴承配合、公差链、端面间隙、循环磨损。",
       "baseline_decision": "keep",
       "baseline_change": "保留轴/孔所在的小金属块。可把跨接外围改 PLA，但先不把短精密件当优先省钱目标。",
-      "current_route": "metal_interface",
+      "current_route": "printed_interface",
       "pla_first_path": "把短耳座与桥接件合并为 PLA 支架，凸轴功能优先由现成标准轴/销承担；轴承孔独立试配、支承间距实测，避免直接打印耐磨转轴。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J7_B/C 首版保留金属轴承耳座与桥接块，检查销孔/轴承同轴度；外侧可加可拆 PLA 罩。",
-      "route_label": "首版金属接口/轴"
+      "current_path": "把短耳座与桥接件合并为 打印 支架，凸轴功能优先由现成标准轴/销承担；轴承孔独立试配、支承间距实测，避免直接打印耐磨转轴。 配合先用现有 PLA；PAHT-CF/PET-CF 是热态承力候选，须核孔座、夹紧、层向和实测温升。",
+      "route_label": "打印接口重设计，待验证"
     },
     {
       "id": "a16",
@@ -487,12 +487,12 @@
       "verify": "偏心弯矩、窄颈应力、工具撞击、重复定位和夹紧漂移。",
       "baseline_decision": "keep",
       "baseline_change": "保留金属关键路径；若合并重设计，要把跨接做成闭合截面并留金属轴/法兰。",
-      "current_route": "metal_interface",
+      "current_route": "printed_interface",
       "pla_first_path": "以闭合 PLA 腕末连接体替代细窄跨接/法兰组合，沿孔圈分布载荷；标准轴套、螺栓可保留，先测偏心弯矩、重复定位与层间开裂。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J7_D 左右件及 J7_E 首版保留金属窄法兰；按实际台阶、孔和螺纹选工艺，不因片状外形就认定可直接激光切割。",
-      "route_label": "首版金属接口/轴"
+      "current_path": "以闭合 打印 腕末连接体替代细窄跨接/法兰组合，沿孔圈分布载荷；标准轴套、螺栓可保留，先测偏心弯矩、重复定位与层间开裂。 配合先用现有 PLA；PAHT-CF/PET-CF 是热态承力候选，须核孔座、夹紧、层向和实测温升。",
+      "route_label": "打印接口重设计，待验证"
     },
     {
       "id": "e1",
@@ -514,12 +514,12 @@
       "verify": "v2 材料、齿轮中心距、夹持电流上限、热态平行度。",
       "baseline_decision": "keep",
       "baseline_change": "首版保留原加工基座；第二轮可评估金属轴座＋PLA 箱体组合。",
-      "current_route": "metal_interface",
+      "current_route": "printed_interface",
       "pla_first_path": "夹爪电机基座优先重画为 PLA 箱体，轴承座之间加横向联系并留散热间隙；验证齿轮中心距、堵转限流下的变形及热态平行度。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "夹爪 base_4310 首版询匹配的金属基座，保持电机和齿轮中心距；原材料待核。后续 PLA 加筋基座需要独立夹持/热态验证。",
-      "route_label": "首版金属接口/轴"
+      "current_path": "夹爪电机基座优先重画为 打印 箱体，轴承座之间加横向联系并留散热间隙；验证齿轮中心距、堵转限流下的变形及热态平行度。 配合先用现有 PLA；PAHT-CF/PET-CF 是热态承力候选，须核孔座、夹紧、层向和实测温升。",
+      "route_label": "打印接口重设计，待验证"
     },
     {
       "id": "e2",
@@ -561,12 +561,12 @@
       "verify": "新版材质与公差、工具偏心、手眼标定重复性、持载与循环。",
       "baseline_decision": "keep",
       "baseline_change": "保留金属接口，夹爪外壳另打印；不可用 v1 滑轨夹爪材料表给这些 v2 件定材。",
-      "current_route": "metal_interface",
+      "current_route": "printed_interface",
       "pla_first_path": "合并为 PLA 工具接口和支承体，保持现有电机、齿轮、轴承的工作位置；通过试片、公差实测与循环抓取确定配合，不默认需要整套加工接口。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "J7_joint_A/B/C 首版用匹配金属关节连接件；材料待核，核对左右数量、孔距与夹爪平行度。外罩不必随之金属化。",
-      "route_label": "首版金属接口/轴"
+      "current_path": "合并为 打印 工具接口和支承体，保持现有电机、齿轮、轴承的工作位置；通过试片、公差实测与循环抓取确定配合，不默认需要整套加工接口。 配合先用现有 PLA；PAHT-CF/PET-CF 是热态承力候选，须核孔座、夹紧、层向和实测温升。",
+      "route_label": "打印接口重设计，待验证"
     },
     {
       "id": "e3",
@@ -595,12 +595,12 @@
       "verify": "轴径与公差、止转结构、接触应力、磨损；实际材料仍未确认。",
       "baseline_decision": "keep",
       "baseline_change": "保留金属转轴/轮毂；可研究标准轴＋夹紧式轮毂替代定制件，必须匹配接口。",
-      "current_route": "metal_interface",
+      "current_route": "stock_shaft_or_exception",
       "pla_first_path": "优先拆分为现成标准金属轴/销＋PLA 轮毂/连接体，检查止转和轴向定位；尚无匹配标准轴规格，可能仍是少量金属例外，不能声称已消除全部定制轴加工。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "夹爪 shaft_A/B 用金属轴。先比现成标准轴能否满足台阶、长度和锁紧方式；不能匹配时随结构包车削，不能把打印轴当等价替代。",
-      "route_label": "首版金属接口/轴"
+      "current_path": "优先拆分为现成标准金属轴/销＋PLA 轮毂/连接体，检查止转和轴向定位；尚无匹配标准轴规格，可能仍是少量金属例外，不能声称已消除全部定制轴加工。",
+      "route_label": "现成轴优先；定制例外待核"
     },
     {
       "id": "e4",
@@ -631,9 +631,9 @@
       "baseline_change": "可先做 PLA 加筋指根，驱动孔/轴孔保留金属衬套和压板；须同时限制夹持力。",
       "current_route": "pla_conditional",
       "pla_first_path": "采用 PLA 加筋指根、短粗圆角过渡和标准轴套/穿透螺栓，夹持力与堵转电流同时标定；物品轻不代表夹持反力小。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "finger_mount_adapter_A/B 可作为 PLA 指根试件，使用穿透螺栓与金属套筒分担孔压。先验证实际夹持力、堵转限力、热态与持续变形；未通过则保留匹配金属件。",
+      "current_path": "采用 PLA 加筋指根、短粗圆角过渡和标准轴套/穿透螺栓，夹持力与堵转电流同时标定；物品轻不代表夹持反力小。 普通 PLA 可先做限力试件；若出现脆裂/热态漂移，再比较工程料并重验。",
       "route_label": "PLA 受力试件，待验证"
     },
     {
@@ -652,9 +652,9 @@
       "baseline_change": "优先 PLA 指体＋可更换橡胶/硅胶/泡棉接触垫；短粗指根、圆角、穿透螺栓，避开视觉区域。",
       "current_route": "pla_conditional",
       "pla_first_path": "优先 PLA 指体＋可更换橡胶/硅胶/泡棉接触垫；短粗指根、圆角、穿透螺栓，避开视觉区域。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "夹指本体优先 PLA，接触面粘贴现成橡胶/硅胶/泡棉垫，不为软垫购买 AMS。先验证夹持载荷、指根和磨损，不照搬未验证的更长夹指。",
+      "current_path": "优先 PLA 指体＋可更换橡胶/硅胶/泡棉接触垫；短粗指根、圆角、穿透螺栓，避开视觉区域。 普通 PLA 可先做限力试件；若出现脆裂/热态漂移，再比较工程料并重验。",
       "route_label": "PLA 受力试件，待验证"
     },
     {
@@ -685,7 +685,7 @@
       "baseline_change": "优先短而带三角筋的 PLA 支架＋螺钉/螺母和线缆卸力；留电机散热间隙。",
       "current_route": "pla_accessory",
       "pla_first_path": "优先短而带三角筋的 PLA 支架＋螺钉/螺母和线缆卸力；留电机散热间隙。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
       "current_path": "左右腕相机架优先短、带筋的 PLA 件，穿透紧固并为线缆卸力；检查相机温升、视野与姿态漂移。只为实际使用的相机制作。",
       "route_label": "PLA 附件"
@@ -712,7 +712,7 @@
       "baseline_change": "普通 PLA 分件打印可作为首版；螺钉可拆、圆角、适度通风；别紧贴电机或夹住转动部件。",
       "current_route": "pla_accessory",
       "pla_first_path": "普通 PLA 分件打印可作为首版；螺钉可拆、圆角、适度通风；别紧贴电机或夹住转动部件。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
       "current_path": "手臂/夹爪外罩用 PLA，可先不装装饰罩；保留散热、运动间隙和维护入口，不让罩子承担主结构载荷。",
       "route_label": "PLA 附件"
@@ -733,7 +733,7 @@
       "baseline_change": "PLA 线夹＋软内衬，圆滑走线，预留活动余量。",
       "current_route": "pla_accessory",
       "pla_first_path": "PLA 线夹＋软内衬，圆滑走线，预留活动余量。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
       "current_path": "理线夹用 PLA，远离热点并保留弯曲与拉力余量；按实测布线分段制作，不能用夹子拉紧连接器。",
       "route_label": "PLA 附件"
@@ -911,7 +911,7 @@
       "baseline_change": "保留标准件；穿透螺栓配定长金属套筒、压板和防转键。套筒端面对接金属面；靠大垫片仍不能消除 PLA 蠕变。",
       "current_route": "standard_hardware",
       "pla_first_path": "保留标准件；穿透螺栓配定长金属套筒、压板和防转键。套筒端面对接金属面；靠大垫片仍不能消除 PLA 蠕变。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
       "current_path": "轴承、螺栓、销和承力支柱用现成金属标准件；优先随匹配机械包采购，按实物库存扣减。PLA 定位套不能自动代替承压定长套筒。",
       "route_label": "现成功能件"
@@ -938,7 +938,7 @@
       "baseline_change": "首版保留原采购齿轮；打印齿轮另做消耗性试验，不和结构改版同时引入。",
       "current_route": "standard_hardware",
       "pla_first_path": "首版保留原采购齿轮；打印齿轮另做消耗性试验，不和结构改版同时引入。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
       "current_path": "夹爪齿轮先买原规格功能件，核模数、齿数、孔径和锁紧；材料依供应商资料，不默认 PLA 齿轮或假定所有齿轮都是金属。",
       "route_label": "现成功能件"
@@ -963,7 +963,7 @@
       "baseline_change": "优先保留采购垫片；0.5 mm 功能垫片不以普通 PLA 薄片直接替代。",
       "current_route": "standard_hardware",
       "pla_first_path": "优先保留采购垫片；0.5 mm 功能垫片不以普通 PLA 薄片直接替代。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
       "current_path": "薄树脂垫片按原厚度与规格采购；这是树脂标准件，不是必须金属的零件，也不值得用 FDM 追求 0.5 mm 精密垫片。",
       "route_label": "现成功能件"
@@ -984,12 +984,12 @@
       "verify": "型材截面与接头刚度、脚轮支撑多边形、载荷重心；底板合金未确认。",
       "baseline_decision": "keep",
       "baseline_change": "原版仅作为受力路径参考。轮式版可改高度与形状，但无需复制 750 mm 立柱或厚底板。",
-      "current_route": "stock_frame",
+      "current_route": "bench_mount",
       "pla_first_path": "本阶段可借鉴原固定支承的载荷路径；轮式改版留后续。原铝型材立柱和桌面底座仅作参考，轮式方案不照搬采购。新结构按 b2–b4 的 PLA 方案重新设计和验证。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "原版长立柱/整套底座仅作参考；首版用短的现成金属型材/角件可靠固定到已有工作台。长而重的型材优先美国本地切长，截面和固定点由载荷确认。",
-      "route_label": "短标准金属支承＋PLA 外罩"
+      "current_path": "原立柱只作参考。最小演示先将单臂用短宽打印座及标准穿透紧固固定到合适工作台；必要时用现成底板/夹具。固定点、台面和打印根座须承受整臂反力；暂不购买整套人形机身或长金属脊柱。",
+      "route_label": "简化桌面固定，待设计"
     },
     {
       "id": "b2",
@@ -1002,12 +1002,12 @@
       "verify": "新件尚无定稿 CAD。先核孔位、力流、梁截面、螺栓组、弯扭挠度；保留模型原坐标基线。",
       "baseline_decision": "newmetal",
       "baseline_change": "候选：左右小金属接口板＋一根窄金属横梁/短型材＋PLA 外形。紧固力经套筒/金属面闭合；避免额外外移肩轴。",
-      "current_route": "stock_frame",
+      "current_route": "printed_structure",
       "pla_first_path": "默认研究窄截面 PLA 箱形肩桥，分段时使用承剪键、重叠连接和可采购紧固件；先验证双臂前伸与单臂侧伸。不得继承旧概念额外外移 85 mm/侧。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "肩桥用短金属型材或矩形管＋必要端板，PLA 做外罩和非承力定位附件；保持基准肩轴位置，不额外外移 85 mm/侧。连接/截面设计尚未冻结。",
-      "route_label": "短标准金属支承＋PLA 外罩"
+      "current_path": "单臂桌面阶段可暂缓；双臂阶段再设计短宽箱形打印肩桥，不额外外移肩轴。比较 PLA 台架与 PET-CF 承力试件，连接用现成紧固/套筒；双臂合力矩和节点漂移未验证。",
+      "route_label": "打印承力结构重设计，待验证"
     },
     {
       "id": "b3",
@@ -1020,12 +1020,12 @@
       "verify": "目标高度、质量重心、截面惯性矩、节点松动、热态长时漂移与制动载荷。",
       "baseline_decision": "newmetal",
       "baseline_change": "候选：一根金属矩形管或短型材主脊柱，上下小接板；PLA 打印线槽、电子仓和曲面外壳。全 PLA 分段躯干留作独立比较试样。",
-      "current_route": "stock_frame",
+      "current_route": "printed_structure",
       "pla_first_path": "本阶段只做固定上半身所需的短支承，不以完整高躯干为前置条件。默认研究带纵筋/隔板的 PLA 闭合躯干，按 P1S 成形空间分段；节点同时传弯矩和剪力。拉杆/套筒只解决对应功能，必须实测长期预紧、弯扭和热态漂移；金属脊柱保留为失败后的备选。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
-      "current_path": "只做固定所需短金属支承，外面可套 PLA 机身壳；暂不做高躯干、升降或腰关节。先核双臂前伸弯矩、工作台与连接刚度。",
-      "route_label": "短标准金属支承＋PLA 外罩"
+      "current_path": "先省掉高躯干；单臂直接桌面固定，双臂只补必要短支承。短支承优先箱形打印方案，必须验证固定点和长期弯扭；现成支承只作失败后的备选，不先定制金属机体。",
+      "route_label": "打印承力结构重设计，待验证"
     },
     {
       "id": "b4",
@@ -1040,7 +1040,7 @@
       "baseline_change": "候选：小金属车架/横梁＋金属电机轮轴支座；PLA 外裙、轻载托盘。电池低置并固定；不预设一整块厚钢板压重。",
       "current_route": "deferred",
       "pla_first_path": "下半身已暂缓，本行仅保留后续候选，不安排当前制作/采购。车架、电池托盘和轮组连接体优先 PLA 加筋箱体/模块化梁；轮轴、轴承、紧固件及现有电机保留。轮距、低位电池和支撑点由真实重心与制动/越缝试验确定，尚无可制造定稿。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "deferred_lower_body",
       "current_path": "下半身、轮组、轮架、移动电池本阶段不制作或采购；固定台架结果不能证明未来移动稳定性。",
       "route_label": "本阶段暂缓"
@@ -1065,7 +1065,7 @@
       "baseline_change": "短支座、三角筋和穿透紧固的 PLA 候选。若以后加云台电机，要另评轴/轴承座；当前不加购。",
       "current_route": "pla_accessory",
       "pla_first_path": "短支座、三角筋和穿透紧固的 PLA 候选。若以后加云台电机，要另评轴/轴承座；当前不加购。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
       "current_path": "有实际需要才打印短带筋 PLA 头/场景相机架，先复用 D405；不为造型购买 ZED、头部电机或完整头壳，视野与模型输入另验。",
       "route_label": "PLA 附件"
@@ -1083,7 +1083,7 @@
       "baseline_change": "PLA 薄壳＋可拆布料/泡棉或局部软垫，露出散热/检修区；不为“像人”扩大肩架。P1S 单色即可，不依赖 AMS。",
       "current_route": "pla_accessory",
       "pla_first_path": "PLA 薄壳＋可拆布料/泡棉或局部软垫，露出散热/检修区；不为“像人”扩大肩架。P1S 单色即可，不依赖 AMS。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
       "current_path": "机身外罩优先 PLA；首轮可只做必要护盖，把装饰整壳延后，保留接头、电源散热与停止装置可达性。",
       "route_label": "PLA 附件"
@@ -1108,12 +1108,12 @@
       "baseline_change": "若沿用此相机方案，可做短带筋 PLA 架＋穿透螺母；不是轮式机器人必须购买的部件。",
       "current_route": "pla_accessory",
       "pla_first_path": "若沿用此相机方案，可做短带筋 PLA 架＋穿透螺母；不是轮式机器人必须购买的部件。",
-      "validation_status": "2026-11-20 首版材料/采购建议，未完成实物装配、强度、温升、蠕变或循环验收；金属建议不代表已经验证，PLA 候选不等于生产图。",
+      "validation_status": "2026-11-20 打印结构优先的重设计候选；无新增有限元求解、制造 CAD 或实物验证。原样 PLA J4/J6 已失败；新材料/新几何尚未验收。",
       "phase": "upper_body_or_reference",
       "current_path": "需要外部视角时用短带筋 PLA 架；长悬臂另作支承，检查长期姿态与线缆卸力，不默认采购原版天花相机组件。",
       "route_label": "PLA 附件"
     }
   ],
-  "baseline_note": "baseline_decision/baseline_change and CAD colors retain the initial assessment. pla_first_path retains the 2026-11-19 concept, now historical. current_route/current_path are the 2026-11-20 user-authorized hybrid recommendations; no new physical or FEA validation performed.",
-  "current_phase": "阶段更新：当前只做可靠固定的双臂上半身，先验证 VLA/学习模型；下半身、轮式底盘和移动电池暂缓。短躯干/肩部支承须可靠固定；上臂自重、接口刚度和温升仍需验证。"
+  "baseline_note": "baseline_decision/baseline_change and CAD colors retain the initial assessment. pla_first_path preserves earlier PLA concepts. current_route/current_path reflect the later 2026-11-20 printed-structure preference, superseding the metal-first sourcing proposal in Git 8f2057e. Candidates are not released designs or validation results.",
+  "current_phase": "先单臂桌面轻物抓放，保持最终固定双臂目标；暂缓机身装饰、头部、下半身与移动电池。"
 }
